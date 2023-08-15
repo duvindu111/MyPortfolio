@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Measurement Units in CSS</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        section>section:first-child{
+            background-color: red;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+        }
+        section>section:nth-child(2){
+            background-color: green;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            right: 0%;
+            top: 0%;
+        }
+        section>section:nth-child(3){
+            background-color: yellow;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+        }
+        section>section:nth-child(4){
+            background-color: pink;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+        }
+        section>div:nth-child(5){
+            background-color: white;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            margin: auto;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            top: 0%;
+        }
+        section>div:nth-child(5)>div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            margin: auto;
+            border-radius: 90px;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            top: 0%;
+        }
+        section>section>div:first-child{
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            border-radius: 90px;
+            margin: auto;
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            top: 0%;
+        }
+        section>section>div:nth-child(2){
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: auto;
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            top: 0%;
+        }
+        section>section:first-child>div:nth-child(3){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-bottom-right-radius: 90px;
+            left: 0%;
+            top: 0%;
+        }
+        section>section:nth-child(2)>div:nth-child(3){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-bottom-left-radius: 90px;
+            right: 0%;
+            top: 0%;
+        }
+        section>section:nth-child(3)>div:nth-child(3){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-top-right-radius: 90px;
+            left: 0%;
+            bottom: 0%;
+        }
+        section>section:nth-child(4)>div:nth-child(3){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-top-left-radius: 90px;
+            right: 0%;
+            bottom: 0%;
+        }
+        section>section:first-child>div:nth-child(4){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-bottom-left-radius: 90px;
+            right: 0%;
+            top: 0%;
+        }
+        section>section:nth-child(2)>div:nth-child(4){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-bottom-right-radius: 90px;
+            left: 0%;
+            top: 0%;
+        }
+        section>section:nth-child(3)>div:nth-child(4){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-top-left-radius: 90px;
+            right: 0%;
+            bottom: 0%;
+        }
+        section>section:nth-child(4)>div:nth-child(4){
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            border-top-right-radius: 90px;
+            left: 0%;
+            bottom: 0%;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Adjust this value as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="container">
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section class="container">
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+   
+   
+
+</body>
+
+</html>
