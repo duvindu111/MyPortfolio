@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS assignment Case 2</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="assets/stylesheets/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        header {
+            inline-size: 100%;
+            block-size: 70px;
+            position: relative;
+        }
+
+        header>div>img {
+            position: absolute;
+            inset-inline-start: 2vw;
+            min-block-size: 100%;
+            max-block-size: 100%;
+        }
+
+        header>section>nav>ul>li {
+            display: inline-block;
+            margin-inline-end: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header>section {
+            text-align: end;
+            /* background: greenyellow; */
+            display: inline-block;
+            inline-size: fit-content;
+            margin-inline-end: 40px;
+            margin-block-start: 5px;
+            position: absolute;
+            inset-inline-end: 0%;
+        }
+
+        footer {
+            inline-size: 100%;
+            block-size: 50px;
+            background: grey;
+            position: relative;
+            text-align: center;
+        }
+
+        footer>p {
+            color: white;
+            position: absolute;
+            inline-size: 100%;
+        }
+
+        main {
+            /* background: beige; */
+            position: relative;
+            margin: 0;
+        }
+
+        main>section:first-child {
+            background: #570195;
+            /* inline-size: 18vw; */
+            width: 20%;
+            position: absolute;
+            block-size: 100%;
+        }
+
+        main>section:first-child>nav {}
+
+        main>section:first-child>nav>ul {
+            padding-inline-start: 35px;
+            padding-block-start: 20px;
+        }
+
+        main>section:first-child>nav>ul>li {
+            margin-block-end: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        main>section:first-child>nav {
+            color: white;
+        }
+
+        main>section:nth-child(2) {
+            position: relative;
+            inset-inline-start: 21vw;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2) {
+            padding-bottom: 10px;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>p {
+            width: 100%;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        main>section:nth-child(2) {
+            width: 78%;
+        }
+
+        main>section:nth-child(2)>section:first-child {
+            font-size: 0;
+            padding-top: 6px;
+            margin-bottom: 15px;
+        }
+
+        main>section:nth-child(2)>section:first-child>div {
+            box-sizing: border-box;
+            display: inline-block;
+            max-width: 33%;
+        }
+
+        main>section:nth-child(2)>section:first-child>div>img {
+            width: 100%;
+            border-bottom: 2px solid green;
+            border-top: 2px solid rgb(154, 0, 0);
+            
+        }
+
+        main>section:nth-child(2)>section:first-child>div:first-child>img{
+            border-left: 2px solid rgb(154, 0, 0);    
+        }
+
+        main>section:nth-child(2)>section:first-child>div:nth-child(2)>img{
+            border-left: 2px solid green;   
+        }
+
+        main>section:nth-child(2)>section:first-child>div:nth-child(3)>img{
+            border-right: 2px solid rgb(154, 0, 0);  
+            border-left: 2px solid green;  
+        }
+
+        nav>ul {
+            list-style: none;
+        }
+
+        body>hr {
+            block-size: 5px;
+            background: black;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="assets/images/ijse.png" alt="">
+        </div>
+        <section>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Contacts</li>
+                    <li>About Us</li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Contacts</li>
+                    <li>About Us</li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <section>
+                <div>
+                    <img src="assets/images/swing.gif" alt="swinging.gif">
+                </div>
+                <div>
+                    <img src="assets/images/swing.gif" alt="swinging.gif">
+                </div>
+                <div>
+                    <img src="assets/images/swing.gif" alt="swinging.gif">
+                </div>
+            </section>
+            <section>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit deleniti suscipit cum eum corrupti
+                    incidunt
+                    eius consequatur laborum dignissimos fugit dolorem perferendis corporis at laudantium, quis
+                    voluptate
+                    mollitia adipisci. Minus.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit deleniti suscipit cum eum corrupti
+                    incidunt
+                    eius consequatur laborum dignissimos fugit dolorem perferendis corporis at laudantium, quis
+                    voluptate
+                    mollitia adipisci. Minus.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit deleniti suscipit cum eum corrupti
+                    incidunt
+                    eius consequatur laborum dignissimos fugit dolorem perferendis corporis at laudantium, quis
+                    voluptate
+                    mollitia adipisci. Minus.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit deleniti suscipit cum eum corrupti
+                    incidunt
+                    eius consequatur laborum dignissimos fugit dolorem perferendis corporis at laudantium, quis
+                    voluptate
+                    mollitia adipisci. Minus.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit deleniti suscipit cum eum corrupti
+                    incidunt
+                    eius consequatur laborum dignissimos fugit dolorem perferendis corporis at laudantium, quis
+                    voluptate
+                    mollitia adipisci. Minus.</p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Developed By IJSE</p>
+    </footer>
+
+</body>
+
+</html>
