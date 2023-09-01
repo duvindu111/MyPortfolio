@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS assignment Case 4</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="assets/stylesheets/normalize.css">
+    <style>
+        body>section {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        body>section:first-child>header{
+            background-color: red;
+        }
+        body>section:nth-child(2){
+            background-color: #498ec7;
+        }
+        body>section:nth-child(2)>header{
+            background-color: #004583;
+        }
+        body>section:nth-child(3){
+            background-color: #605952;
+        }
+        body>section:nth-child(3)>header{
+            background-color: #2a2924;
+        }
+        body>section:nth-child(4){
+            background-color: #f23d2a;
+        }
+        body>section:nth-child(4)>header{
+            background-color: #7c322b;
+        }
+        header {
+            margin: 0;
+            height: 50px;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        header>h3 {
+            margin-top: 0;
+            padding-top: 15px;
+            margin-left: 15px;
+        }
+        section>h1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+            font-size: 100px;
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <h3>Card 1</h3>
+        </header>
+        <h1>Hello</h1>
+    </section>
+    <section>
+        <header>
+            <h3>Card 2</h3>
+        </header>
+        <h1>How</h1>
+    </section>
+    <section>
+        <header>
+            <h3>Card 3</h3>
+        </header>
+        <h1>Are</h1>
+    </section>
+    <section>
+        <header>
+            <h3>Card 4</h3>
+        </header>
+        <h1>You..?</h1>
+    </section>
+
+</body>
+
+</html>
