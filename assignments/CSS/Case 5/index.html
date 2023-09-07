@@ -9,13 +9,13 @@
     <style>
         body{
             font-size: 0;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            height: 100vh;
         }
         body>div{
             box-sizing: border-box;
-            display: inline-block;
-            width: 25%;
-            background-color: yellow;
-            height: 33.3vh;
             border: 1px solid black;
         }
     body>div:first-child{
@@ -58,7 +58,7 @@
 </head>
 
 <body>
-
+   
     <div></div>
     <div></div>
     <div></div>
