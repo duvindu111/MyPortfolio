@@ -136,7 +136,7 @@
             text-align: center;
         }
 
-        #home>main>nav>a>button{
+        #home>main>nav>a>button {
             position: absolute;
             margin: auto;
             left: 0;
@@ -154,20 +154,80 @@
         }
 
         /* about me */
-        body>section:nth-child(2)>main>aside{
-            background-color: aqua;
+        body>section:nth-child(2)>main>aside {
             width: calc(100% / 2);
             position: relative;
         }
 
-        body>section:nth-child(2)>main>section{
-            background-color: aquamarine;
+        body>section:nth-child(2)>main>aside>img {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 160px;
+            right: 0;
+            height: 80%;
+        }
+
+        body>section:nth-child(2)>main>section {
             width: calc(100% / 2);
             position: relative;
         }
 
-        body>section:nth-child(2)>main{
+        body>section:nth-child(2)>main>section>hgroup>h1 {
+            position: absolute;
+            margin: auto;
+            top: 120px;
+            left: 20px;
+            color: white;
+        }
+
+        body>section:nth-child(2)>main>section>hgroup>h4 {
+            position: absolute;
+            margin: auto;
+            top: 170px;
+            left: 20px;
+            color: white;
+            font-weight: 100;
+        }
+
+        body>section:nth-child(2)>main>section>hr {
+            position: absolute;
+            margin: auto;
+            top: 200px;
+            left: 20px;
+            color: white;
+            border: 1px solid white;
+            width: 60%;
+        }
+
+        body>section:nth-child(2)>main>section>article {
+            position: absolute;
+            margin: auto;
+            top: 200px;
+            left: 20px;
+            padding-right: 220px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        body>section:nth-child(2)>main>section>nav>a>button {
+            position: absolute;
+            color: white;
+            background: #EB4A4C;
+            border: none;
+            top: 440px;
+            left: 20px;
+            border-radius: 10px;
+            font-size: 12px;
+            padding: 4px 40px;
+            font-family: 'Poppins', sans-serif;
+            height: 35px;
+        }
+
+        body>section:nth-child(2)>main {
             display: flex;
+            font-family: 'Poppins', sans-serif;
         }
 
 
@@ -276,23 +336,22 @@
             </aside>
             <section>
                 <hgroup>
-                    <h2><span>DUVINDU</span> THATHSARA</h2>
-                    <h4>Full Stack Develpoer</h4>
+                    <h1><span class="highlight_red">DUVINDU</span> THATHSARA</h1>
+                    <h4>Full Stack Developer</h4>
                 </hgroup>
+                <hr>
                 <article>
                     <p>
                         My name is Duvindu Thathsara. I am a Full Stack Developer from Sri Lanka. I'm very passionate
-                        and
-                        dedicated to my work. With a strong commitment to excellence, I have acquired extensive
-                        knowledge to
-                        compete in the thriving software engineering industry. When it comes to my work, I approach each
-                        project with a unique blend of creativity,analytical thinking, and unwavering attention to
-                        detail.
+                        and dedicated to my work. With a strong commitment to excellence, I have acquired extensive
+                        knowledge to compete in the thriving software engineering industry. When it comes to my work, I
+                        approach each project with a unique blend of creativity,analytical thinking, and unwavering
+                        attention to detail.
                     </p>
                 </article>
                 <nav>
                     <a href="assets/cv.txt" download="cv">
-                        <p>download cv</p>
+                        <button>Download CV</button>
                     </a>
                 </nav>
             </section>
