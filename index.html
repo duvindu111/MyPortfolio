@@ -8,86 +8,268 @@
     <title>My Portfolio</title>
     <base href="">
     <link rel="icon" href="check-mark.png">
+    <link rel="stylesheet" href="assets/resources/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300;700&display=swap"
+        rel="stylesheet">
     <meta name="keywords" content="IJSE, GDSE, HTML, ABDS">
     <meta name="description" content="Welcome to my personal Portfolio">
     <meta name="owner" content="Duvindu Thathsara">
     <meta name="author" content="Duvindu Thathsara">
     <meta name="theme-color" content="red">
     <meta name="robots" content="noindex,nofollow">
+    <style>
+        /* header */
+        body>section>header {
+            width: 100%;
+        }
+
+        body>section>header>section:first-child {
+            height: 40px;
+            background-color: #262626;
+            position: relative;
+        }
+
+        body>section>header>section:first-child>h4 {
+            color: #858585;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-weight: 100;
+            margin-top: 0;
+            padding-top: 10px;
+            margin-left: 20px;
+        }
+
+        body>section>header>section:first-child>nav>a>button {
+            position: absolute;
+            color: white;
+            background: #EB4A4C;
+            border: none;
+            top: 5px;
+            right: 40px;
+            border-radius: 10px;
+            font-size: 12px;
+            padding: 4px 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body>section>header>section:nth-child(2) {
+            height: 50px;
+            background-color: #2f2d2d;
+            position: relative;
+        }
+
+        body>section>header>section:nth-child(2)>div>img {
+            width: 250px;
+            margin-left: 15px;
+            margin-top: 12px;
+            opacity: 80%;
+        }
+
+        body>section>header>section:nth-child(2)>nav>menu {
+            list-style: none;
+            margin: 0;
+        }
+
+        body>section>header>section:nth-child(2)>nav>menu>li>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        body>section>header>section:nth-child(2)>nav {
+            position: absolute;
+            top: 10px;
+            right: 40px;
+        }
+
+        body>section>header>section:nth-child(2)>nav>menu>li {
+            display: inline-block;
+            padding-right: 20px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body>section>header>section:nth-child(2)>nav>menu>li:last-of-type {
+            padding-right: 4px;
+        }
+
+        /* home */
+        .highlight_red {
+            color: #EB4A4C;
+        }
+
+        #home>main>hgroup>h1 {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 180px;
+            width: max-content;
+            font-size: 4em;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: white;
+        }
+
+        #home>main>hgroup>h4 {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 280px;
+            width: max-content;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 100;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        #home>main>article>p {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 340px;
+            width: max-content;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        #home>main>nav>a>button{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 440px;
+            color: white;
+            background: #EB4A4C;
+            border: none;
+            border-radius: 15px;
+            font-size: 12px;
+            padding: 4px 40px;
+            font-family: 'Poppins', sans-serif;
+            height: 35px;
+            width: 160px;
+        }
+
+        /* about me */
+        body>section:nth-child(2)>main>aside{
+            background-color: aqua;
+            width: calc(100% / 2);
+            position: relative;
+        }
+
+        body>section:nth-child(2)>main>section{
+            background-color: aquamarine;
+            width: calc(100% / 2);
+            position: relative;
+        }
+
+        body>section:nth-child(2)>main{
+            display: flex;
+        }
+
+
+        /* common elements */
+        body>section>main {
+            /* background-color: #131313; */
+            background-color: burlywood;
+            position: absolute;
+            width: 100%;
+            top: 90px;
+            bottom: 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .page_sec {
+            height: 100vh;
+            position: relative;
+        }
+
+        body {
+            /* overflow: hidden; */
+        }
+    </style>
 </head>
 
 <body>
-    <!--  -->
+
     <!-- home -->
-    <Section>
+    <Section id="home" class="page_sec">
         <header>
             <section>
                 <h4>Full Stack Developer</h4>
-                <nav></nav>
+                <nav>
+                    <a href="">
+                        <button>Hire Me</button>
+                    </a>
+                </nav>
             </section>
             <section>
                 <div>
-                    <img src="assets/resources/images/logo (1).png" alt="personal logo" style="background-color: black;"
-                        width="200">
+                    <img src="assets/resources/images/logo.png" alt="personal logo">
                 </div>
                 <nav>
                     <menu>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>My Works</li>
-                        <li>Education</li>
-                        <li>Contact</li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">My Works</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Contact</a></li>
                     </menu>
                 </nav>
             </section>
         </header>
-
         <main>
             <hgroup>
-                <h1><span>DUVINDU</span> THATHSARA</h1>
+                <h1><span class="highlight_red">DUVINDU</span> THATHSARA</h1>
                 <h4>Full Stack Developer</h4>
             </hgroup>
             <article>
                 <p>
-                    Join me on this virtual journey
-                    where I share my passion for crafting elegant code and unleashing the power of technology
+                    Join me on this virtual journey<br>
+                    where I share my passion for crafting elegant code and unleashing the power of technology<br>
                     to shape the world around us.
                 </p>
             </article>
             <nav>
-
+                <a href="">
+                    <button>Get In Touch</button>
+                </a>
             </nav>
         </main>
     </Section>
 
-
-
     <!-- about me -->
-    <section>
+    <section id="about_me" class="page_sec">
         <header>
             <section>
                 <h4>Full Stack Developer</h4>
-                <nav></nav>
+                <nav>
+                    <a href="">
+                        <button>Hire Me</button>
+                    </a>
+                </nav>
             </section>
             <section>
                 <div>
-                    <img src="assets/resources/images/logo (1).png" alt="personal logo" style="background-color: black;"
-                        width="200">
+                    <img src="assets/resources/images/logo.png" alt="personal logo">
                 </div>
                 <nav>
                     <menu>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>My Works</li>
-                        <li>Education</li>
-                        <li>Contact</li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">My Works</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Contact</a></li>
                     </menu>
                 </nav>
             </section>
         </header>
-
         <main>
             <aside>
                 <img src="assets/resources/images/my_photo.png" alt="">
@@ -120,30 +302,32 @@
 
 
     <!-- skills -->
-    <section>
+    <section id="skills" class="page_sec">
         <header>
             <section>
                 <h4>Full Stack Developer</h4>
-                <nav></nav>
+                <nav>
+                    <a href="">
+                        <button>Hire Me</button>
+                    </a>
+                </nav>
             </section>
             <section>
                 <div>
-                    <img src="assets/resources/images/logo (1).png" alt="personal logo" style="background-color: black;"
-                        width="200">
+                    <img src="assets/resources/images/logo.png" alt="personal logo">
                 </div>
                 <nav>
                     <menu>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>My Works</li>
-                        <li>Education</li>
-                        <li>Contact</li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">My Works</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Contact</a></li>
                     </menu>
                 </nav>
             </section>
         </header>
-
         <main>
             <h4>My <span>Skills</span></h4>
 
@@ -211,30 +395,32 @@
     </section>
 
     <!-- My projects -->
-    <section>
+    <section id="my_projects" class="page_sec">
         <header>
             <section>
                 <h4>Full Stack Developer</h4>
-                <nav></nav>
+                <nav>
+                    <a href="">
+                        <button>Hire Me</button>
+                    </a>
+                </nav>
             </section>
             <section>
                 <div>
-                    <img src="assets/resources/images/logo (1).png" alt="personal logo" style="background-color: black;"
-                        width="200">
+                    <img src="assets/resources/images/logo.png" alt="personal logo">
                 </div>
                 <nav>
                     <menu>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>My Works</li>
-                        <li>Education</li>
-                        <li>Contact</li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">My Works</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Contact</a></li>
                     </menu>
                 </nav>
             </section>
         </header>
-
         <main>
             <h4>My <span>Projects</span></h4>
 
@@ -273,30 +459,32 @@
     </section>
 
     <!-- My Assignments -->
-    <section>
+    <section id="my_assignments" class="page_sec">
         <header>
             <section>
                 <h4>Full Stack Developer</h4>
-                <nav></nav>
+                <nav>
+                    <a href="">
+                        <button>Hire Me</button>
+                    </a>
+                </nav>
             </section>
             <section>
                 <div>
-                    <img src="assets/resources/images/logo (1).png" alt="personal logo" style="background-color: black;"
-                        width="200">
+                    <img src="assets/resources/images/logo.png" alt="personal logo">
                 </div>
                 <nav>
                     <menu>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>My Works</li>
-                        <li>Education</li>
-                        <li>Contact</li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">My Works</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Contact</a></li>
                     </menu>
                 </nav>
             </section>
         </header>
-
         <main>
             <h4>My <span>Assignments</span></h4>
 
@@ -330,30 +518,32 @@
     </section>
 
     <!-- My Educational Qualifications -->
-    <section>
+    <section id="my_edu_quali" class="page_sec">
         <header>
             <section>
                 <h4>Full Stack Developer</h4>
-                <nav></nav>
+                <nav>
+                    <a href="">
+                        <button>Hire Me</button>
+                    </a>
+                </nav>
             </section>
             <section>
                 <div>
-                    <img src="assets/resources/images/logo (1).png" alt="personal logo" style="background-color: black;"
-                        width="200">
+                    <img src="assets/resources/images/logo.png" alt="personal logo">
                 </div>
                 <nav>
                     <menu>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>My Works</li>
-                        <li>Education</li>
-                        <li>Contact</li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">My Works</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Contact</a></li>
                     </menu>
                 </nav>
             </section>
         </header>
-
         <main>
             <h4>My <span>Educational Qualifications</span></h4>
 
@@ -399,30 +589,32 @@
     </section>
 
     <!-- get in touch -->
-    <section>
+    <section id="get_in_touch" class="page_sec">
         <header>
             <section>
                 <h4>Full Stack Developer</h4>
-                <nav></nav>
+                <nav>
+                    <a href="">
+                        <button>Hire Me</button>
+                    </a>
+                </nav>
             </section>
             <section>
                 <div>
-                    <img src="assets/resources/images/logo (1).png" alt="personal logo" style="background-color: black;"
-                        width="200">
+                    <img src="assets/resources/images/logo.png" alt="personal logo">
                 </div>
                 <nav>
                     <menu>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Skills</li>
-                        <li>My Works</li>
-                        <li>Education</li>
-                        <li>Contact</li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">My Works</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Contact</a></li>
                     </menu>
                 </nav>
             </section>
         </header>
-
         <main>
             <h4>Get In <span>Touch</span></h4>
 
