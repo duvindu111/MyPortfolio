@@ -415,6 +415,75 @@
             line-height: 25px;
         }
 
+        /* my assignments */
+        body>section:nth-child(5)>main>h2{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            position: absolute;
+            left: 150px;
+            top: 30px;
+            margin: 0;
+        }
+
+        body>section:nth-child(5)>main>hr {
+            color: white;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            top: 65px;
+            left: 0;
+            right: 0;
+            border: 1px solid white;
+        }
+
+        body>section:nth-child(5)>main>section:nth-child(3) {
+            display: flex;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 110px;
+            height: 460px;
+            justify-content: space-around;
+        }
+
+        body>section:nth-child(5)>main>section:nth-child(3)>div {
+            background-color: #2f2d2d;
+            margin: 10px;
+            width: 350px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        body>section:nth-child(5)>main>section:nth-child(3)>div>img {
+            width: 100%;
+            border-radius: 10px 10px 4px 4px;
+            height: 233px;
+        }
+
+        body>section:nth-child(5)>main>section:nth-child(3)>div>h4 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            text-decoration: underline;
+        }
+
+        body>section:nth-child(5)>main>section:nth-child(3)>div>article {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 100;
+            font-size: 0.8em;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            line-height: 25px;
+        }
+
         /* common elements */
         body>section>main {
             /* background-color: #131313; */
@@ -826,31 +895,33 @@
             </section>
         </header>
         <main>
-            <h4>My <span>Assignments</span></h4>
-
-            <div>
-                <img src="assets/resources/images/8151789_orig.png" alt="assignment 1 image" width="300">
-                <h4>E-commerce Website Front-end Development</h4>
-                <article>
-                    <p>Develop the front-end of an e-commerce website using HTML, CSS, and JavaScript</p>
-                </article>
-            </div>
-            <div>
-                <img src="assets/resources/images/8151789_orig.png" alt="assignment 1 image" width="300">
-                <h4>Bug Fixing and Testing</h4>
-                <article>
-                    <p>Identify and fix bugs in a software application through thorough testing and effective solutions
-                    </p>
-                </article>
-            </div>
-            <div>
-                <img src="assets/resources/images/8151789_orig.png" alt="assignment 1 image" width="300">
-                <h4>Software Documentation and Technical Writing</h4>
-                <article>
-                    <p>Create comprehensive software documentation, including user manuals and technical guides, with
-                        strong writing skills and attention to detail</p>
-                </article>
-            </div>
+            <h2>My <span class="highlight_red">Assignments</span></h2>
+            <hr>
+            <section>
+                <div>
+                    <img src="assets/resources/images/8151789_orig.png" alt="assignment 1 image" width="300">
+                    <h4>E-commerce Website Front-end Development</h4>
+                    <article>
+                        <p>Develop the front-end of an e-commerce website using HTML, CSS, and JavaScript</p>
+                    </article>
+                </div>
+                <div>
+                    <img src="assets/resources/images/8151789_orig.png" alt="assignment 1 image" width="300">
+                    <h4>Bug Fixing and Testing</h4>
+                    <article>
+                        <p>Identify and fix bugs in a software application through thorough testing and effective solutions
+                        </p>
+                    </article>
+                </div>
+                <div>
+                    <img src="assets/resources/images/8151789_orig.png" alt="assignment 1 image" width="300">
+                    <h4>Software Documentation and Technical Writing</h4>
+                    <article>
+                        <p>Create comprehensive software documentation, including user manuals and technical guides, with
+                            strong writing skills and attention to detail</p>
+                    </article>
+                </div>
+            </section>
         </main>
 
         <footer class="footer_mid">
