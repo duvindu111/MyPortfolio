@@ -9,9 +9,11 @@
     <base href="">
     <link rel="icon" href="check-mark.png">
     <link rel="stylesheet" href="assets/resources/css/normalize.css">
+    <link rel="stylesheet" href="assets/resources/icons/fontawesome-free-6.4.2-web/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <meta name="keywords" content="IJSE, GDSE, HTML, ABDS">
     <meta name="description" content="Welcome to my personal Portfolio">
@@ -230,6 +232,120 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* skills */
+        body>section:nth-child(3)>main>h2 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            position: absolute;
+            left: 150px;
+            top: 30px;
+            margin: 0;
+        }
+
+        body>section:nth-child(3)>main>hr {
+            color: white;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            top: 65px;
+            left: 0;
+            right: 0;
+            border: 1px solid white;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(3) {
+            display: flex;
+            width: 80%;
+            align-items: center;
+            justify-content: space-around;
+            height: 120px;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 90px;
+            border-radius: 10px;
+            background-color: #2f2d2d;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(3)>div>figure>img {
+            border-radius: 10px;
+            width: 60px;
+            border: 2px solid white;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(3)>div>figure>figcaption {
+            color: white;
+            text-align: center;
+            padding-top: 2px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8em;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(4) {
+            display: flex;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 232px;
+            height: 350px;
+            justify-content: space-around;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(4)>div {
+            background-color: #2f2d2d;
+            margin: 10px;
+            width: 350px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(4)>div>div {
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 25px;
+            width: max-content;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(4)>div>div>i {
+            font-size: 40px;
+            color: white;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(4)>div>h3 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            width: max-content;
+            top: 90px;
+            text-decoration: underline;
+        }
+
+        body>section:nth-child(3)>main>section:nth-child(4)>div>p {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 150px;
+            font-size: 0.8em;
+            font-weight: 100;
+            padding: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+
 
         /* common elements */
         body>section>main {
@@ -246,6 +362,53 @@
         .page_sec {
             height: 100vh;
             position: relative;
+        }
+
+        body>section>footer {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            margin: auto;
+            background-color: #262626;
+            height: 50px;
+            text-align: center;
+        }
+
+        body>section>footer>div {
+            display: flex;
+            width: max-content;
+            margin: auto;
+            align-items: center;
+            position: relative;
+            height: 100%;
+        }
+
+        .footer_mid>div>a>button {
+            background-color: white;
+            transform: rotate(45deg);
+            width: 22px;
+            height: 22px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .footer_mid>div>a>button>p {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+
+        .footer_mid>div>p {
+            color: white;
+            margin-right: 30px;
+            margin-left: 30px;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         body {
@@ -388,33 +551,57 @@
             </section>
         </header>
         <main>
-            <h4>My <span>Skills</span></h4>
-
+            <h2>My <span class="highlight_red">Skills</span></h2>
+            <hr>
             <!-- icons java/sql... -->
             <section>
                 <div>
-                    <img src="assets/resources/images/java.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/java.jpg" alt="java logo">
+                        <figcaption>Java</figcaption>
+                    </figure>
                 </div>
                 <div>
-                    <img src="assets/resources/images/mysql.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/mysql.jpg" alt="java logo">
+                        <figcaption>MySQL</figcaption>
+                    </figure>
                 </div>
                 <div>
-                    <img src="assets/resources/images/mongodb.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/mongodb.jpg" alt="java logo">
+                        <figcaption>MongoDB</figcaption>
+                    </figure>
                 </div>
                 <div>
-                    <img src="assets/resources/images/js.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/js.jpg" alt="java logo">
+                        <figcaption>JavaScript</figcaption>
+                    </figure>
                 </div>
                 <div>
-                    <img src="assets/resources/images/html.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/html.jpg" alt="java logo">
+                        <figcaption>Html</figcaption>
+                    </figure>
                 </div>
                 <div>
-                    <img src="assets/resources/images/css.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/css.jpg" alt="java logo">
+                        <figcaption>CSS</figcaption>
+                    </figure>
                 </div>
                 <div>
-                    <img src="assets/resources/images/figma.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/figma.jpg" alt="java logo">
+                        <figcaption>Figma</figcaption>
+                    </figure>
                 </div>
                 <div>
-                    <img src="assets/resources/images/ps.jpg" alt="" width="50">
+                    <figure>
+                        <img src="assets/resources/images/ps.jpg" alt="java logo">
+                        <figcaption>Photoshop</figcaption>
+                    </figure>
                 </div>
             </section>
 
@@ -422,7 +609,7 @@
             <section>
                 <div>
                     <div>
-                        <img src="assets/resources/images/computer (1).png" alt="computer icon" width="50">
+                        <i class="fa-solid fa-display"></i>
                     </div>
                     <h3>Desktop Application Development</h3>
                     <p>With a mastery of desktop application development, From concept to completion, I deliver
@@ -430,7 +617,7 @@
                 </div>
                 <div>
                     <div>
-                        <img src="assets/resources/images/network.png" alt="network icon" width="50">
+                        <i class="fa-solid fa-earth-americas"></i>
                     </div>
                     <h3>Web Application Development</h3>
                     <p>I create visually stunning, user-friendly, and seamless online experiences. From e-commerce
@@ -439,7 +626,7 @@
                 </div>
                 <div>
                     <div>
-                        <img src="assets/resources/images/pen.png" alt="pen icon" width="50">
+                        <i class="fa-solid fa-pen-nib"></i>
                     </div>
                     <h3>Graphic Designing</h3>
                     <p>As a master of graphic design, I create captivating visuals that leave a lasting impact. From
@@ -449,8 +636,21 @@
             </section>
         </main>
 
-        <footer></footer>
-
+        <footer class="footer_mid">
+            <div>
+                <a href="">
+                    <button>
+                        <p>&#8249;</p>
+                    </button>
+                </a>
+                <p>1</p>
+                <a href="">
+                    <button>
+                        <p>&#8250;</p>
+                    </button>
+                </a>
+            </div>
+        </footer>
     </section>
 
     <!-- My projects -->
@@ -513,8 +713,21 @@
             </section>
         </main>
 
-        <footer></footer>
-
+        <footer class="footer_mid">
+            <div>
+                <a href="">
+                    <button>
+                        <p>&#8249;</p>
+                    </button>
+                </a>
+                <p>1</p>
+                <a href="">
+                    <button>
+                        <p>&#8250;</p>
+                    </button>
+                </a>
+            </div>
+        </footer>
     </section>
 
     <!-- My Assignments -->
@@ -572,8 +785,21 @@
             </div>
         </main>
 
-        <footer></footer>
-
+        <footer class="footer_mid">
+            <div>
+                <a href="">
+                    <button>
+                        <p>&#8249;</p>
+                    </button>
+                </a>
+                <p>1</p>
+                <a href="">
+                    <button>
+                        <p>&#8250;</p>
+                    </button>
+                </a>
+            </div>
+        </footer>
     </section>
 
     <!-- My Educational Qualifications -->
@@ -643,8 +869,21 @@
             </section>
         </main>
 
-        <footer></footer>
-
+        <footer class="footer_mid">
+            <div>
+                <a href="">
+                    <button>
+                        <p>&#8249;</p>
+                    </button>
+                </a>
+                <p>1</p>
+                <a href="">
+                    <button>
+                        <p>&#8250;</p>
+                    </button>
+                </a>
+            </div>
+        </footer>
     </section>
 
     <!-- get in touch -->
@@ -745,8 +984,10 @@
         </main>
 
         <footer>
-            <small>Designed and developed by Duvindu Thathsara<br>
-                Copyright © 2023 - Duvindu Thathsara All Rights Reserved</small>
+            <div>
+                <small>Designed and developed by Duvindu Thathsara<br>
+                    Copyright © 2023 - Duvindu Thathsara All Rights Reserved</small>
+            </div>
         </footer>
     </section>
 
