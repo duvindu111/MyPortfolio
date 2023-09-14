@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS assignment Case 6</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="assets/stylesheets/normalize.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        body>div {
+            width: 180px;
+            height: 50px;
+            background-color: blueviolet;
+            position: relative;
+            display: flex;
+            margin-left: -100px;
+            transition-duration: 1s;
+            transition-property: margin-left;
+            margin-top: 85px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        body>div:hover {
+            margin-left: 0px;
+            transition-duration: 3s;
+            transition-property: margin-left;
+        }
+
+        body>div>p:first-child {
+            padding-left: 20px;
+            color: white;
+        }
+
+        body>div>i {
+            color: white;
+            position: absolute;
+            right: 20px;
+            align-self: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>Button 1</p>
+        <i class="fa-solid fa-house"></i>
+    </div>
+    <div>
+        <p>Button 2</p>
+        <i class="fa-solid fa-user"></i>
+    </div>
+    <div>
+        <p>Button 3</p>
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <div>
+        <p>Button 4</p>
+        <i class="fa-solid fa-cloud"></i>
+    </div>
+    <div>
+        <p>Button 5</p>
+        <i class="fa-solid fa-face-smile"></i>
+    </div>
+
+
+
+
+</body>
+
+</html>
