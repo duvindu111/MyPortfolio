@@ -22,18 +22,26 @@
     <meta name="theme-color" content="red">
     <meta name="robots" content="noindex,nofollow">
     <style>
-        /* header */
-        body>section>header {
-            width: 100%;
+
+        body>div{
+            height: 90px;
         }
 
-        body>section>header>section:first-child {
+        /* header */
+        body>header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 50;
+        }
+
+        body>header>section:first-child {
             height: 40px;
             background-color: #262626;
             position: relative;
         }
 
-        body>section>header>section:first-child>h4 {
+        body>header>section:first-child>h4 {
             color: #858585;
             font-family: 'Nanum Gothic', sans-serif;
             font-weight: 100;
@@ -42,7 +50,7 @@
             margin-left: 20px;
         }
 
-        body>section>header>section:first-child>nav>a>button {
+        body>header>section:first-child>nav>a>button {
             position: absolute;
             color: white;
             background: #EB4A4C;
@@ -55,43 +63,48 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        body>section>header>section:nth-child(2) {
+        body>header>section:nth-child(2) {
             height: 50px;
             background-color: #2f2d2d;
             position: relative;
         }
 
-        body>section>header>section:nth-child(2)>div>img {
+        body>header>section:nth-child(2)>div>img {
             width: 250px;
             margin-left: 15px;
             margin-top: 12px;
             opacity: 80%;
         }
 
-        body>section>header>section:nth-child(2)>nav>menu {
+        body>header>section:nth-child(2)>nav>menu {
             list-style: none;
             margin: 0;
         }
 
-        body>section>header>section:nth-child(2)>nav>menu>li>a {
+        body>header>section:nth-child(2)>nav>menu>li>a {
             text-decoration: none;
             color: white;
         }
 
-        body>section>header>section:nth-child(2)>nav {
+        body>header>section:nth-child(2)>nav {
             position: absolute;
             top: 10px;
             right: 40px;
         }
 
-        body>section>header>section:nth-child(2)>nav>menu>li {
+        body>header>section:nth-child(2)>nav>menu>li {
             display: inline-block;
             padding-right: 20px;
-            color: white;
             font-family: 'Poppins', sans-serif;
         }
 
-        body>section>header>section:nth-child(2)>nav>menu>li:last-of-type {
+        body>header>section:nth-child(2)>nav>menu>li>a:hover {
+            transition-duration: 0.2s;
+            transition-property: color;
+            color: #EB4A4C;
+        }
+
+        body>header>section:nth-child(2)>nav>menu>li:last-of-type {
             padding-right: 4px;
         }
 
@@ -156,12 +169,12 @@
         }
 
         /* about me */
-        body>section:nth-child(2)>main>aside {
+        body>section:nth-child(3)>main>aside {
             width: calc(100% / 2);
             position: relative;
         }
 
-        body>section:nth-child(2)>main>aside>img {
+        body>section:nth-child(3)>main>aside>img {
             position: absolute;
             margin: auto;
             top: 0;
@@ -171,12 +184,13 @@
             height: 80%;
         }
 
-        body>section:nth-child(2)>main>section {
-            width: calc(100% / 2);
+        body>section:nth-child(3)>main>section {
+            /* width: calc(100% / 3); */
+            width: 50%;
             position: relative;
         }
 
-        body>section:nth-child(2)>main>section>hgroup>h1 {
+        body>section:nth-child(3)>main>section>hgroup>h1 {
             position: absolute;
             margin: auto;
             top: 120px;
@@ -184,7 +198,7 @@
             color: white;
         }
 
-        body>section:nth-child(2)>main>section>hgroup>h4 {
+        body>section:nth-child(3)>main>section>hgroup>h4 {
             position: absolute;
             margin: auto;
             top: 170px;
@@ -193,7 +207,7 @@
             font-weight: 100;
         }
 
-        body>section:nth-child(2)>main>section>hr {
+        body>section:nth-child(3)>main>section>hr {
             position: absolute;
             margin: auto;
             top: 200px;
@@ -203,7 +217,7 @@
             width: 60%;
         }
 
-        body>section:nth-child(2)>main>section>article {
+        body>section:nth-child(3)>main>section>article {
             position: absolute;
             margin: auto;
             top: 200px;
@@ -213,7 +227,7 @@
             margin-top: 20px;
         }
 
-        body>section:nth-child(2)>main>section>nav>a>button {
+        body>section:nth-child(3)>main>section>nav>a>button {
             position: absolute;
             color: white;
             background: #EB4A4C;
@@ -227,126 +241,12 @@
             height: 35px;
         }
 
-        body>section:nth-child(2)>main {
+        body>section:nth-child(3)>main {
             display: flex;
             font-family: 'Poppins', sans-serif;
         }
 
         /* skills */
-        body>section:nth-child(3)>main>h2 {
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            position: absolute;
-            left: 150px;
-            top: 30px;
-            margin: 0;
-        }
-
-        body>section:nth-child(3)>main>hr {
-            color: white;
-            width: 80%;
-            position: absolute;
-            margin: auto;
-            top: 65px;
-            left: 0;
-            right: 0;
-            border: 1px solid white;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(3) {
-            display: flex;
-            width: 80%;
-            align-items: center;
-            justify-content: space-around;
-            height: 120px;
-            position: absolute;
-            margin: auto;
-            right: 0;
-            left: 0;
-            top: 90px;
-            border-radius: 10px;
-            background-color: #2f2d2d;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(3)>div>figure>img {
-            border-radius: 10px;
-            width: 60px;
-            border: 2px solid white;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(3)>div>figure>figcaption {
-            color: white;
-            text-align: center;
-            padding-top: 2px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.8em;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(4) {
-            display: flex;
-            width: 80%;
-            position: absolute;
-            margin: auto;
-            right: 0;
-            left: 0;
-            top: 232px;
-            height: 350px;
-            justify-content: space-around;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(4)>div {
-            background-color: #2f2d2d;
-            margin: 10px;
-            width: 350px;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(4)>div>div {
-            position: absolute;
-            margin: auto;
-            right: 0;
-            left: 0;
-            top: 25px;
-            width: max-content;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(4)>div>div>i {
-            font-size: 40px;
-            color: white;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(4)>div>h3 {
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            position: absolute;
-            margin: auto;
-            right: 0;
-            left: 0;
-            width: max-content;
-            top: 90px;
-            text-decoration: underline;
-        }
-
-        body>section:nth-child(3)>main>section:nth-child(4)>div>p {
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            position: absolute;
-            margin: auto;
-            right: 0;
-            left: 0;
-            top: 150px;
-            font-size: 0.8em;
-            font-weight: 100;
-            padding: 0;
-            margin-left: 20px;
-            margin-right: 20px;
-            text-align: center;
-        }
-
-        /* my projects */
         body>section:nth-child(4)>main>h2 {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -371,16 +271,45 @@
         body>section:nth-child(4)>main>section:nth-child(3) {
             display: flex;
             width: 80%;
+            align-items: center;
+            justify-content: space-around;
+            height: 120px;
             position: absolute;
             margin: auto;
             right: 0;
             left: 0;
-            top: 110px;
-            height: 460px;
+            top: 90px;
+            border-radius: 10px;
+            background-color: #2f2d2d;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(3)>div>figure>img {
+            border-radius: 10px;
+            width: 60px;
+            border: 2px solid white;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(3)>div>figure>figcaption {
+            color: white;
+            text-align: center;
+            padding-top: 2px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8em;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(4) {
+            display: flex;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 232px;
+            height: 350px;
             justify-content: space-around;
         }
 
-        body>section:nth-child(4)>main>section:nth-child(3)>div {
+        body>section:nth-child(4)>main>section:nth-child(4)>div {
             background-color: #2f2d2d;
             margin: 10px;
             width: 350px;
@@ -388,34 +317,50 @@
             position: relative;
         }
 
-        body>section:nth-child(4)>main>section:nth-child(3)>div>img {
-            width: 100%;
-            border-radius: 10px 10px 4px 4px;
-            height: 233px;
+        body>section:nth-child(4)>main>section:nth-child(4)>div>div {
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 25px;
+            width: max-content;
         }
 
-        body>section:nth-child(4)>main>section:nth-child(3)>div>h4 {
+        body>section:nth-child(4)>main>section:nth-child(4)>div>div>i {
+            font-size: 40px;
+            color: white;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(4)>div>h3 {
             color: white;
             font-family: 'Poppins', sans-serif;
-            font-weight: 300;
-            margin-left: 20px;
-            margin-top: 10px;
-            margin-bottom: 0;
+            font-weight: 500;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            width: max-content;
+            top: 90px;
             text-decoration: underline;
         }
 
-        body>section:nth-child(4)>main>section:nth-child(3)>div>article {
+        body>section:nth-child(4)>main>section:nth-child(4)>div>p {
             color: white;
             font-family: 'Poppins', sans-serif;
-            font-weight: 100;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 150px;
             font-size: 0.8em;
+            font-weight: 100;
+            padding: 0;
             margin-left: 20px;
             margin-right: 20px;
-            margin-top: 20px;
-            line-height: 25px;
+            text-align: center;
         }
 
-        /* my assignments */
+        /* my projects */
         body>section:nth-child(5)>main>h2 {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -484,7 +429,7 @@
             line-height: 25px;
         }
 
-        /* my educational qualifications */
+        /* my assignments */
         body>section:nth-child(6)>main>h2 {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -532,65 +477,28 @@
             height: 233px;
         }
 
-        body>section:nth-child(6)>main>section:nth-child(3)>div>hgroup>h4 {
+        body>section:nth-child(6)>main>section:nth-child(3)>div>h4 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            margin-top: 20px;
+            margin-left: 20px;
+            margin-top: 10px;
             margin-bottom: 0;
-            text-align: center;
             text-decoration: underline;
-            padding-left: 10px;
-            padding-right: 10px;
         }
 
-        body>section:nth-child(6)>main>section:nth-child(3)>div>hgroup>h6 {
+        body>section:nth-child(6)>main>section:nth-child(3)>div>article {
             color: white;
             font-family: 'Poppins', sans-serif;
-            font-weight: 300;
+            font-weight: 100;
+            font-size: 0.8em;
+            margin-left: 20px;
+            margin-right: 20px;
             margin-top: 20px;
-            margin-bottom: 0;
-            text-align: center;
-            padding-left: 10px;
-            padding-right: 10px;
+            line-height: 25px;
         }
 
-        body>section:nth-child(6)>main>section:nth-child(3)>div>div {
-            position: absolute;
-            margin: auto;
-            left: 0;
-            right: 0;
-            bottom: 0px;
-            background-color: white;
-            text-align: center;
-            height: 80px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        /* body>section:nth-child(6)>main>section:nth-child(3)>div>div>a>img */
-        /* mcg logo */
-        .edu_mcg {
-            width: 60px;
-            position: absolute;
-            margin: auto;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-        }
-
-        /* ijse logo */
-        body>section:nth-child(6)>main>section:nth-child(3)>div:nth-child(3)>div>a>img {
-            width: 160px;
-            position: absolute;
-            margin: auto;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-        }
-
-        /* contact */
+        /* my educational qualifications */
         body>section:nth-child(7)>main>h2 {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -612,7 +520,113 @@
             border: 1px solid white;
         }
 
-        body>section:nth-child(7)>main>address {
+        body>section:nth-child(7)>main>section:nth-child(3) {
+            display: flex;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            top: 110px;
+            height: 460px;
+            justify-content: space-around;
+        }
+
+        body>section:nth-child(7)>main>section:nth-child(3)>div {
+            background-color: #2f2d2d;
+            margin: 10px;
+            width: 350px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        body>section:nth-child(7)>main>section:nth-child(3)>div>img {
+            width: 100%;
+            border-radius: 10px 10px 4px 4px;
+            height: 233px;
+        }
+
+        body>section:nth-child(7)>main>section:nth-child(3)>div>hgroup>h4 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            margin-top: 20px;
+            margin-bottom: 0;
+            text-align: center;
+            text-decoration: underline;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        body>section:nth-child(7)>main>section:nth-child(3)>div>hgroup>h6 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            margin-top: 20px;
+            margin-bottom: 0;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        body>section:nth-child(7)>main>section:nth-child(3)>div>div {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            background-color: white;
+            text-align: center;
+            height: 80px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* body>section:nth-child(7)>main>section:nth-child(3)>div>div>a>img */
+        /* mcg logo */
+        .edu_mcg {
+            width: 60px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        /* ijse logo */
+        body>section:nth-child(7)>main>section:nth-child(3)>div:nth-child(3)>div>a>img {
+            width: 160px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        /* contact */
+        body>section:nth-child(8)>main>h2 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            position: absolute;
+            left: 150px;
+            top: 30px;
+            margin: 0;
+        }
+
+        body>section:nth-child(8)>main>hr {
+            color: white;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            top: 65px;
+            left: 0;
+            right: 0;
+            border: 1px solid white;
+        }
+
+        body>section:nth-child(8)>main>address {
             position: absolute;
             width: 40%;
             left: 10%;
@@ -621,7 +635,7 @@
             flex-direction: column;
         }
 
-        body>section:nth-child(7)>main>address>div {
+        body>section:nth-child(8)>main>address>div {
             background-color: #2f2d2d;
             width: 85%;
             margin-bottom: 15px;
@@ -631,7 +645,7 @@
             height: 50px;
         }
 
-        body>section:nth-child(7)>main>address>div>i {
+        body>section:nth-child(8)>main>address>div>i {
             color: white;
             font-size: 30px;
             position: absolute;
@@ -639,21 +653,21 @@
             left: 20px;
         }
 
-        body>section:nth-child(7)>main>address>div>p {
+        body>section:nth-child(8)>main>address>div>p {
             color: white;
             font-family: 'Poppins', sans-serif;
             margin: auto;
             font-style: normal;
         }
 
-        body>section:nth-child(7)>main>aside {
+        body>section:nth-child(8)>main>aside {
             position: absolute;
             width: 40%;
             left: 50%;
             top: 100px;
         }
 
-        body>section:nth-child(7)>main>aside>fieldset>form {
+        body>section:nth-child(8)>main>aside>fieldset>form {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(4, 1fr);
@@ -661,18 +675,19 @@
             column-gap: 20px;
             margin: 0;
             padding: 0;
+            position: relative;
         }
 
-        body>section:nth-child(7)>main>aside>fieldset {
+        body>section:nth-child(8)>main>aside>fieldset {
             padding: 0;
             border: none;
         }
 
-        body>section:nth-child(7)>main>aside>fieldset>form>div {
+        body>section:nth-child(8)>main>aside>fieldset>form>div {
             height: 50px;
         }
 
-        body>section:nth-child(7)>main>aside>fieldset>form>div>input {
+        body>section:nth-child(8)>main>aside>fieldset>form>div>input {
             height: 100%;
             width: 100%;
             border-radius: 5px;
@@ -684,19 +699,19 @@
             color: white;
         }
 
-        body>section:nth-child(7)>main>aside>fieldset>form>input {
-            height: 100%;
-            width: 100%;
+        body>section:nth-child(8)>main>aside>fieldset>form>input {
+            height: 15%;
+            width: 40%;
             border-radius: 30px;
             border: none;
-            color: white;
-            background: #EB4A4C;
             font-size: 0.9em;
             font-family: 'Poppins', sans-serif;
             padding-left: 10px;
+            position: absolute;
+            bottom: 0;
         }
 
-        body>section:nth-child(7)>main>aside>fieldset>form>div>textarea {
+        body>section:nth-child(8)>main>aside>fieldset>form>div>textarea {
             width: 100%;
             height: 200%;
             border-radius: 5px;
@@ -707,12 +722,12 @@
             color: white;
         }
 
-        body>section:nth-child(7)>main>aside>fieldset>form>div:nth-child(3) {
+        body>section:nth-child(8)>main>aside>fieldset>form>div:nth-child(3) {
             grid-column: 1/3;
             grid-row: 2/4;
         }
 
-        body>section:nth-child(7)>main>section:nth-child(5) {
+        body>section:nth-child(8)>main>section:nth-child(5) {
             width: 80%;
             background-color: #2f2d2d;
             position: absolute;
@@ -724,7 +739,7 @@
             height: 100px;
         }
 
-        body>section:nth-child(7)>main>section:nth-child(5)>p {
+        body>section:nth-child(8)>main>section:nth-child(5)>p {
             color: white;
             font-family: 'Poppins', sans-serif;
             position: absolute;
@@ -735,11 +750,11 @@
             height: max-content;
         }
 
-        body>section:nth-child(7)>main>section:nth-child(5)>p a {
+        body>section:nth-child(8)>main>section:nth-child(5)>p a {
             color: white;
         }
 
-        body>section:nth-child(7)>main>section:nth-child(6) {
+        body>section:nth-child(8)>main>section:nth-child(6) {
             width: 80%;
             position: absolute;
             margin: auto;
@@ -748,24 +763,24 @@
             top: 500px;
         }
 
-        body>section:nth-child(7)>main>section:nth-child(6)>section {
+        body>section:nth-child(8)>main>section:nth-child(6)>section {
             display: flex;
             margin-top: 10px;
         }
 
-        body>section:nth-child(7)>main>section:nth-child(6)>p {
+        body>section:nth-child(8)>main>section:nth-child(6)>p {
             color: white;
             font-family: 'Poppins', sans-serif;
             margin: 0;
         }
 
-        body>section:nth-child(7)>main>section:nth-child(6)>section>div i {
+        body>section:nth-child(8)>main>section:nth-child(6)>section>div i {
             color: white;
             font-size: 30px;
             margin-right: 10px;
         }
 
-        body>section:nth-child(7)>footer {
+        body>section:nth-child(8)>footer {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
@@ -853,33 +868,36 @@
 
 <body>
 
+    <!-- header -->
+    <header>
+        <section>
+            <h4>Full Stack Developer</h4>
+            <nav>
+                <a href="">
+                    <button>Hire Me</button>
+                </a>
+            </nav>
+        </section>
+        <section>
+            <div>
+                <img src="assets/resources/images/logo.png" alt="personal logo">
+            </div>
+            <nav>
+                <menu>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about_me">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#my_projects">My Works</a></li>
+                    <li><a href="#my_edu_quali">Education</a></li>
+                    <li><a href="#get_in_touch">Contact</a></li>
+                </menu>
+            </nav>
+        </section>
+    </header>
+
     <!-- home -->
     <Section id="home" class="page_sec">
-        <header>
-            <section>
-                <h4>Full Stack Developer</h4>
-                <nav>
-                    <a href="">
-                        <button>Hire Me</button>
-                    </a>
-                </nav>
-            </section>
-            <section>
-                <div>
-                    <img src="assets/resources/images/logo.png" alt="personal logo">
-                </div>
-                <nav>
-                    <menu>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about_me">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my_projects">My Works</a></li>
-                        <li><a href="#my_edu_quali">Education</a></li>
-                        <li><a href="#get_in_touch">Contact</a></li>
-                    </menu>
-                </nav>
-            </section>
-        </header>
+        <div></div>
         <main>
             <hgroup>
                 <h1><span class="highlight_red">DUVINDU</span> THATHSARA</h1>
@@ -893,7 +911,7 @@
                 </p>
             </article>
             <nav>
-                <a href="">
+                <a href="#get_in_touch">
                     <button>Get In Touch</button>
                 </a>
             </nav>
@@ -902,31 +920,7 @@
 
     <!-- about me -->
     <section id="about_me" class="page_sec">
-        <header>
-            <section>
-                <h4>Full Stack Developer</h4>
-                <nav>
-                    <a href="">
-                        <button>Hire Me</button>
-                    </a>
-                </nav>
-            </section>
-            <section>
-                <div>
-                    <img src="assets/resources/images/logo.png" alt="personal logo">
-                </div>
-                <nav>
-                    <menu>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about_me">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my_projects">My Works</a></li>
-                        <li><a href="#my_edu_quali">Education</a></li>
-                        <li><a href="#get_in_touch">Contact</a></li>
-                    </menu>
-                </nav>
-            </section>
-        </header>
+        <div></div>
         <main>
             <aside>
                 <img src="assets/resources/images/my_photo.png" alt="">
@@ -947,7 +941,7 @@
                     </p>
                 </article>
                 <nav>
-                    <a href="assets/cv.txt" download="cv">
+                    <a href="assets/resources/docs/cv.txt" download="cv" target="_blank">
                         <button>Download CV</button>
                     </a>
                 </nav>
@@ -959,31 +953,7 @@
 
     <!-- skills -->
     <section id="skills" class="page_sec">
-        <header>
-            <section>
-                <h4>Full Stack Developer</h4>
-                <nav>
-                    <a href="">
-                        <button>Hire Me</button>
-                    </a>
-                </nav>
-            </section>
-            <section>
-                <div>
-                    <img src="assets/resources/images/logo.png" alt="personal logo">
-                </div>
-                <nav>
-                    <menu>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about_me">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my_projects">My Works</a></li>
-                        <li><a href="#my_edu_quali">Education</a></li>
-                        <li><a href="#get_in_touch">Contact</a></li>
-                    </menu>
-                </nav>
-            </section>
-        </header>
+        <div></div>
         <main>
             <h2>My <span class="highlight_red">Skills</span></h2>
             <hr>
@@ -1089,31 +1059,7 @@
 
     <!-- My projects -->
     <section id="my_projects" class="page_sec">
-        <header>
-            <section>
-                <h4>Full Stack Developer</h4>
-                <nav>
-                    <a href="">
-                        <button>Hire Me</button>
-                    </a>
-                </nav>
-            </section>
-            <section>
-                <div>
-                    <img src="assets/resources/images/logo.png" alt="personal logo">
-                </div>
-                <nav>
-                    <menu>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about_me">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my_projects">My Works</a></li>
-                        <li><a href="#my_edu_quali">Education</a></li>
-                        <li><a href="#get_in_touch">Contact</a></li>
-                    </menu>
-                </nav>
-            </section>
-        </header>
+        <div></div>
         <main>
             <h2>My <span class="highlight_red">Projects</span></h2>
             <hr>
@@ -1166,31 +1112,7 @@
 
     <!-- My Assignments -->
     <section id="my_assignments" class="page_sec">
-        <header>
-            <section>
-                <h4>Full Stack Developer</h4>
-                <nav>
-                    <a href="">
-                        <button>Hire Me</button>
-                    </a>
-                </nav>
-            </section>
-            <section>
-                <div>
-                    <img src="assets/resources/images/logo.png" alt="personal logo">
-                </div>
-                <nav>
-                    <menu>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about_me">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my_projects">My Works</a></li>
-                        <li><a href="#my_edu_quali">Education</a></li>
-                        <li><a href="#get_in_touch">Contact</a></li>
-                    </menu>
-                </nav>
-            </section>
-        </header>
+        <div></div>
         <main>
             <h2>My <span class="highlight_red">Assignments</span></h2>
             <hr>
@@ -1242,31 +1164,7 @@
 
     <!-- My Educational Qualifications -->
     <section id="my_edu_quali" class="page_sec">
-        <header>
-            <section>
-                <h4>Full Stack Developer</h4>
-                <nav>
-                    <a href="">
-                        <button>Hire Me</button>
-                    </a>
-                </nav>
-            </section>
-            <section>
-                <div>
-                    <img src="assets/resources/images/logo.png" alt="personal logo">
-                </div>
-                <nav>
-                    <menu>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about_me">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my_projects">My Works</a></li>
-                        <li><a href="#my_edu_quali">Education</a></li>
-                        <li><a href="#get_in_touch">Contact</a></li>
-                    </menu>
-                </nav>
-            </section>
-        </header>
+        <div></div>
         <main>
             <h2>My <span class="highlight_red">Educational Qualifications</span></h2>
             <hr>
@@ -1332,31 +1230,7 @@
 
     <!-- get in touch -->
     <section id="get_in_touch" class="page_sec">
-        <header>
-            <section>
-                <h4>Full Stack Developer</h4>
-                <nav>
-                    <a href="">
-                        <button>Hire Me</button>
-                    </a>
-                </nav>
-            </section>
-            <section>
-                <div>
-                    <img src="assets/resources/images/logo.png" alt="personal logo">
-                </div>
-                <nav>
-                    <menu>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about_me">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my_projects">My Works</a></li>
-                        <li><a href="#my_edu_quali">Education</a></li>
-                        <li><a href="#get_in_touch">Contact</a></li>
-                    </menu>
-                </nav>
-            </section>
-        </header>
+        <div></div>
         <main>
             <h2>Get In <span class="highlight_red">Touch</span></h2>
             <hr>
@@ -1448,7 +1322,5 @@
         </footer>
     </section>
 
-    <!--  -->
 </body>
-
 </html>
