@@ -63,16 +63,25 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        body>header>section:first-child>nav>a>button:hover {
+            color: black;
+            background: white;
+            border:3px solid #858585;
+        }
+
         body>header>section:nth-child(2) {
             height: 50px;
             background-color: #2f2d2d;
             position: relative;
         }
 
-        body>header>section:nth-child(2)>div>img {
-            width: 250px;
-            margin-left: 15px;
-            margin-top: 12px;
+        body>header>section:nth-child(2)>h3 {
+            color: #858585;
+            margin-top: 0;
+            padding-top: 10px;
+            margin-left: 18px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 100;
             opacity: 80%;
         }
 
@@ -113,25 +122,36 @@
             color: #EB4A4C;
         }
 
-        #home>main>hgroup>h1 {
+        #home>main>section {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 50%;
+            text-align: center;
+        }
+
+        #home>main>section>hgroup>h1 {
             position: absolute;
             margin: auto;
             left: 0;
             right: 0;
-            top: 180px;
-            width: max-content;
+            top: 30%;
+            text-align: center;
             font-size: 4em;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             color: white;
         }
 
-        #home>main>hgroup>h4 {
+        #home>main>section>hgroup>h4 {
             position: absolute;
             margin: auto;
             left: 0;
             right: 0;
-            top: 280px;
+            top: 44%;
             width: max-content;
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
@@ -139,24 +159,24 @@
             color: white;
         }
 
-        #home>main>article>p {
+        #home>main>section>article>p {
             position: absolute;
             margin: auto;
             left: 0;
             right: 0;
-            top: 340px;
-            width: max-content;
+            top: 52%;
+            text-align: center;
             font-family: 'Poppins', sans-serif;
             color: white;
             text-align: center;
         }
 
-        #home>main>nav>a>button {
+        #home>main>section>nav>a>button {
             position: absolute;
             margin: auto;
             left: 0;
             right: 0;
-            top: 440px;
+            top: 67%;
             color: white;
             background: #EB4A4C;
             border: none;
@@ -168,20 +188,26 @@
             width: 160px;
         }
 
+        #home>main>section>nav>a>button:hover {
+            color: black;
+            background: white;
+            border:3px solid #858585;
+        }
+
         /* about me */
         body>section:nth-child(3)>main>aside {
-            width: calc(100% / 2);
+            width: 50%;
             position: relative;
         }
 
         body>section:nth-child(3)>main>aside>img {
             position: absolute;
             margin: auto;
-            top: 0;
+            top: 10%;
             bottom: 0;
-            left: 160px;
+            left: 22%;
             right: 0;
-            height: 80%;
+            width: 50%;
         }
 
         body>section:nth-child(3)>main>section {
@@ -193,16 +219,16 @@
         body>section:nth-child(3)>main>section>hgroup>h1 {
             position: absolute;
             margin: auto;
-            top: 120px;
-            left: 20px;
+            top: 29%;
+            left: 3%;
             color: white;
         }
 
         body>section:nth-child(3)>main>section>hgroup>h4 {
             position: absolute;
             margin: auto;
-            top: 170px;
-            left: 20px;
+            top: 35%;
+            left: 3%;
             color: white;
             font-weight: 100;
         }
@@ -210,8 +236,8 @@
         body>section:nth-child(3)>main>section>hr {
             position: absolute;
             margin: auto;
-            top: 200px;
-            left: 20px;
+            top: 39%;
+            left: 3%;
             color: white;
             border: 1px solid white;
             width: 60%;
@@ -220,11 +246,13 @@
         body>section:nth-child(3)>main>section>article {
             position: absolute;
             margin: auto;
-            top: 200px;
-            left: 20px;
-            padding-right: 220px;
+            top: 38%;
+            left: 3%;
+            /* padding-right: 40%; */
+            width: 60%;
             color: white;
             margin-top: 20px;
+            line-height: 150%;
         }
 
         body>section:nth-child(3)>main>section>nav>a>button {
@@ -232,13 +260,19 @@
             color: white;
             background: #EB4A4C;
             border: none;
-            top: 440px;
-            left: 20px;
+            top: 74%;
+            left: 3%;
             border-radius: 10px;
             font-size: 12px;
             padding: 4px 40px;
             font-family: 'Poppins', sans-serif;
             height: 35px;
+        }
+
+        body>section:nth-child(3)>main>section>nav>a>button:hover {
+            color: black;
+            background: white;
+            border:3px solid #858585;
         }
 
         body>section:nth-child(3)>main {
@@ -253,7 +287,7 @@
             font-weight: 500;
             position: absolute;
             left: 150px;
-            top: 30px;
+            top: 15.5%;
             margin: 0;
         }
 
@@ -262,7 +296,7 @@
             width: 80%;
             position: absolute;
             margin: auto;
-            top: 65px;
+            top: 20%;
             left: 0;
             right: 0;
             border: 1px solid white;
@@ -273,20 +307,33 @@
             width: 80%;
             align-items: center;
             justify-content: space-around;
-            height: 120px;
+            height: 16%;
             position: absolute;
             margin: auto;
             right: 0;
             left: 0;
-            top: 90px;
+            top: 24%;
             border-radius: 10px;
             background-color: #2f2d2d;
         }
 
+        body>section:nth-child(4)>main>section:nth-child(3)>div {
+            width: 5%;
+        }
+
         body>section:nth-child(4)>main>section:nth-child(3)>div>figure>img {
             border-radius: 10px;
-            width: 60px;
+            width: 100%;
             border: 2px solid white;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(3)>div>figure:hover img {
+            border: 5px solid white;
+            width: 110%;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(3)>div>figure:hover figcaption{
+            font-size: 1em;
         }
 
         body>section:nth-child(4)>main>section:nth-child(3)>div>figure>figcaption {
@@ -304,8 +351,8 @@
             margin: auto;
             right: 0;
             left: 0;
-            top: 232px;
-            height: 350px;
+            top: 42%;
+            height: 46%;
             justify-content: space-around;
         }
 
@@ -315,6 +362,10 @@
             width: 350px;
             border-radius: 10px;
             position: relative;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(4)>div:hover h3{
+            color: #EB4A4C;  
         }
 
         body>section:nth-child(4)>main>section:nth-child(4)>div>div {
@@ -331,6 +382,13 @@
             color: white;
         }
 
+        body>section:nth-child(4)>main>section:nth-child(4)>div>div>i:hover {
+            transform:rotate(360deg);
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: transform, color;
+        }
+
         body>section:nth-child(4)>main>section:nth-child(4)>div>h3 {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -339,9 +397,13 @@
             margin: auto;
             right: 0;
             left: 0;
-            width: max-content;
-            top: 90px;
+            text-align: center;
+            top: 28%;
             text-decoration: underline;
+        }
+
+        body>section:nth-child(4)>main>section:nth-child(4)>div>h3:hover {
+            color: #EB4A4C;
         }
 
         body>section:nth-child(4)>main>section:nth-child(4)>div>p {
@@ -360,14 +422,22 @@
             text-align: center;
         }
 
+        body>section:nth-child(4)>footer{
+            top: 90%;
+        }
+
         /* my projects */
+        body>section:nth-child(5)>footer{
+            top: 86%;
+        }
+
         body>section:nth-child(5)>main>h2 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
             position: absolute;
-            left: 150px;
-            top: 30px;
+            left: 10%;
+            top: 15.5%;
             margin: 0;
         }
 
@@ -376,7 +446,7 @@
             width: 80%;
             position: absolute;
             margin: auto;
-            top: 65px;
+            top: 20%;
             left: 0;
             right: 0;
             border: 1px solid white;
@@ -389,31 +459,36 @@
             margin: auto;
             right: 0;
             left: 0;
-            top: 110px;
-            height: 460px;
+            top: 24%;
+            height: 60%;
             justify-content: space-around;
         }
 
         body>section:nth-child(5)>main>section:nth-child(3)>div {
             background-color: #2f2d2d;
-            margin: 10px;
-            width: 350px;
+            margin: 1%;
+            width: 28%;
             border-radius: 10px;
             position: relative;
+            border: 5px solid hsla(0, 0%, 49%, 0.5);
+        }
+
+        body>section:nth-child(5)>main>section:nth-child(3)>div:hover h4 {
+            color: #EB4A4C;
         }
 
         body>section:nth-child(5)>main>section:nth-child(3)>div>img {
             width: 100%;
             border-radius: 10px 10px 4px 4px;
-            height: 233px;
+            height: 50%;
         }
 
         body>section:nth-child(5)>main>section:nth-child(3)>div>h4 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            margin-left: 20px;
-            margin-top: 10px;
+            margin-left: 6%;
+            margin-top: 4%;
             margin-bottom: 0;
             text-decoration: underline;
         }
@@ -423,20 +498,24 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
             font-size: 0.8em;
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-top: 20px;
+            margin-left: 6%;
+            margin-right: 6%;
+            margin-top: 6%;
             line-height: 25px;
         }
 
         /* my assignments */
+        body>section:nth-child(6)>footer{
+            top: 86%;
+        }
+
         body>section:nth-child(6)>main>h2 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
             position: absolute;
-            left: 150px;
-            top: 30px;
+            left: 10%;
+            top: 15.5%;
             margin: 0;
         }
 
@@ -445,7 +524,7 @@
             width: 80%;
             position: absolute;
             margin: auto;
-            top: 65px;
+            top: 20%;
             left: 0;
             right: 0;
             border: 1px solid white;
@@ -458,15 +537,15 @@
             margin: auto;
             right: 0;
             left: 0;
-            top: 110px;
-            height: 460px;
+            top: 24%;
+            height: 60%;
             justify-content: space-around;
         }
 
         body>section:nth-child(6)>main>section:nth-child(3)>div {
             background-color: #2f2d2d;
-            margin: 10px;
-            width: 350px;
+            margin: 1%;
+            width: 28%;
             border-radius: 10px;
             position: relative;
         }
@@ -474,15 +553,16 @@
         body>section:nth-child(6)>main>section:nth-child(3)>div>img {
             width: 100%;
             border-radius: 10px 10px 4px 4px;
-            height: 233px;
+            height: 50%;
         }
 
         body>section:nth-child(6)>main>section:nth-child(3)>div>h4 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            margin-left: 20px;
-            margin-top: 10px;
+            margin-left: 6%;
+            margin-right: 6%;
+            margin-top: 4%;
             margin-bottom: 0;
             text-decoration: underline;
         }
@@ -492,20 +572,24 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
             font-size: 0.8em;
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-top: 20px;
+            margin-left: 6%;
+            margin-right: 6%;
+            margin-top: 6%;
             line-height: 25px;
         }
 
         /* my educational qualifications */
+        body>section:nth-child(7)>footer{
+            top: 86%;
+        }
+
         body>section:nth-child(7)>main>h2 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
             position: absolute;
-            left: 150px;
-            top: 30px;
+            left: 10%;
+            top: 15.5%;
             margin: 0;
         }
 
@@ -514,7 +598,7 @@
             width: 80%;
             position: absolute;
             margin: auto;
-            top: 65px;
+            top: 20%;
             left: 0;
             right: 0;
             border: 1px solid white;
@@ -527,46 +611,47 @@
             margin: auto;
             right: 0;
             left: 0;
-            top: 110px;
-            height: 460px;
+            top: 24%;
+            height: 60%;
             justify-content: space-around;
         }
 
         body>section:nth-child(7)>main>section:nth-child(3)>div {
             background-color: #2f2d2d;
-            margin: 10px;
-            width: 350px;
+            margin: 1%;
+            width: 28%;
             border-radius: 10px;
             position: relative;
+            border: 5px solid rgb(118, 108, 108);
         }
 
         body>section:nth-child(7)>main>section:nth-child(3)>div>img {
             width: 100%;
             border-radius: 10px 10px 4px 4px;
-            height: 233px;
+            height: 50%;
         }
 
         body>section:nth-child(7)>main>section:nth-child(3)>div>hgroup>h4 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            margin-top: 20px;
+            margin-top: 5%;
             margin-bottom: 0;
             text-align: center;
             text-decoration: underline;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 4%;
+            padding-right: 4%;
         }
 
         body>section:nth-child(7)>main>section:nth-child(3)>div>hgroup>h6 {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            margin-top: 20px;
+            margin-top: 5%;
             margin-bottom: 0;
             text-align: center;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 4%;
+            padding-right: 4%;
         }
 
         body>section:nth-child(7)>main>section:nth-child(3)>div>div {
@@ -577,14 +662,14 @@
             bottom: 0px;
             background-color: white;
             text-align: center;
-            height: 80px;
+            height: 19%;
             border-radius: 0 0 10px 10px;
         }
 
         /* body>section:nth-child(7)>main>section:nth-child(3)>div>div>a>img */
         /* mcg logo */
         .edu_mcg {
-            width: 60px;
+            width: 18%;
             position: absolute;
             margin: auto;
             left: 0;
@@ -593,15 +678,24 @@
             top: 0;
         }
 
+        .edu_mcg:hover {
+            width: 21%;
+        }
+
         /* ijse logo */
         body>section:nth-child(7)>main>section:nth-child(3)>div:nth-child(3)>div>a>img {
-            width: 160px;
+            width: 48%;
             position: absolute;
             margin: auto;
             left: 0;
             right: 0;
             bottom: 0;
             top: 0;
+        }
+
+        body>section:nth-child(7)>main>section:nth-child(3)>div:nth-child(3)>div>a>img:hover {
+            width: 52%;
+
         }
 
         /* contact */
@@ -610,8 +704,8 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
             position: absolute;
-            left: 150px;
-            top: 30px;
+            left: 10%;
+            top: 15.5%;
             margin: 0;
         }
 
@@ -620,7 +714,7 @@
             width: 80%;
             position: absolute;
             margin: auto;
-            top: 65px;
+            top: 20%;
             left: 0;
             right: 0;
             border: 1px solid white;
@@ -630,27 +724,32 @@
             position: absolute;
             width: 40%;
             left: 10%;
-            top: 100px;
+            top: 26%;
             display: flex;
             flex-direction: column;
+            height: 35%;
         }
 
         body>section:nth-child(8)>main>address>div {
             background-color: #2f2d2d;
             width: 85%;
-            margin-bottom: 15px;
+            margin-bottom: 2.4%;
             border-radius: 5px;
             display: flex;
             position: relative;
-            height: 50px;
+            height: 20%;
+        }
+
+        body>section:nth-child(8)>main>address>div:hover i {
+            color: #EB4A4C;
         }
 
         body>section:nth-child(8)>main>address>div>i {
             color: white;
-            font-size: 30px;
+            font-size: 1.8em;
             position: absolute;
             align-self: center;
-            left: 20px;
+            left: 4%;
         }
 
         body>section:nth-child(8)>main>address>div>p {
@@ -664,15 +763,16 @@
             position: absolute;
             width: 40%;
             left: 50%;
-            top: 100px;
+            top: 26%;
+            height: 35%;
         }
 
         body>section:nth-child(8)>main>aside>fieldset>form {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(4, 1fr);
-            row-gap: 15px;
-            column-gap: 20px;
+            row-gap: 7%;
+            column-gap: 4%;
             margin: 0;
             padding: 0;
             position: relative;
@@ -684,7 +784,7 @@
         }
 
         body>section:nth-child(8)>main>aside>fieldset>form>div {
-            height: 50px;
+            height: 100%;
         }
 
         body>section:nth-child(8)>main>aside>fieldset>form>div>input {
@@ -694,7 +794,7 @@
             border: none;
             font-family: 'Poppins', sans-serif;
             padding: 0;
-            padding-left: 10px;
+            padding-left: 4%;
             background-color: #2f2d2d;
             color: white;
         }
@@ -706,18 +806,22 @@
             border: none;
             font-size: 0.9em;
             font-family: 'Poppins', sans-serif;
-            padding-left: 10px;
             position: absolute;
             bottom: 0;
         }
 
+        body>section:nth-child(8)>main>aside>fieldset>form>input:hover {
+            background-color: #EB4A4C;
+            color: white;
+        }
+
         body>section:nth-child(8)>main>aside>fieldset>form>div>textarea {
             width: 100%;
-            height: 200%;
+            height: 100%;
             border-radius: 5px;
             border: none;
             font-family: 'Poppins', sans-serif;
-            padding-left: 10px;
+            padding-left: 2%;
             background-color: #2f2d2d;
             color: white;
         }
@@ -735,8 +839,8 @@
             border-radius: 10px;
             left: 0;
             right: 0;
-            top: 380px;
-            height: 100px;
+            top: 63%;
+            height: 14%;
         }
 
         body>section:nth-child(8)>main>section:nth-child(5)>p {
@@ -746,12 +850,16 @@
             margin: auto;
             top: 0;
             bottom: 0;
-            left: 20px;
+            left: 1.8%;
             height: max-content;
         }
 
         body>section:nth-child(8)>main>section:nth-child(5)>p a {
             color: white;
+        }
+
+        body>section:nth-child(8)>main>section:nth-child(5)>p a:hover {
+            color: rgb(54, 138, 255);
         }
 
         body>section:nth-child(8)>main>section:nth-child(6) {
@@ -760,12 +868,12 @@
             margin: auto;
             left: 0;
             right: 0;
-            top: 500px;
+            top: 80%;
         }
 
         body>section:nth-child(8)>main>section:nth-child(6)>section {
             display: flex;
-            margin-top: 10px;
+            margin-top: 0.9%;
         }
 
         body>section:nth-child(8)>main>section:nth-child(6)>p {
@@ -776,8 +884,12 @@
 
         body>section:nth-child(8)>main>section:nth-child(6)>section>div i {
             color: white;
-            font-size: 30px;
+            font-size: 2em;
             margin-right: 10px;
+        }
+
+        body>section:nth-child(8)>main>section:nth-child(6)>section>div i:hover {
+            color: #EB4A4C;
         }
 
         body>section:nth-child(8)>footer {
@@ -802,8 +914,7 @@
             /* background-color: burlywood; */
             position: absolute;
             width: 100%;
-            top: 90px;
-            bottom: 0;
+            height: 100%;
             margin: auto;
             box-sizing: border-box;
         }
@@ -815,12 +926,15 @@
 
         .footer_mid {
             position: absolute;
-            width: 100%;
-            bottom: 0;
+            width: 80%;
+            /* bottom: 0; */
             margin: auto;
-            background-color: #262626;
-            height: 50px;
+            left: 0;
+            right: 0;
+            background-color: #2f2d2d;
+            height: 7%;
             text-align: center;
+            border-radius: 10px;
         }
 
         body>section>footer>div {
@@ -830,6 +944,7 @@
             align-items: center;
             position: relative;
             height: 100%;
+            justify-content: center;
         }
 
         .footer_mid>div>a>button {
@@ -839,7 +954,12 @@
             height: 22px;
             border: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 1em;
+        }
+
+        .footer_mid>div>a>button:hover {
+            background-color: #EB4A4C;
+            color: white;
         }
 
         .footer_mid>div>a>button>p {
@@ -854,14 +974,19 @@
 
         .footer_mid>div>p {
             color: white;
-            margin-right: 30px;
-            margin-left: 30px;
+            margin-right: 60%;
+            margin-left: 60%;
             margin-top: 0;
             margin-bottom: 0;
         }
 
         body {
-            overflow: hidden;
+            /* overflow: hidden; */
+            /* overflow-y: hidden; */
+        }
+
+        *{
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -879,9 +1004,7 @@
             </nav>
         </section>
         <section>
-            <div>
-                <img src="assets/resources/images/logo.png" alt="personal logo">
-            </div>
+            <h3>DUVINDU THATHSARA</h3>
             <nav>
                 <menu>
                     <li><a href="#home">Home</a></li>
@@ -897,33 +1020,33 @@
 
     <!-- home -->
     <Section id="home" class="page_sec">
-        <div></div>
         <main>
-            <hgroup>
-                <h1><span class="highlight_red">DUVINDU</span> THATHSARA</h1>
-                <h4>Full Stack Developer</h4>
-            </hgroup>
-            <article>
-                <p>
-                    Join me on this virtual journey<br>
-                    where I share my passion for crafting elegant code and unleashing the power of technology<br>
-                    to shape the world around us.
-                </p>
-            </article>
-            <nav>
-                <a href="#get_in_touch">
-                    <button>Get In Touch</button>
-                </a>
-            </nav>
+            <section>
+                <hgroup>
+                    <h1><span class="highlight_red">DUVINDU</span> THATHSARA</h1>
+                    <h4>Full Stack Developer</h4>
+                </hgroup>
+                <article>
+                    <p>
+                        Join me on this virtual journey<br>
+                        where I share my passion for crafting elegant code and unleashing the power of technology<br>
+                        to shape the world around us.
+                    </p>
+                </article>
+                <nav>
+                    <a href="#get_in_touch">
+                        <button>Get In Touch</button>
+                    </a>
+                </nav>
+            </section>
         </main>
     </Section>
 
     <!-- about me -->
     <section id="about_me" class="page_sec">
-        <div></div>
         <main>
             <aside>
-                <img src="assets/resources/images/my_photo.png" alt="">
+                <img src="assets/resources/images/my_photo2.png" alt="">
             </aside>
             <section>
                 <hgroup>
@@ -953,7 +1076,6 @@
 
     <!-- skills -->
     <section id="skills" class="page_sec">
-        <div></div>
         <main>
             <h2>My <span class="highlight_red">Skills</span></h2>
             <hr>
