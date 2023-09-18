@@ -209,13 +209,18 @@
         #about_me>section>section {
             /* width: calc(100% / 3); */
             width: 50%;
-            position: relative;
+            position: absolute;
+            margin: auto;
+            bottom: 0;
+            right: 0;
+            height: 400px;
+            top: 10%;
         }
 
         #about_me>section>section>hgroup>h1 {
             position: absolute;
             margin: auto;
-            top: 28%;
+            top: 0;
             left: 3%;
             font-size: 2.2vw;
             color: white;
@@ -224,7 +229,7 @@
         #about_me>section>section>hgroup>h4 {
             position: absolute;
             margin: auto;
-            top: 35%;
+            top: 13%;
             left: 3%;
             font-size: 1.2vw;
             color: white;
@@ -234,7 +239,7 @@
         #about_me>section>section>hr {
             position: absolute;
             margin: auto;
-            top: 40%;
+            top: 24%;
             left: 3%;
             color: white;
             border: 1px solid white;
@@ -244,7 +249,7 @@
         #about_me>section>section>article {
             position: absolute;
             margin: auto;
-            top: 38%;
+            top: 23%;
             left: 3%;
             /* padding-right: 40%; */
             width: 60%;
@@ -259,7 +264,7 @@
             color: white;
             background: #EB4A4C;
             border: none;
-            top: 74%;
+            bottom: 0;
             left: 3%;
             border-radius: 10px;
             font-size: 12px;
@@ -892,23 +897,21 @@
             color: #EB4A4C;
         }
 
-        #get_in_touch>footer {
+        /* common elements */
+        body>footer {
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
             font-size: 0.8em;
             line-height: 18px;
-            position: absolute;
+            position: relative;
             width: 100%;
-            bottom: 0;
-            margin: auto;
             background-color: #262626;
-            height: 60px;
+            height: 100px;
             text-align: center;
         }
 
-
-        #get_in_touch>footer>div {
+        body>footer>div {
             display: flex;
             width: max-content;
             margin: auto;
@@ -918,8 +921,6 @@
             justify-content: center;
         }
 
-
-        /* common elements */
         .sub_section {
             background-color: #131313;
             /* background-color: burlywood; */
@@ -1450,15 +1451,15 @@
                     </section>
                 </section>
             </section>
-
-            <footer>
-                <div>
-                    <small>Designed and developed by Duvindu Thathsara<br>
-                        Copyright © 2023 - Duvindu Thathsara All Rights Reserved</small>
-                </div>
-            </footer>
         </section>
     </main>
+
+    <footer>
+        <div>
+            <small>Designed and developed by Duvindu Thathsara<br>
+                Copyright © 2023 - Duvindu Thathsara All Rights Reserved</small>
+        </div>
+    </footer>
 </body>
 
 </html>
