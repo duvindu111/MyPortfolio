@@ -38,11 +38,16 @@
 
         body>header>section:first-child>h4 {
             color: #858585;
-            font-family: 'Nanum Gothic', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 100;
             margin-top: 0;
             padding-top: 10px;
             margin-left: 20px;
+            width: max-content;
+        }
+
+        body>header>section:first-child>h4:hover {
+            color: #EB4A4C;
         }
 
         body>header>section:first-child>nav>a>button {
@@ -78,6 +83,12 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
             opacity: 80%;
+            width: max-content;
+        }
+
+        body>header>section:nth-child(2)>h3:hover {
+            color: #EB4A4C;
+            letter-spacing: 2px;
         }
 
         body>header>section:nth-child(2)>nav>menu {
@@ -191,18 +202,41 @@
         }
 
         /* about me */
+        #about_me>section>h2 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            position: absolute;
+            left: 150px;
+            top: 15.5%;
+            margin: 0;
+        }
+
+        #about_me>section>hr {
+            color: white;
+            width: 80%;
+            position: absolute;
+            margin: auto;
+            top: 20%;
+            left: 0;
+            right: 0;
+            border: 1px solid white;
+        }
+
         #about_me>section>aside {
             width: 50%;
-            position: relative;
+            position: absolute;
+            margin: auto;
+            height: max-content;
+            bottom: 0;
+            top: 20%;
+           
         }
 
         #about_me>section>aside>img {
-            position: absolute;
+            position: relative;
             margin: auto;
-            top: 10%;
-            bottom: 0;
-            left: 22%;
-            right: 0;
+            left: 35%;
             width: 50%;
         }
 
@@ -214,7 +248,7 @@
             bottom: 0;
             right: 0;
             height: 400px;
-            top: 10%;
+            top: 20%;
         }
 
         #about_me>section>section>hgroup>h1 {
@@ -370,6 +404,21 @@
 
         #skills>section>section:nth-child(4)>div:hover h3 {
             color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
+        #skills>section>section:nth-child(4)>div:hover p {
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
+        #skills>section>section:nth-child(4)>div:hover i{
+            transform: rotate(360deg);
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: transform, color;
         }
 
         #skills>section>section:nth-child(4)>div>div {
@@ -384,13 +433,8 @@
         #skills>section>section:nth-child(4)>div>div>i {
             font-size: 40px;
             color: white;
-        }
-
-        #skills>section>section:nth-child(4)>div>div>i:hover {
-            transform: rotate(360deg);
-            color: #EB4A4C;
             transition-duration: 1s;
-            transition-property: transform, color;
+            transition-property: color;
         }
 
         #skills>section>section:nth-child(4)>div>h3 {
@@ -404,10 +448,8 @@
             text-align: center;
             top: 28%;
             text-decoration: underline;
-        }
-
-        #skills>section>section:nth-child(4)>div>h3:hover {
-            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #skills>section>section:nth-child(4)>div>p {
@@ -424,6 +466,7 @@
             margin-left: 20px;
             margin-right: 20px;
             text-align: center;
+            
         }
 
         #skills>.footer_div {
@@ -479,6 +522,14 @@
 
         #my_projects>section>section:nth-child(3)>div:hover h4 {
             color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
+        #my_projects>section>section:nth-child(3)>div:hover article {
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #my_projects>section>section:nth-child(3)>div>img {
@@ -495,6 +546,8 @@
             margin-top: 4%;
             margin-bottom: 0;
             text-decoration: underline;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #my_projects>section>section:nth-child(3)>div>article {
@@ -506,6 +559,8 @@
             margin-right: 6%;
             margin-top: 6%;
             line-height: 25px;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         /* my assignments */
@@ -554,6 +609,18 @@
             position: relative;
         }
 
+        #my_assignments>section>section:nth-child(3)>div:hover h4 {
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
+        #my_assignments>section>section:nth-child(3)>div:hover article {
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
         #my_assignments>section>section:nth-child(3)>div>img {
             width: 100%;
             border-radius: 10px 10px 4px 4px;
@@ -570,6 +637,8 @@
             margin-top: 4%;
             margin-bottom: 0;
             text-decoration: underline;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #my_assignments>section>section:nth-child(3)>div>article {
@@ -581,6 +650,8 @@
             margin-right: 6%;
             margin-top: 6%;
             line-height: 25px;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         /* my educational qualifications */
@@ -630,6 +701,18 @@
             border: 5px solid rgb(118, 108, 108);
         }
 
+        #my_edu_quali>section>section:nth-child(3)>div:hover h4{
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
+        #my_edu_quali>section>section:nth-child(3)>div:hover h6{
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
+        }
+
         #my_edu_quali>section>section:nth-child(3)>div>img {
             width: 100%;
             border-radius: 10px 10px 4px 4px;
@@ -646,6 +729,8 @@
             text-decoration: underline;
             padding-left: 4%;
             padding-right: 4%;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #my_edu_quali>section>section:nth-child(3)>div>hgroup>h6 {
@@ -657,6 +742,8 @@
             text-align: center;
             padding-left: 4%;
             padding-right: 4%;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #my_edu_quali>section>section:nth-child(3)>div>div {
@@ -729,7 +816,7 @@
             position: absolute;
             width: 40%;
             left: 10%;
-            top: 26%;
+            top: 27%;
             display: flex;
             flex-direction: column;
             height: 35%;
@@ -747,6 +834,15 @@
 
         #get_in_touch>section>address>div:hover i {
             color: #EB4A4C;
+            transform: rotate(360deg);
+            transition-duration: 1s;
+            transition-property: color,transform;
+        }
+
+        #get_in_touch>section>address>div:hover p {
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #get_in_touch>section>address>div>i {
@@ -755,6 +851,8 @@
             position: absolute;
             align-self: center;
             left: 4%;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #get_in_touch>section>address>div>p {
@@ -762,13 +860,15 @@
             font-family: 'Poppins', sans-serif;
             margin: auto;
             font-style: normal;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #get_in_touch>section>aside {
             position: absolute;
             width: 40%;
             left: 50%;
-            top: 26%;
+            top: 27%;
             height: 35%;
         }
 
@@ -844,8 +944,14 @@
             border-radius: 10px;
             left: 0;
             right: 0;
-            top: 63%;
+            top: 65%;
             height: 14%;
+        }
+
+        #get_in_touch>section>section:nth-child(5):hover strong{
+            color: #EB4A4C;
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #get_in_touch>section>section:nth-child(5)>p {
@@ -857,6 +963,11 @@
             bottom: 0;
             left: 1.8%;
             height: max-content;
+        }
+
+        #get_in_touch>section>section:nth-child(5)>p>strong{
+            transition-duration: 1s;
+            transition-property: color;
         }
 
         #get_in_touch>section>section:nth-child(5)>p a {
@@ -873,12 +984,12 @@
             margin: auto;
             left: 0;
             right: 0;
-            top: 80%;
+            top: 83%;
         }
 
         #get_in_touch>section>section:nth-child(6)>section {
             display: flex;
-            margin-top: 0.9%;
+            margin-top: 1.5%;
         }
 
         #get_in_touch>section>section:nth-child(6)>p {
@@ -992,6 +1103,44 @@
             margin-bottom: 0;
         }
 
+        body>div:nth-child(4) {
+            position: fixed;
+            bottom: 75px;
+            right: 50px;
+            border: 5px solid #858585;
+            border-top: 5px solid #858585;
+            border-radius: 200px;
+            transition-duration: 1s;
+            transition-property: border-top;
+        }
+
+        body>div:nth-child(4)>a>i {
+            font-size: 3em;
+            color: #3b3b3b;
+            border-radius: 200px;
+            transition-duration: 1s;
+            transition-property: font-size;
+        }
+
+        body>div:nth-child(4):hover {
+            border-top: 5px solid white;
+            rotate: 360deg;
+            transition-duration: 1s;
+            transition-property: rotate;
+        }
+
+        body>div:nth-child(4):hover a>i {
+            font-size: 3.5em;
+            background-color: white;
+            rotate: -360deg;
+            transition-duration: 1s;
+            transition-property: font-size, rotate;
+        }
+
+        main {
+            position: relative;
+        }
+
         body {
             /* overflow: hidden; */
             /* overflow-y: hidden; */
@@ -1000,6 +1149,21 @@
         * {
             scroll-behavior: smooth;
         }
+
+        ::-webkit-scrollbar {
+            width: 18px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #262626;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4b4b4b;
+        }
+
+        /* media queries */
+        @media all and (max-width:320px) {}
     </style>
 </head>
 
@@ -1059,6 +1223,8 @@
         <!-- about me -->
         <section id="about_me" class="page_sec">
             <section class="sub_section">
+                <h2>About <span class="highlight_red">Me</span></h2>
+                <hr>
                 <aside>
                     <img src="assets/resources/images/my_photo2.png" alt="">
                 </aside>
@@ -1460,6 +1626,13 @@
                 Copyright © 2023 - Duvindu Thathsara All Rights Reserved</small>
         </div>
     </footer>
+
+    <div>
+        <a href="#home">
+            <i class="fa-solid fa-circle-chevron-up fa-fade" style="--fa-animation-duration: 1.5s;"></i>
+        </a>
+    </div>
+
 </body>
 
 </html>
