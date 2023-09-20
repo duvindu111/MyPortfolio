@@ -123,6 +123,14 @@
             padding-right: 4px;
         }
 
+        body>header>section:nth-child(2)>div:nth-child(3) {
+            visibility: hidden;
+        }
+
+        body>header>section:nth-child(2)>div:nth-child(3)>i {
+            color: #7e7575;
+        }
+
         /* home */
         .highlight_red {
             color: #EB4A4C;
@@ -230,7 +238,7 @@
             height: max-content;
             bottom: 0;
             top: 20%;
-           
+
         }
 
         #about_me>section>aside>img {
@@ -414,7 +422,7 @@
             transition-property: color;
         }
 
-        #skills>section>section:nth-child(4)>div:hover i{
+        #skills>section>section:nth-child(4)>div:hover i {
             transform: rotate(360deg);
             color: #EB4A4C;
             transition-duration: 1s;
@@ -466,7 +474,7 @@
             margin-left: 20px;
             margin-right: 20px;
             text-align: center;
-            
+
         }
 
         #skills>.footer_div {
@@ -701,13 +709,13 @@
             border: 5px solid rgb(118, 108, 108);
         }
 
-        #my_edu_quali>section>section:nth-child(3)>div:hover h4{
+        #my_edu_quali>section>section:nth-child(3)>div:hover h4 {
             color: #EB4A4C;
             transition-duration: 1s;
             transition-property: color;
         }
 
-        #my_edu_quali>section>section:nth-child(3)>div:hover h6{
+        #my_edu_quali>section>section:nth-child(3)>div:hover h6 {
             color: #EB4A4C;
             transition-duration: 1s;
             transition-property: color;
@@ -836,7 +844,7 @@
             color: #EB4A4C;
             transform: rotate(360deg);
             transition-duration: 1s;
-            transition-property: color,transform;
+            transition-property: color, transform;
         }
 
         #get_in_touch>section>address>div:hover p {
@@ -948,7 +956,7 @@
             height: 14%;
         }
 
-        #get_in_touch>section>section:nth-child(5):hover strong{
+        #get_in_touch>section>section:nth-child(5):hover strong {
             color: #EB4A4C;
             transition-duration: 1s;
             transition-property: color;
@@ -965,7 +973,7 @@
             height: max-content;
         }
 
-        #get_in_touch>section>section:nth-child(5)>p>strong{
+        #get_in_touch>section>section:nth-child(5)>p>strong {
             transition-duration: 1s;
             transition-property: color;
         }
@@ -1163,7 +1171,91 @@
         }
 
         /* media queries */
-        @media all and (max-width:320px) {}
+        /* 320px */
+        @media all and (max-width:320px) {
+
+            /* header  */
+            body>header>section:nth-child(2)>nav {
+                display: none;
+            }
+
+            body>header>section:first-child>h4 {
+                font-size: 10px;
+                padding-top: 13px;
+                margin-left: 10px;
+            }
+
+            body>header>section:first-child>nav>a>button {
+                height: 25px;
+                width: max-content;
+                font-size: 10px;
+                right: 10px;
+            }
+
+            body>header>section:nth-child(2) {
+                height: 40px;
+            }
+
+            body>header>section:nth-child(2)>h3 {
+                margin-left: 10px;
+                font-size: 13px;
+                padding-top: 10px;
+            }
+
+            body>header>section:nth-child(2)>div:nth-child(3) {
+                visibility: visible;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                height: max-content;
+                right: 20px;
+                font-size: 1.5em;
+            }
+
+            /* home  */
+
+            #home>section>section {
+                width: 90%;
+            }
+
+            #home>section>section>hgroup>h1 {
+                font-size: 35px;
+                top: 165px;
+                line-height: 45px;
+            }
+
+            #home>section>section>hgroup>h4 {
+                font-size: 16px;
+                top: 275px;
+            }
+
+            #home>section>section>article>p {
+                font-size: 12px;
+                width: 90%;
+                top: 320px;
+            }
+
+            #home>section>section>nav>a>button{
+                top: 444px;
+                font-size: 10px;
+                height: 26px;
+    width: 150px;
+            }
+
+            /* common */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            body>div:nth-child(4) {
+    bottom: 35px;
+    right: 21px;
+        }
+
+        body>div:nth-child(4)>a>i {
+    font-size: 2em;
+        }
     </style>
 </head>
 
@@ -1191,6 +1283,9 @@
                     <li><a href="#get_in_touch">Contact</a></li>
                 </menu>
             </nav>
+            <div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </section>
     </header>
 
