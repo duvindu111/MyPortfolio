@@ -1041,8 +1041,9 @@
         }
 
         .sub_section {
-            background-color: #131313;
-            /* background-color: burlywood; */
+            /* background-color: #131313; */
+            background-color: burlywood;
+            border: 2px solid greenyellow;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -1236,11 +1237,92 @@
                 top: 320px;
             }
 
-            #home>section>section>nav>a>button{
+            #home>section>section>nav>a>button {
                 top: 444px;
                 font-size: 10px;
                 height: 26px;
-    width: 150px;
+                width: 150px;
+            }
+
+            /* about me  */
+            #about_me{
+                height: 735px;
+            }
+
+            #about_me>section>h2 {
+                width: 80%;
+                text-align: left;
+                margin: auto;
+                top: 100px;
+                left: 0;
+                right: 0;
+                font-size: 15px;
+            }
+
+            #about_me>section>hr{
+                top: 125px;
+            }
+
+            #about_me>section>aside{
+                width: 100%;
+                top: 165px;
+                bottom: auto;
+            }
+
+            #about_me>section>aside>img {
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                width: 40%;
+                height: max-content;
+            }
+
+            #about_me>section>section{
+                position: relative;
+                top: 320px;
+                width: 100%;
+                margin: 0;
+                text-align: center;
+                /* height: max-content; */
+            }
+
+            #about_me>section>section>hgroup>h1{
+                position: relative;
+                font-size: 30px;
+                line-height: 36px;
+                width: 100%;
+                left: 0;
+                text-wrap: wrap;
+            }
+
+            #about_me>section>section>hgroup>h4 {
+                position: relative;
+                top: 8px;
+                left: 0;
+                font-size: 12px;
+                width: max-content;
+            }
+
+            #about_me>section>section>hr{
+                width: 80%;
+                position: relative;
+                top: 20px;
+            }
+
+            #about_me>section>section>article{
+                position: relative;
+                top: 24px;
+                width: 80%;
+                left: 0;
+                font-size: 10px;
+            }
+
+            #about_me>section>section>nav>a>button{
+                position: relative;
+                top: 40px;
+                height: 28px;
+                left: 0;
             }
 
             /* common */
@@ -1249,13 +1331,17 @@
             }
 
             body>div:nth-child(4) {
-    bottom: 35px;
-    right: 21px;
-        }
+                bottom: 35px;
+                right: 21px;
+            }
 
-        body>div:nth-child(4)>a>i {
-    font-size: 2em;
-        }
+            body>div:nth-child(4)>a>i {
+                font-size: 2em;
+            }
+
+            body>div:nth-child(4):hover a>i {
+                font-size: 2em;
+            }
     </style>
 </head>
 
