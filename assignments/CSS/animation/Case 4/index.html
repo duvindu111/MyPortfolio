@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>animation case 1</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        body>div{
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 10px;
+            position: relative;
+            animation-name: anima;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            display: inline-block;
+            animation-direction: alternate;
+        }
+
+        @keyframes anima{
+            0%{
+              top: 0;
+              left: 0;
+              rotate: 0deg;
+            }
+
+            25%{
+                left: 400px;
+                top: 0;
+                rotate: 180deg;
+                background-color: aqua;
+            }
+
+
+            50%{
+              left: 400px;
+              top: 400px;
+              rotate: 360deg;
+              background-color: aquamarine;
+            }
+
+            75%{
+                left: 0;
+                top: 400px;
+                rotate: 180deg;
+                background-color: blanchedalmond;
+            }
+
+            100%{
+                left: 0;
+                top: 0;
+                rotate: 0deg;
+                background-color: yellow;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    </div>
+</body>
+
+</html>
