@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>animation case 1</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        body>div{
+            /* position: relative; */
+            height: 100vh;
+            width: max-content;
+            display: flex;
+            animation-name: anima;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            display: inline-block;
+            animation-direction: alternate;
+        }
+
+        body>div>img{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        @keyframes anima{
+           0%{
+                margin-left: 0;
+           }
+           25%{
+            margin-left: -100vw;
+           }
+           50%{
+            margin-left: -200vw;
+           }
+           75%{
+            margin-left: -300vw;
+           }
+           100%{
+            margin-left: -400vw;
+           }
+
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="15525089158_1871b6515e_o - Copy.jpg" alt="">
+        <img src="1582030629_lionel-messi-cool_vsthemes_ru-6 - Copy.jpg" alt="">
+        <img src="ronaldo-wallpaper-21013022271540-1536x672 - Copy.jpg" alt="">
+        <img src="15525089158_1871b6515e_o - Copy.jpg" alt="">
+        <img src="1582030629_lionel-messi-cool_vsthemes_ru-6 - Copy.jpg" alt="">
+    </div>
+</body>
+
+</html>
