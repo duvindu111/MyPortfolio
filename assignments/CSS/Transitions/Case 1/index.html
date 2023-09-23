@@ -10,68 +10,78 @@
     <style>
         body {
             margin: 0;
+            background-color: chocolate;
         }
 
-        body>div {
-            width: 180px;
-            height: 50px;
-            background-color: blueviolet;
+        body>section{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            height: max-content;
+            row-gap: 20px;
+        }
+
+        body>section>div {
+            width: 250px;
+            height: 60px;
+            background-color: white;
             position: relative;
             display: flex;
-            margin-left: -100px;
+            margin-left: -150px;
             transition-duration: 1s;
             transition-property: margin-left;
-            margin-top: 85px;
+            /* margin-top: 85px; */
             border-radius: 0 10px 10px 0;
         }
 
-        body>div:hover {
+        body>section>div:hover {
             margin-left: 0px;
-            transition-duration: 3s;
+            transition-duration: 1s;
             transition-property: margin-left;
         }
 
-        body>div>p:first-child {
+        body>section>div>p:first-child {
             padding-left: 20px;
-            color: white;
+            color: black;
         }
 
-        body>div>i {
-            color: white;
+        body>section>div>i {
+            color: black;
             position: absolute;
-            right: 20px;
+            right: 40px;
             align-self: center;
-            font-size: 30px;
+            font-size: 20px;
         }
     </style>
 </head>
 
 <body>
-
-    <div>
-        <p>Button 1</p>
-        <i class="fa-solid fa-house"></i>
-    </div>
-    <div>
-        <p>Button 2</p>
-        <i class="fa-solid fa-user"></i>
-    </div>
-    <div>
-        <p>Button 3</p>
-        <i class="fa-solid fa-heart"></i>
-    </div>
-    <div>
-        <p>Button 4</p>
-        <i class="fa-solid fa-cloud"></i>
-    </div>
-    <div>
-        <p>Button 5</p>
-        <i class="fa-solid fa-face-smile"></i>
-    </div>
-
-
-
-
+    <section>
+        <div>
+            <p>Home</p>
+            <i class="fa-solid fa-house"></i>
+        </div>
+        <div>
+            <p>Person</p>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+            <p>Love</p>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+        <div>
+            <p>Cloud</p>
+            <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div>
+            <p>Face</p>
+            <i class="fa-solid fa-face-smile"></i>
+        </div>
+    </section>
 </body>
 
 </html>
