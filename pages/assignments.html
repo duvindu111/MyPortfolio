@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="../assets/resources/css/normalize.css">
     <link rel="stylesheet" href="../assets/resources/icons/fontawesome-free-6.4.2-web/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <style>
-        body{
+        body {
             background-color: #131313;
             margin-bottom: 150px;
         }
 
-        body>header{
+        body>header {
             /* border: 1px solid white; */
             background-color: #131313;
             height: 50px;
@@ -26,7 +27,7 @@
             z-index: 100;
         }
 
-        body>header>div{
+        body>header>div {
             position: absolute;
             left: 0;
             right: 0;
@@ -38,7 +39,7 @@
             width: max-content;
         }
 
-        body>header>div>h2{
+        body>header>div>h2 {
             display: inline-block;
             color: #858585;
             font-weight: 100;
@@ -46,28 +47,28 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        body>main{
+        body>main {
             /* background-color: bisque; */
             height: 100%;
-           
+
         }
 
-        body>main>section{
+        body>main>section {
             position: relative;
             top: 100px;
             margin: auto;
             left: 0;
             right: 0;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             width: 80%;
             column-gap: 50px;
-           row-gap: 60px;
-           text-wrap: wrap;
+            row-gap: 60px;
+            text-wrap: wrap;
         }
 
-        body>main>section>div{
+        body>main>section>div {
             background-color: #2f2d2d;
             border: 5px solid hsla(0, 0%, 49%, 0.5);
             border-radius: 10px;
@@ -75,13 +76,13 @@
             overflow-x: hidden;
         }
 
-        body>main>section>div>img{
+        body>main>section>div>img {
             width: 100%;
             border-radius: 10px 10px 0 0;
             position: relative;
         }
 
-        body>main>section>div>a>button{
+        body>main>section>div>a>button {
             background-color: #eb4a4c;
             width: max-content;
             height: 30px;
@@ -99,13 +100,13 @@
             right: 0;
         }
 
-        body>main>section>div>a>button:hover{
+        body>main>section>div>a>button:hover {
             background-color: white;
             color: black;
             border: 3px solid #eb4a4c;
         }
 
-        body>main>section>div>h4{
+        body>main>section>div>h4 {
             color: white;
             position: relative;
             top: 10px;
@@ -116,7 +117,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        body>main>section>div>div{
+        body>main>section>div>div {
             background-color: black;
             opacity: 70%;
             height: 100%;
@@ -129,128 +130,171 @@
             transition-property: width;
         }
 
-        body>main>section>div:hover div{
+        body>main>section>div:hover div {
             width: 100%;
             transition-duration: 0.5s;
             transition-property: width;
         }
 
-        body>main>section>div:hover button{
+        body>main>section>div:hover button {
             left: 0;
             transition-duration: 0.5s;
             transition-property: left;
         }
-        
+
+        @media all and (max-width:320px) {
+            body>main>section {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(12, 1fr);
+            }
+
+            body>header>div>h2 {
+                font-size: 4vw;
+            }
+        }
+
+        @media all and (min-width:320px) and (max-width:375px) {
+            body>main>section {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(12, 1fr);
+            }
+
+            body>header>div>h2 {
+                font-size: 3vw;
+            }
+        }
+
+        @media all and (min-width:375px) and (max-width:425px) {
+            body>main>section {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(12, 1fr);
+            }
+
+            body>header>div>h2 {
+                font-size: 3vw;
+            }
+        }
+
+        @media all and (min-width:425px) and (max-width:768px) {
+            body>main>section {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+            }
+
+            body>header>div>h2 {
+                font-size: 3vw;
+            }
+        }
     </style>
 </head>
 
 <body>
-        <header>
+    <header>
+        <div>
+            <h2>DUVINDU THATHSARA</h2>
+        </div>
+    </header>
+    <main>
+        <section>
             <div>
-                <h2>DUVINDU THATHSARA</h2>
+                <img src="assets/images/css case 1.jpg" alt="image of css case 1">
+                <h4>CSS Case 1</h4>
+                <div></div>
+                <a href="../assignments/CSS/Case 1/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
             </div>
-        </header>
-        <main>
-            <section>
-                <div>
-                    <img src="assets/images/css case 1.jpg" alt="image of css case 1">
-                    <h4>CSS Case 1</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Case 1/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/css case 2.jpg" alt="image of css case 2">
-                    <h4>CSS Case 2</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Case 2/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/css case 3.jpg" alt="image of css case 3">
-                    <h4>CSS Case 3</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Case 3/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/css case 4.jpg" alt="image of css case 4">
-                    <h4>CSS Case 4</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Case 4/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/css case 5.jpg" alt="image of css case 5">
-                    <h4>CSS Case 5</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Case 5/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/css assignment case 6.jpg" alt="image of css case 6">
-                    <h4>CSS Case 6</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Case 6/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/transition case 1.jpg" alt="image of transition case 1">
-                    <h4>Transition Case 1</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Transitions/Case 1/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/transition case 2.jpg" alt="image of transition case 2">
-                    <h4>Transition Case 2</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Transitions/Case 2/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/transition case 3.jpg" alt="image of transition case 3">
-                    <h4>Transition Case 3</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Transitions/Case 3/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/transition case 4.jpg" alt="image of transition case 4">
-                    <h4>Transition Case 4</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/Transitions/Case 4/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/animation case 1.jpg" alt="image of animation case 1">
-                    <h4>Animation Case 1</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/animation/Case 1/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                <div>
-                    <img src="assets/images/animation case 3.jpg" alt="image of animation case 2">
-                    <h4>Animation Case 2</h4>
-                    <div></div>
-                    <a href="../assignments/CSS/animation/Case 3/index.html" target="_blank">
-                        <button>Check It Out</button>
-                    </a>          
-                </div>
-                
-            </section>
-        </main>
+            <div>
+                <img src="assets/images/css case 2.jpg" alt="image of css case 2">
+                <h4>CSS Case 2</h4>
+                <div></div>
+                <a href="../assignments/CSS/Case 2/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/css case 3.jpg" alt="image of css case 3">
+                <h4>CSS Case 3</h4>
+                <div></div>
+                <a href="../assignments/CSS/Case 3/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/css case 4.jpg" alt="image of css case 4">
+                <h4>CSS Case 4</h4>
+                <div></div>
+                <a href="../assignments/CSS/Case 4/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/css case 5.jpg" alt="image of css case 5">
+                <h4>CSS Case 5</h4>
+                <div></div>
+                <a href="../assignments/CSS/Case 5/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/css assignment case 6.jpg" alt="image of css case 6">
+                <h4>CSS Case 6</h4>
+                <div></div>
+                <a href="../assignments/CSS/Case 6/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/transition case 1.jpg" alt="image of transition case 1">
+                <h4>Transition Case 1</h4>
+                <div></div>
+                <a href="../assignments/CSS/Transitions/Case 1/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/transition case 2.jpg" alt="image of transition case 2">
+                <h4>Transition Case 2</h4>
+                <div></div>
+                <a href="../assignments/CSS/Transitions/Case 2/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/transition case 3.jpg" alt="image of transition case 3">
+                <h4>Transition Case 3</h4>
+                <div></div>
+                <a href="../assignments/CSS/Transitions/Case 3/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/transition case 4.jpg" alt="image of transition case 4">
+                <h4>Transition Case 4</h4>
+                <div></div>
+                <a href="../assignments/CSS/Transitions/Case 4/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/animation case 1.jpg" alt="image of animation case 1">
+                <h4>Animation Case 1</h4>
+                <div></div>
+                <a href="../assignments/CSS/animation/Case 1/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+            <div>
+                <img src="assets/images/animation case 3.jpg" alt="image of animation case 2">
+                <h4>Animation Case 2</h4>
+                <div></div>
+                <a href="../assignments/CSS/animation/Case 3/index.html" target="_blank">
+                    <button>Check It Out</button>
+                </a>
+            </div>
+
+        </section>
+    </main>
 </body>
 
 </html>
