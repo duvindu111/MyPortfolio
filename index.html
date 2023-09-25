@@ -22,64 +22,605 @@
     <meta name="theme-color" content="red">
     <meta name="robots" content="noindex,nofollow">
     <style>
-        #animated_section{
-            width:100%;
+        #animated_section {
+            width: 100%;
             height: 100vh;
             /* background-color: aliceblue; */
-            z-index:1;
-            margin:auto;
+            z-index: 1;
+            margin: auto;
             position: fixed;
-            border:2px solid red;
+            /* border: 2px solid red; */
             box-sizing: border-box;
         }
+
         .code {
             position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: #00FF00;
-            display:inline-block;
-            animation-name: moveCode;
-            animation-duration: 5s;
-            top:90px;
-            margin: auto;
+            width: 150px;
+            height: 40px;
+            /* background-color: #00FF00; */
+            text-align: right;
+            color: white;
+            display: inline-block;
+            color: #333;
+            text-shadow: 0 0 2px #9170a2;
         }
 
-        @keyframes moveCode {
+        #code1 {
+            animation-name: moveCode1;
+            animation-duration: 50s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            top: 0px;
+        }
+
+        #code2 {
+            animation-name: moveCode2;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            top: 0px;
+        }
+
+        #code3 {
+            animation-name: moveCode3;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            top: 0px;
+        }
+
+        #code4 {
+            animation-name: moveCode4;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            bottom: -40px;
+        }
+
+        #code5 {
+            animation-name: moveCode5;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            bottom: -40px;
+        }
+
+        #code6 {
+            animation-name: moveCode6;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            /* bottom: -40px; */
+        }
+
+        #code7 {
+            animation-name: moveCode7;
+            text-align: left;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            /* bottom: -40px; */
+        }
+
+        #code8 {
+            animation-name: moveCode8;
+            text-align: left;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code9 {
+            animation-name: moveCode9;
+            text-align: left;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code10 {
+            animation-name: moveCode10;
+            text-align: left;
+            animation-duration: 60s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code11 {
+            animation-name: moveCode11;
+            text-align: left;
+            animation-duration: 100s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code12 {
+            animation-name: moveCode12;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code13 {
+            animation-name: moveCode13;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            left: calc(100% - 200px);
+        }
+
+        #code14 {
+            text-align: left;
+            animation-name: moveCode14;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code15 {
+            animation-name: moveCode15;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code16 {
+            animation-name: moveCode16;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code17 {
+            animation-name: moveCode17;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        #code18 {
+            animation-name: moveCode18;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        #code19 {
+            animation-name: moveCode19;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        #code20 {
+            animation-name: moveCode20;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveCode1 {
             0% {
+                top: 0px;
+                left: 0;
+            }
+
+            50% {
+                top: calc(100% - 40px);
+                left: 30%;
+            }
+
+            100% {
                 top: 90px;
-                left: 0 ;
-                bottom: auto;
-                right: auto;
+                left: calc(100% - 150px);
+            }
+        }
+
+        @keyframes moveCode2 {
+            0% {
+                top: 0px;
+                left: calc(100% - 150px);
+            }
+
+            50% {
+                top: calc(100% - 40px);
+                left: 70%;
+            }
+
+            100% {
+                top: 90px;
+                left: 0;
+            }
+        }
+
+        @keyframes moveCode3 {
+            0% {
+                top: 0px;
+                left: calc(50% - 150px);
+            }
+
+            25% {
+                top: calc(100% - 40px);
+                left: 20%;
+            }
+
+            50% {
+                top: 50%;
+                left: 0;
+            }
+
+            75% {
+                top: 90px;
+                left: 60%;
+            }
+
+            100% {
+                top: calc(100% - 40px);
+                left: calc(100% - 150px);
+            }
+        }
+
+        @keyframes moveCode3 {
+            0% {
+                top: 0px;
+                left: calc(50% - 150px);
+            }
+
+            25% {
+                top: calc(100% - 40px);
+                left: 20%;
+            }
+
+            50% {
+                top: 50%;
+                left: 0;
+            }
+
+            75% {
+                top: 90px;
+                left: 60%;
+            }
+
+            100% {
+                top: calc(100% - 40px);
+                left: calc(100% - 150px);
+            }
+        }
+
+        @keyframes moveCode4 {
+            0% {
+                top: calc(100% - 40px);
+                left: calc(70% - 150px);
+            }
+
+            25% {
+                top: calc(40% - 40px);
+                left: calc(100% - 150px);
+            }
+
+            50% {
+                top: 90px;
+                left: 60%;
+            }
+
+            75% {
+                top: 30%;
+                left: 0;
+            }
+
+            100% {
+                top: calc(100% - 40px);
+                left: calc(100% - 150px);
+            }
+        }
+
+        @keyframes moveCode5 {
+            0% {
+                top: calc(100% - 40px);
+                left: calc(30% - 150px);
+            }
+
+            25% {
+                top: calc(70% - 40px);
+                left: 0;
+            }
+
+            50% {
+                top: 90px;
+                left: 60%;
+            }
+
+            75% {
+                top: 30%;
+                left: calc(100% - 150px);
+            }
+
+            100% {
+                top: calc(100% - 40px);
+                left: 0;
+            }
+        }
+
+        @keyframes moveCode6 {
+            0% {
+                top: calc(30% - 40px);
+                left: -150px;
+            }
+
+            25% {
+                top: calc(80% - 40px);
+                left: calc(100% - 150px);
+            }
+
+            50% {
+                top: calc(100% - 40px);
+                left: calc(60% - 40px);
+            }
+
+            75% {
+                top: calc(50% - 40px);
+                left: 0;
+            }
+
+            100% {
+                top: 90px;
+                left: calc(50% - 150px);
+            }
+        }
+
+        @keyframes moveCode7 {
+            0% {
+                top: 0;
+                left: calc(50% - 150px);
+            }
+
+            25% {
+                top: calc(100% - 40px);
+                left: 20%;
+            }
+
+            50% {
+                top: 50%;
+                left: 0;
+            }
+
+            75% {
+                top: 90px;
+                left: 60%;
+            }
+
+            100% {
+                top: calc(100% - 40px);
+                left: calc(100% - 150px);
+            }
+        }
+
+        @keyframes moveCode8 {
+            0% {
+                top: calc(70% - 40px);
+                left: -150px;
             }
 
             25% {
                 top: 90px;
-                left:auto ;
-                bottom:auto ;
-                right: 0;
-            } 
+                left: 30%;
+            }
 
             50% {
-                top: ;
-                left: ;
-                bottom: ;
-                right: ;
-            } 
+                top: calc(100% - 40px);
+                left: 80%;
+            }
 
             75% {
-                top: ;
-                left: ;
-                bottom: ;
-                right: ;
+                top: calc(40% - 40px);
+                left: calc(100% - 150px);
             }
 
             100% {
-                top: ;
-                left: ;
-                bottom: ;
-                right: ;
+                top: 90px;
+                left: 40%;
             }
         }
+
+        @keyframes moveCode9 {
+            0% {
+                top: calc(100% - 40px);
+                left: calc(50% - 150px);
+            }
+
+            25% {
+                top: 90px;
+                left: calc(70% - 150px);
+            }
+
+            50% {
+                top: calc(100% - 40px);
+                left: calc(90% - 150px);
+            }
+
+            75% {
+                top: calc(50% - 40px);
+                left: calc(100% - 150px);
+            }
+
+            100% {
+                top: 90px;
+                left: calc(70% - 150px);
+            }
+        }
+
+        @keyframes moveCode10 {
+            0% {
+                top: 0px;
+                left: calc(20% - 150px);
+            }
+
+            25% {
+                top: calc(100% - 40px);
+                left: calc(40% - 150px);
+            }
+
+            50% {
+                top: 90px;
+                left: calc(50% - 150px);
+            }
+
+            75% {
+                top: calc(100% - 40px);
+                left: calc(60% - 150px);
+            }
+
+            100% {
+                top: 90px;
+                left: calc(80% - 150px);
+            }
+        }
+
+        @keyframes moveCode11 {
+            0% {
+                top: calc(30% - 40px);
+                left: -150px;
+            }
+
+            25% {
+                top: calc(50% - 40px);
+                left: calc(100% - 150px);
+            }
+
+            50% {
+                top: calc(70% - 40px);
+                left: 0;
+            }
+
+            75% {
+                top: calc(90% - 40px);
+                left: calc(100% - 150px);
+            }
+
+            100% {
+                top: calc(100% - 40px);
+                left: calc(50% - 150px);
+            }
+        }
+
+        @keyframes moveCode12 {
+            0% {
+                top: calc(90px + 5%);
+            }
+
+            100% {
+                top: calc(50% - 40px);
+            }
+        }
+
+        @keyframes moveCode13 {
+            0% {
+                top: 90px;
+            }
+
+            100% {
+                top: calc(60% - 40px);
+            }
+        }
+
+        @keyframes moveCode14 {
+            0% {
+                top: calc(50% - 40px);
+                left: 50px;
+            }
+            100% {
+                top: calc(100% - 40px);
+                left: 50px;
+            }
+        }
+
+        @keyframes moveCode15 {
+            0% {
+                top: calc(70% - 40px);
+            left: calc(100% - 220px);
+            }
+            100% {
+                top: calc(100% - 40px);
+            left: calc(100% - 220px);
+            }
+        }
+
+        @keyframes moveCode16 {
+            0% {
+                top: calc(40% - 40px);
+                left: -150px;
+            }
+            50% {
+                top: calc(100% - 40px);
+                left: calc(20% - 150px);
+            }
+            100% {
+                top: 90px;
+                left: calc(100% - 150px);
+            }
+        }
+
+        @keyframes moveCode17 {
+            0% {
+                top: 150px;
+                left: calc(20% - 150px);
+            }
+            100% {
+                top: 150px;
+                left: calc(80% - 150px);
+            }
+        }
+        @keyframes moveCode18 {
+            0% {
+                bottom: 100px;
+                left: calc(80% - 150px);
+            }
+            100% {
+                bottom: 100px;
+                left: calc(20% - 150px);
+            }
+        }
+
+        @keyframes moveCode19 {
+            0% {
+                top: calc(40% - 40px);
+                left: calc(80% - 150px);
+            }
+            100% {
+                top: calc(80% - 40px);
+                left: calc(80% - 150px);
+            }
+        }
+
+        @keyframes moveCode20 {
+            0% {
+                top: calc(40% - 40px);
+                left: calc(10% - 150px);
+            }
+            100% {
+                top: calc(80% - 40px);
+                left: calc(40% - 150px);
+            }
+        }
+
 
         /* header */
         body>header {
@@ -204,6 +745,7 @@
             left: 0;
             width: 50%;
             text-align: center;
+            z-index: 2;
         }
 
         #home>section>section>hgroup>h1 {
@@ -277,6 +819,7 @@
             left: 150px;
             top: 15.5%;
             margin: 0;
+            z-index: 2;
         }
 
         #about_me>section>hr {
@@ -285,9 +828,9 @@
             position: absolute;
             margin: auto;
             top: 20%;
-            left: 0;
-            right: 0;
+            left: 10%;
             border: 1px solid white;
+            z-index: 2;
         }
 
         #about_me>section>aside {
@@ -297,7 +840,7 @@
             height: max-content;
             bottom: 0;
             top: 20%;
-
+            z-index: 2;
         }
 
         #about_me>section>aside>img {
@@ -316,6 +859,7 @@
             right: 0;
             height: 400px;
             top: 20%;
+            z-index: 2;
         }
 
         #about_me>section>section>hgroup>h1 {
@@ -398,6 +942,7 @@
             left: 150px;
             top: 120px;
             margin: 0;
+            z-index: 2;
         }
 
         #skills>section>hr {
@@ -406,9 +951,9 @@
             position: absolute;
             margin: auto;
             top: 155px;
-            left: 0;
-            right: 0;
+            left: 10%;
             border: 1px solid white;
+            z-index: 2;
         }
 
         #skills>section>section:nth-child(3) {
@@ -426,23 +971,36 @@
             right: 0;
             left: 0;
             top: 178px;
-            border-radius: 10px;
-            background-color: #2f2d2d;
+            border-radius: 20px;
+            background-color: #2e2e2eb2;
+            border: 3px solid hsla(0, 0%, 35%, 0.5);
+            z-index: 2;
+        }
+
+        #skills>section>section:nth-child(3):hover{
+            background-color: rgb(14, 14, 23);
+            transition-duration: 1s;
+            transition-property: background-color;
         }
 
         #skills>section>section:nth-child(3)>div>figure>img {
-            border-radius: 10px;
+            border-radius: 20px;
             width: 60px;
-            border: 2px solid white;
+            border: 5px solid white;
+            transition-duration: 1s;
+            transition-property:border;
         }
 
         #skills>section>section:nth-child(3)>div>figure:hover img {
-            border: 5px solid white;
-            width: 70px;
+            border: 5px solid #EB4A4C;
+            transition-duration: 1s;
+            transition-property:border;
         }
 
         #skills>section>section:nth-child(3)>div>figure:hover figcaption {
-            font-size: 1em;
+            color:#EB4A4C;
+            transition-duration: 1s;
+            transition-property:color;
         }
 
         #skills>section>section:nth-child(3)>div>figure>figcaption {
@@ -451,6 +1009,8 @@
             padding-top: 2px;
             font-family: 'Poppins', sans-serif;
             font-size: 0.9vw;
+            transition-duration: 1s;
+            transition-property:color;
         }
 
         #skills>section>section:nth-child(4) {
@@ -466,14 +1026,26 @@
             left: 0;
             top: 220px;
             text-align: center;
+            z-index: 2;
         }
 
         #skills>section>section:nth-child(4)>div {
-            background-color: #2f2d2d;
+            /* background-color: #2f2d2d; */
+            background-color: #2e2e2eb2;
+            border: 3px solid hsla(0, 0%, 35%, 0.5);
             margin: 10px;
-            border-radius: 10px;
+            border-radius: 20px;
             position: relative;
             height: 300px;
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
+        }
+
+        #skills>section>section:nth-child(4)>div:hover{
+            background-color: rgb(14, 14, 23);
+            border-color: white;
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
         }
 
         #skills>section>section:nth-child(4)>div:hover h3 {
@@ -557,6 +1129,7 @@
             left: 10%;
             top: 120px;
             margin: 0;
+            z-index: 2;
         }
 
         #my_projects>section>hr {
@@ -565,9 +1138,9 @@
             position: absolute;
             margin: auto;
             top: 155px;
-            left: 0;
-            right: 0;
+            left: 10%;
             border: 1px solid white;
+            z-index: 2;
         }
 
         #my_projects>section>section:nth-child(3) {
@@ -583,14 +1156,24 @@
             left: 0;
             top: 200px;
             justify-content: space-around;
+            z-index: 2;
         }
 
         #my_projects>section>section:nth-child(3)>div {
-            background-color: #2f2d2d;
+            background-color: #2e2e2eb2;
+            border: 3px solid hsla(0, 0%, 35%, 0.5);
             margin: 20px;
-            border-radius: 10px;
+            border-radius: 20px;
             position: relative;
-            border: 5px solid hsla(0, 0%, 49%, 0.5);
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
+        }
+
+        #my_projects>section>section:nth-child(3)>div:hover{
+            background-color: rgb(14, 14, 23);
+            border-color: white;
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
         }
 
         #my_projects>section>section:nth-child(3)>div:hover h4 {
@@ -607,7 +1190,7 @@
 
         #my_projects>section>section:nth-child(3)>div>img {
             width: 100%;
-            border-radius: 10px 10px 4px 4px;
+            border-radius: 20px 20px 10px 10px;
             height: 50%;
         }
 
@@ -643,23 +1226,34 @@
 
         #my_projects>section>a:nth-child(4)>section {
             width: 80%;
-            background-color: #2F2D2D;
+            background-color: #2e2e2eb2;
+            border: 3px solid hsla(0, 0%, 35%, 0.5);
             position: relative;
             left: 0;
             right: 0;
             margin: auto;
             top: 240px;
             height: 50px;
-            border-radius: 10px;
-            border: 5px solid #4b4b4b;
+            border-radius: 20px;
             text-align: center;
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
+            z-index: 2;
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
+        }
+
+        #my_projects>section>a:nth-child(4)>section:hover{
+            background-color: rgb(14, 14, 23);
+            transition-duration: 1s;
+            transition-property: background-color;
         }
 
         #my_projects>section>a:nth-child(4)>section:hover p {
             color: #EB4A4C;
+            transition-duration: 0.5s;
+            transition-property:color;
         }
 
         #my_projects>section>a:nth-child(4)>section>p {
@@ -668,6 +1262,8 @@
             top: 12px;
             left: 0;
             right: 0;
+            transition-duration: 0.5s;
+            transition-property:color;
         }
 
         /* my assignments */
@@ -684,6 +1280,7 @@
             left: 10%;
             top: 120px;
             margin: 0;
+            z-index: 2;
         }
 
         #my_assignments>section>hr {
@@ -692,9 +1289,9 @@
             position: absolute;
             margin: auto;
             top: 155px;
-            left: 0;
-            right: 0;
+            left: 10%;
             border: 1px solid white;
+            z-index: 2;
         }
 
         #my_assignments>section>section:nth-child(3) {
@@ -710,14 +1307,24 @@
             left: 0;
             top: 200px;
             justify-content: space-around;
+            z-index: 2;
         }
 
         #my_assignments>section>section:nth-child(3)>div {
-            background-color: #2f2d2d;
+            background-color: #2e2e2eb2;
+            border: 3px solid hsla(0, 0%, 35%, 0.5);
             margin: 20px;
-            border-radius: 10px;
+            border-radius: 20px;
             position: relative;
-            border: 5px solid hsla(0, 0%, 49%, 0.5);
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
+        }
+
+        #my_assignments>section>section:nth-child(3)>div:hover{
+            background-color: rgb(14, 14, 23);
+            border-color: white;
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
         }
 
         #my_assignments>section>section:nth-child(3)>div:hover h4 {
@@ -734,7 +1341,7 @@
 
         #my_assignments>section>section:nth-child(3)>div>img {
             width: 100%;
-            border-radius: 10px 10px 4px 4px;
+            border-radius: 20px 20px 10px 10px;
             height: 50%;
         }
 
@@ -771,23 +1378,32 @@
 
         #my_assignments>section>a:nth-child(4)>section {
             width: 80%;
-            background-color: #2F2D2D;
+            background-color: #2e2e2eb2;
+            border: 3px solid hsla(0, 0%, 35%, 0.5);
             position: relative;
             left: 0;
             right: 0;
             margin: auto;
             top: 220px;
             height: 50px;
-            border-radius: 10px;
-            border: 5px solid #4b4b4b;
+            border-radius: 20px;
             text-align: center;
             color: white;
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
+            z-index: 2;
+        }
+
+         #my_assignments>section>a:nth-child(4)>section:hover{
+                background-color: rgb(14, 14, 23);
+            transition-duration: 1s;
+            transition-property: background-color;
         }
 
         #my_assignments>section>a:nth-child(4)>section:hover p {
             color: #EB4A4C;
+            transition-duration: 0.5s;
+            transition-property: color;
         }
 
         #my_assignments>section>a:nth-child(4)>section>p {
@@ -796,6 +1412,8 @@
             top: 12px;
             left: 0;
             right: 0;
+            transition-duration: 0.5s;
+            transition-property: color;
         }
 
         /* my educational qualifications */
@@ -812,6 +1430,7 @@
             left: 10%;
             top: 120px;
             margin: 0;
+            z-index: 2;
         }
 
         #my_edu_quali>section>hr {
@@ -820,9 +1439,9 @@
             position: absolute;
             margin: auto;
             top: 155px;
-            left: 0;
-            right: 0;
+            left: 10%;
             border: 1px solid white;
+            z-index: 2;
         }
 
         #my_edu_quali>section>section:nth-child(3) {
@@ -838,15 +1457,23 @@
             top: 200px;
             justify-content: center;
             box-sizing: border-box;
+            z-index: 2;
         }
 
         #my_edu_quali>section>section:nth-child(3)>div {
-            background-color: #2f2d2d;
             margin: 20px;
-            border-radius: 10px;
+            border-radius: 20px;
             width: calc(100%/3.5);
             position: relative;
-            border: 5px solid rgb(118, 108, 108);
+            background-color: #2e2e2eb2;
+            border: 3px solid hsla(0, 0%, 35%, 0.5);
+        }
+
+        #my_edu_quali>section>section:nth-child(3)>div:hover{
+            background-color: rgb(14, 14, 23);
+            border-color: white;
+            transition-duration: 1s;
+            transition-property: background-color,border-color;
         }
 
         #my_edu_quali>section>section:nth-child(3)>div:hover h4 {
@@ -863,7 +1490,7 @@
 
         #my_edu_quali>section>section:nth-child(3)>div>img {
             width: 100%;
-            border-radius: 10px 10px 4px 4px;
+            border-radius: 20px 20px 4px 4px;
             height: 50%;
         }
 
@@ -952,6 +1579,7 @@
             left: 10%;
             top: 120px;
             margin: 0;
+            z-index: 2;
         }
 
         #get_in_touch>section>hr {
@@ -960,9 +1588,9 @@
             position: absolute;
             margin: auto;
             top: 155px;
-            left: 0;
-            right: 0;
+            left: 10%;
             border: 1px solid white;
+            z-index: 2;
         }
 
         #get_in_touch>section>address {
@@ -973,6 +1601,7 @@
             display: flex;
             flex-direction: column;
             /* height: 35%; */
+            z-index: 2;
         }
 
         #get_in_touch>section>address>div {
@@ -1023,6 +1652,7 @@
             left: 50%;
             top: 200px;
             /* height: 35%; */
+            z-index: 2;
         }
 
         #get_in_touch>section>aside>fieldset>form {
@@ -1100,6 +1730,7 @@
             right: 0;
             top: 470px;
             height: 14%;
+            z-index: 2;
         }
 
         #get_in_touch>section>section:nth-child(5):hover strong {
@@ -1139,6 +1770,7 @@
             left: 0;
             right: 0;
             top: 600px;
+            z-index: 2;
         }
 
         #get_in_touch>section>section:nth-child(6)>section {
@@ -1163,6 +1795,24 @@
         }
 
         /* common elements */
+        body>main>section>section>hr{
+            animation-name:hr_width;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+        }
+
+        @keyframes hr_width{
+            0%{
+                width:0%;
+            }
+            80%{
+                width:80%;
+            }
+            80%{
+                width:80%;
+            }
+        }
+
         body>footer {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -1174,6 +1824,7 @@
             background-color: #262626;
             height: 100px;
             text-align: center;
+            z-index: 2;
         }
 
         body>footer>div {
@@ -1263,30 +1914,53 @@
             bottom: 75px;
             right: 50px;
             border: 5px solid #858585;
-            border-top: 5px solid #858585;
+            border-top: 5px solid white;
             border-radius: 200px;
-            transition-duration: 1s;
-            transition-property: border-top;
+            transition-duration: 0.5s;
+            transition-property: border;
+            z-index: 2;
+             animation: rotateDiv 3s linear infinite;
+        }
+
+          @keyframes rotateDiv {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         body>div:nth-child(4)>a>i {
             font-size: 3em;
             color: #3b3b3b;
             border-radius: 200px;
+            animation: rotateDiv 3s linear infinite, up_icon_fade 2s linear 0s infinite;
+            animation-direction: reverse;
+        }
+
+        @keyframes up_icon_fade {
+             0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
         }
 
         body>div:nth-child(4):hover {
-            border-top: 5px solid white;
-            rotate: 360deg;
-            transition-duration: 1s;
-            transition-property: rotate;
+            animation-play-state: paused;
+            border: 5px solid #EB4A4C;
+            transition-duration: 0.5s;
+            transition-property: border;
         }
 
         body>div:nth-child(4):hover a>i {
             background-color: white;
-            rotate: -360deg;
-            transition-duration: 1s;
-            transition-property: rotate;
+             animation-play-state: paused;
         }
 
         main {
@@ -1294,8 +1968,6 @@
         }
 
         body {
-            /* overflow: hidden; */
-            /* overflow-y: hidden; */
         }
 
         * {
@@ -3495,8 +4167,68 @@
 
     <main>
         <section id="animated_section">
-            <div class="code">1111111111</div>
+            <div class="code" id="code1">
+                <code>system out</code>
+            </div>
+            <div class="code" id="code2">
+                <code>int i = count;</code>
+            </div>
+            <div class="code" id="code3">
+                <code>println()</code>
+            </div>
+            <div class="code" id="code4">
+                <code>print()</code>
+            </div>
+            <div class="code" id="code5">
+                <code>String[]args</code>
+            </div>
+            <div class="code" id="code6">
+                <code>i++</code>
+            </div>
+            <div class="code" id="code7">
+                <code>if(){<br>}</code>
+            </div>
+            <div class="code" id="code8">
+                <code>class Calc{<br>}</code>
+            </div>
+            <div class="code" id="code9">
+                <code>switch(){<br>case 1:</code>
+            </div>
+            <div class="code" id="code10">
+                <code>for(int i=0){<br>}</code>
+            </div>
+            <div class="code" id="code11">
+                <code>do{<br>}while(i<5)</code>
+            </div>
+            <div class="code" id="code12">
+                <code>css</code>
+            </div>
+            <div class="code" id="code13">
+                <code>html</code>
+            </div>
+            <div class="code" id="code14">
+                <code>java</code>
+            </div>
+            <div class="code" id="code15">
+                <code>my sql</code>
+            </div>
+            <div class="code" id="code16">
+                <code>creative</code>
+            </div>
+            <div class="code" id="code17">
+                <code>unique</code>
+            </div>
+            <div class="code" id="code18">
+                <code>updated</code>
+            </div>
+            <div class="code" id="code19">
+                <code>passion</code>
+            </div>
+            <div class="code" id="code20">
+                <code>discipline</code>
+            </div>
         </section>
+
         <!-- home -->
         <Section id="home" class="page_sec">
             <section class="sub_section">
@@ -3928,7 +4660,7 @@
     </footer>
     <div>
         <a href="#home">
-            <i class="fa-solid fa-circle-chevron-up fa-fade" style="--fa-animation-duration: 1.5s;"></i>
+            <i class="fa-solid fa-circle-chevron-up"></i>
         </a>
     </div>
 </body>
