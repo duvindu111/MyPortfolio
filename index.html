@@ -862,6 +862,34 @@
             font-family: 'Poppins', sans-serif;
             height: 35px;
             width: 160px;
+            animation-name: home_btn_position;
+            animation-duration:4s;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+            /* animation-direction: alternate; */
+        }
+
+        @keyframes home_btn_position{
+            0%{
+                left:0;
+                right:0;
+            }
+            25%{
+                left:10%;
+                right:0;
+            }
+            50%{
+                left:0;
+                right:0;
+            }
+            75%{
+                left:0;
+                right: 10%;
+            }
+            100%{
+                left:0;
+                right:0;
+            }
         }
 
         #home>section>section>nav>a>button:hover {
