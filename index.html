@@ -743,9 +743,6 @@
         }
 
         /* home */
-        .highlight_red {
-            color: #EB4A4C;
-        }
 
         #home>section>section {
             position: absolute;
@@ -770,6 +767,26 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             color: white;
+        }
+
+        #home_th{
+           animation-name: home_th_glow;
+           animation-duration: 4s;
+           animation-iteration-count: infinite;
+           animation-direction:alternate;
+           animation-timing-function: linear;
+        }
+
+        @keyframes home_th_glow{
+            0% {
+    text-shadow: none;
+  }
+  70%{
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9), 0 0 50px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
+  }
         }
 
         #home>section>section>hgroup>h4 {
@@ -881,6 +898,26 @@
             font-size: 2.2vw;
             color: white;
         }
+
+        #about_th{
+            animation-name:about_th_glow;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes about_th_glow{
+            0% {
+    text-shadow: none;
+  }
+  70%{
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.9), 0 0 80px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
+  }
+}
 
         #about_me>section>section>hgroup>h4 {
             position: absolute;
@@ -1806,6 +1843,31 @@
         }
 
         /* common elements */
+
+        .highlight_red {
+            color: #EB4A4C;
+        }
+
+        .red_first_letter{
+            animation-name:red_first_glow;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes red_first_glow{
+            0% {
+    text-shadow: none;
+  }
+  50%{
+    text-shadow: 0 0 0px #EB4A4C;
+  }
+  100% {
+    text-shadow: 2px 2px 30px #ff0004, 0px 0px 30px #ff0004, 10px 10px 30px #ff0004;
+  }
+}
+
         body>main>section>section>hr {
             animation-name: hr_width;
             animation-duration: 2s;
@@ -3460,6 +3522,9 @@
 
         /* 425 - 768 */
         @media all and (min-width:425px) and (max-width:768px) {
+            .code {
+                text-shadow: none;
+            }
 
             /* header  */
             body>header>section:nth-child(2)>nav {
@@ -4158,6 +4223,7 @@
             #get_in_touch>section>section:nth-child(6) {
                 top: 610px;
             }
+
         }
     </style>
 </head>
@@ -4261,7 +4327,7 @@
             <section class="sub_section">
                 <section>
                     <hgroup>
-                        <h1><span class="highlight_red">DUVINDU</span> THATHSARA</h1>
+                        <h1><span class="highlight_red">DUVINDU</span> <span id="home_th">T</span>HATHSARA</h1>
                         <h4>Full Stack Developer</h4>
                     </hgroup>
                     <article>
@@ -4285,14 +4351,14 @@
         <!-- about me -->
         <section id="about_me" class="page_sec">
             <section class="sub_section">
-                <h2>About <span class="highlight_red">Me</span></h2>
+                <h2>About <span class="highlight_red"><span class="red_first_letter">M</span>e</span></h2>
                 <hr>
                 <aside>
                     <img src="assets/resources/images/my_photo2.png" alt="">
                 </aside>
                 <section>
                     <hgroup>
-                        <h1><span class="highlight_red">DUVINDU</span> THATHSARA</h1>
+                        <h1><span class="highlight_red">DUVINDU</span> <span id="about_th">T</span>HATHSARA</h1>
                         <h4>Full Stack Developer</h4>
                     </hgroup>
                     <hr>
@@ -4321,7 +4387,7 @@
         <!-- skills -->
         <section id="skills" class="page_sec">
             <section class="sub_section">
-                <h2>My <span class="highlight_red">Skills</span></h2>
+                <h2>My <span class="highlight_red"><span class="red_first_letter">S</span>kills</span></h2>
                 <hr>
                 <!-- icons java/sql... -->
                 <section>
@@ -4441,7 +4507,7 @@
         <!-- My projects -->
         <section id="my_projects" class="page_sec">
             <section class="sub_section">
-                <h2>My <span class="highlight_red">Projects</span></h2>
+                <h2>My <span class="highlight_red"><span class="red_first_letter">P</span>rojects</span></h2>
                 <hr>
                 <section>
                     <div>
@@ -4480,7 +4546,7 @@
         <!-- My Assignments -->
         <section id="my_assignments" class="page_sec">
             <section class="sub_section">
-                <h2>My <span class="highlight_red">Assignments</span></h2>
+                <h2>My <span class="highlight_red"><span class="red_first_letter">A</span>ssignments</span></h2>
                 <hr>
                 <section>
                     <div>
@@ -4545,7 +4611,7 @@
         <!-- My Educational Qualifications -->
         <section id="my_edu_quali" class="page_sec">
             <section class="sub_section">
-                <h2>My <span class="highlight_red">Educational Qualifications</span></h2>
+                <h2>My <span class="highlight_red"><span class="red_first_letter">E</span>ducational <span class="red_first_letter">Q</span>ualifications</span></h2>
                 <hr>
                 <section>
                     <div>
@@ -4595,7 +4661,7 @@
         <!-- get in touch -->
         <section id="get_in_touch" class="page_sec">
             <section class="sub_section">
-                <h2>Get In <span class="highlight_red">Touch</span></h2>
+                <h2>Get In <span class="highlight_red"><span class="red_first_letter">T</span>ouch</span></h2>
                 <hr>
                 <address>
                     <div>
