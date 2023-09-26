@@ -229,6 +229,15 @@
                 top: calc(100% - 40px);
                 left: 30%;
             }
+            80% {
+                text-shadow: 0 0 2px #9170a2;
+            }
+            81% {
+                text-shadow: 0 0 2px #0291ff39, 2px 2px 10px #0291ffb9;
+            }
+            82% {
+                text-shadow: 0 0 2px #9170a2;
+            }
 
             100% {
                 top: 90px;
@@ -527,9 +536,12 @@
             0% {
                 top: calc(90px + 5%);
             }
-
+            90% {
+                text-shadow: 0 0 2px #9170a2; 
+            }
             100% {
                 top: calc(50% - 40px);
+                text-shadow: 0 0 2px #0291ff39, 2px 2px 10px #0291ffb9;
             }
         }
 
@@ -537,9 +549,12 @@
             0% {
                 top: 90px;
             }
-
+            90%{
+                text-shadow: 0 0 2px #9170a2;
+            }
             100% {
                 top: calc(60% - 40px);
+                text-shadow: 0 0 2px #0291ff39, 2px 2px 10px #0291ffb9;
             }
         }
 
@@ -548,10 +563,13 @@
                 top: calc(50% - 40px);
                 left: 50px;
             }
-
+            90% {
+                text-shadow: 0 0 2px #9170a2;
+            }
             100% {
                 top: calc(100% - 40px);
                 left: 50px;
+                text-shadow: 0 0 2px #0291ff39, 2px 2px 10px #0291ffb9;
             }
         }
 
@@ -560,7 +578,15 @@
                 top: calc(70% - 40px);
                 left: calc(100% - 220px);
             }
-
+            40%{
+                text-shadow: 0 0 2px #9170a2; 
+            }
+            45% {
+                text-shadow: 0 0 2px #0291ff39, 2px 2px 10px #0291ffb9; 
+            }
+            50% {
+                text-shadow: 0 0 2px #9170a2; 
+            }
             100% {
                 top: calc(100% - 40px);
                 left: calc(100% - 220px);
@@ -589,10 +615,13 @@
                 top: 150px;
                 left: calc(20% - 150px);
             }
-
+            95%{
+                text-shadow: 0 0 2px #9170a2;
+            }
             100% {
                 top: 150px;
                 left: calc(80% - 150px);
+                text-shadow: 0 0 2px #0291ff39, 2px 2px 10px #0291ffb9;
             }
         }
 
@@ -625,10 +654,13 @@
                 top: calc(40% - 40px);
                 left: calc(10% - 150px);
             }
-
+            90%{
+                text-shadow: 0 0 2px #9170a2;
+            }
             100% {
                 top: calc(80% - 40px);
                 left: calc(40% - 150px);
+                text-shadow: 0 0 2px #0291ff39, 2px 2px 10px #0291ffb9;
             }
         }
 
@@ -1289,14 +1321,15 @@
             font-weight: 100;
             z-index: 2;
             transition-duration: 1s;
-            transition-property: background-color, border-color;
+            transition-property: background-color, border;
         }
 
         #my_projects>section>a:nth-child(4)>section:hover {
             background-color: rgb(14, 14, 23);
             transition-duration: 1s;
-            transition-property: background-color;
+            transition-property: background-color, border;
             cursor: url(assets/resources/images/crosshair24.png), pointer;
+            border: 3px solid #eb4a4c;
         }
 
         #my_projects>section>a:nth-child(4)>section:hover p {
@@ -1441,13 +1474,16 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
             z-index: 2;
+            transition-duration: 1s;
+            transition-property: background-color, border;
         }
 
         #my_assignments>section>a:nth-child(4)>section:hover {
             background-color: rgb(14, 14, 23);
             transition-duration: 1s;
-            transition-property: background-color;
+            transition-property: background-color, border;
             cursor: url(assets/resources/images/crosshair24.png), pointer;
+            border: 3px solid #eb4a4c;
         }
 
         #my_assignments>section>a:nth-child(4)>section:hover p {
@@ -3471,6 +3507,7 @@
         @media all and (min-width:425px) and (max-width:768px) {
             .code {
                 text-shadow: none;
+                font-size: 12px;
             }
 
             /* header  */
@@ -3921,7 +3958,7 @@ body>header>section:nth-child(2)>nav {
         /* 769 - 1024 */
         @media all and (min-width:769px) and (max-width:1024px) {
             .code {
-                /* font-size: 10px; */
+                font-size: 14px;
                 text-shadow: none;
             }
 
