@@ -759,6 +759,7 @@
         body>header>section:nth-child(2)>nav>menu>li>a {
             text-decoration: none;
             color: white;
+            z-index: 2;
         }
 
         body>header>section:nth-child(2)>nav {
@@ -769,7 +770,8 @@
 
         body>header>section:nth-child(2)>nav>menu>li {
             display: inline-block;
-            padding-right: 20px;
+            padding-right: 10px;
+            padding-left: 10px;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -778,6 +780,10 @@
             transition-property: color;
             color: #EB4A4C;
         }
+
+        body>header>section:nth-child(2)>nav>menu>li>a:active {
+          
+}
 
         body>header>section:nth-child(2)>nav>menu>li:last-of-type {
             padding-right: 4px;
