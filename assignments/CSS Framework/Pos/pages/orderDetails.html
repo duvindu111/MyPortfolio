@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>CSS Framework POS</title>
     <meta content="width=device-width initial-scale=1" name="viewport">
-    <link href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
+    <link href="../assets/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -33,13 +33,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link active" href="#">Orders</a>
+                        <a aria-current="page" class="nav-link" href="../placeOrder.html">Place Order</a>
                     </li>
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link" href="pages/items.html">Items</a>
+                        <a aria-current="page" class="nav-link" href="items.html">Items</a>
                     </li>
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link" href="pages/customers.html">Customers</a>
+                        <a aria-current="page" class="nav-link" href="customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#">Order Details</a>
                     </li>
                 </ul>
 
@@ -50,20 +53,20 @@
 
 <main style="margin-top: 56px; z-index: 10" class="">
     <div class="accordion" id="accordionExample">
-        <div class="accordion-item rounded-bottom-5 border-top-0" style="border-color: black;">
-            <h2 class="accordion-header rounded-bottom-5 ">
+        <div class="accordion-item bg-secondary-subtle rounded-bottom-3" style="">
+            <h2 class="accordion-header rounded-bottom-3 ">
                 <button aria-controls="collapseOne" aria-expanded="false"
-                        class="accordion-button rounded-bottom-5 px-5 bg-secondary-subtle "
+                        class="accordion-button rounded-bottom-3 px-5 bg-secondary text-white "
                         data-bs-target="#collapseOne"
                         data-bs-toggle="collapse" type="button">
-                    Place / Update Order
+                    Update / Delete Order
                 </button>
             </h2>
             <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
-                <div class="row justify-content-center w-100">
+                <div class="row justify-content-center w-100 mt-4">
                     <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
                         <label class="form-label" for="inputOrderId">Order ID:</label>
-                        <input class="form-control" id="inputOrderId" placeholder="" type="text">
+                        <input class="form-control text-danger" disabled id="inputOrderId" placeholder="" type="text" value="ORD-001">
                     </div>
                     <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
                         <label class="form-label" for="inputOrderDate">Order Date:</label>
@@ -71,7 +74,12 @@
                     </div>
                     <div class="col-10 col-md-3 mb-0 mt-3">
                         <label class="form-label" for="inputCustId">Customer ID:</label>
-                        <input class="form-control" id="inputCustId" placeholder="" type="text">
+                        <select class="form-select" id="inputCustId">
+                            <option selected>Choose Customer ID</option>
+                            <option value="1">C001</option>
+                            <option value="2">C002</option>
+                            <option value="3">C003</option>
+                        </select>
                     </div>
                     <div class="col-10 col-md-9 mb-0 mt-3">
                         <label class="form-label" >Customer Name:</label>
@@ -83,7 +91,12 @@
                     </div>
                     <div class="col-10 col-md-9 mb-0 mt-3">
                         <label class="form-label" for="inputItmCode">Item Code:</label>
-                        <input class="form-control" id="inputItmCode" placeholder="" type="text">
+                        <select class="form-select" id="inputItmCode">
+                            <option selected>Choose Item Code</option>
+                            <option value="1">ITM001</option>
+                            <option value="2">ITM002</option>
+                            <option value="3">ITM003</option>
+                        </select>
                     </div>
                     <div class="col-10 col-md-6 mb-0 mt-3">
                         <label class="form-label" >Item Name:</label>
@@ -118,17 +131,14 @@
 
 
                 <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
-                    <div class="row w-100">
-                        <div class="col-6 col-md-4 text-center py-2">
-                            <button class="btn w-100 h-100 btn-dark">Save</button>
-                        </div>
+                    <div class="row w-100 justify-content-center">
                         <div class="col-6 col-md-4 text-center py-2">
                             <button class="btn w-100 h-100 btn-dark">Update</button>
                         </div>
                         <div class="col-6 col-md-4 text-center py-2">
                             <button class="btn w-100 h-100 btn-dark">Delete</button>
                         </div>
-                        <div class="col-6 col-md-12 text-center py-2">
+                        <div class="col-6 col-md-8 text-center py-2">
                             <button class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
                         </div>
                     </div>
@@ -138,9 +148,9 @@
         </div>
     </div>
 
-    <div class="container border mt-5 rounded-2 border-black">
-            <div class="row justify-content-center mb-4">
-                <div class="col-10 mt-3">
+    <div class="container border mt-5 rounded-5 border-success bg-secondary-subtle">
+            <div class="row justify-content-center mb-5">
+                <div class="col-10 mt-5">
                     <label class=" " style="">Find the Order:</label>
                 </div>
                 <form class="d-flex justify-content-center mt-3 gap-3" role="search">
@@ -154,36 +164,66 @@
             </div>
     </div>
 
-    <table class="table table-hover m-auto w-75 mt-5 table-responsive table-bordered">
-        <thead>
-        <tr class="table-dark">
-            <th>Order ID</th>
-            <th>Date</th>
-            <th>Customer ID</th>
-            <th>Item ID</th>
-            <th>Qty</th>
-        </tr>
-        </thead>
-        <tbody class="table-secondary">
-        <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
-            <td>Row 1, Cell 3</td>
-            <td>Row 1, Cell 4</td>
-            <td>Row 1, Cell 5</td>
-        </tr>
-        <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-            <td>Row 2, Cell 3</td>
-            <td>Row 1, Cell 4</td>
-            <td>Row 1, Cell 5</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="col-12 col-md-9 mb-5 mt-3 overflow-x-scroll mx-auto">
+        <table class="table table-hover m-auto w-100 mt-5 table-responsive table-bordered">
+            <thead>
+            <tr class="table-dark">
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Customer ID</th>
+                <th>Item ID</th>
+                <th>Qty</th>
+            </tr>
+            </thead>
+            <tbody class="table-secondary">
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+                <td>Row 1, Cell 4</td>
+                <td>Row 1, Cell 5</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+                <td>Row 1, Cell 4</td>
+                <td>Row 1, Cell 5</td>
+            </tr>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+                <td>Row 1, Cell 4</td>
+                <td>Row 1, Cell 5</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+                <td>Row 1, Cell 4</td>
+                <td>Row 1, Cell 5</td>
+            </tr>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+                <td>Row 1, Cell 4</td>
+                <td>Row 1, Cell 5</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+                <td>Row 1, Cell 4</td>
+                <td>Row 1, Cell 5</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </main>
 
-<script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script src="../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

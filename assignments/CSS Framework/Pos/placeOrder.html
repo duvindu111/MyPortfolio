@@ -41,6 +41,9 @@
                     <li class="nav-item">
                         <a aria-current="page" class="nav-link" href="pages/customers.html">Customers</a>
                     </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="pages/orderDetails.html">Order Details</a>
+                    </li>
                 </ul>
 
             </div>
@@ -49,20 +52,20 @@
 </header>
 
 <main class="" style="margin-top: 100px; z-index: 10">
-    <div class="container border rounded-4 mb-5 py-4 border-success-subtle">
+    <div class="container border rounded-5 mb-5 py-4 border-secondary border-3 bg-secondary-subtle ">
         <div class="row justify-content-center w-100 mx-auto">
             <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
                 <label class="form-label" for="inputOrderId">Order ID:</label>
-                <input class="form-control" id="inputOrderId" placeholder="" type="text">
+                <input class="form-control border-black" id="inputOrderId" placeholder="" type="text">
             </div>
             <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
                 <label class="form-label" for="inputOrderDate">Order Date:</label>
-                <input class="form-control" id="inputOrderDate" placeholder="" type="date">
+                <input class="form-control border-black" id="inputOrderDate" placeholder="" type="date">
             </div>
             <div class="col-10 col-md-3 mb-0 mt-3">
                 <label class="form-label" for="inputCustId">Customer ID:</label>
 <!--                <input class="form-control" id="inputCustId" placeholder="" type="text">-->
-                <select class="form-select" id="inputCustId">
+                <select class="form-select border-black" id="inputCustId">
                     <option selected>Choose Customer ID</option>
                     <option value="1">C001</option>
                     <option value="2">C002</option>
@@ -70,17 +73,17 @@
                 </select>
             </div>
             <div class="col-10 col-md-9 mb-0 mt-3">
-                <label class="form-label text-success">Customer Name:</label>
-                <label class="form-label text-success">&nbsp;&nbsp;Name 1</label>
+                <label class="form-label text-info-emphasis">Customer Name:</label>
+                <label class="form-label text-info-emphasis">&nbsp;&nbsp;Name 1</label>
             </div>
             <div class="col-10 col-md-9 mb-0 mt-0">
-                <label class="form-label text-success">Customer Contact:</label>
-                <label class="form-label text-success">&nbsp;&nbsp;0123456789</label>
+                <label class="form-label text-info-emphasis">Customer Contact:</label>
+                <label class="form-label text-info-emphasis">&nbsp;&nbsp;0123456789</label>
             </div>
             <div class="col-10 col-md-9 mb-0 mt-3">
                 <label class="form-label" for="inputItmCode">Item Code:</label>
 <!--                <input class="form-control" id="inputItmCode" placeholder="" type="text">-->
-                <select class="form-select" id="inputItmCode">
+                <select class="form-select border-black" id="inputItmCode">
                     <option selected>Choose Item Code</option>
                     <option value="1">ITM001</option>
                     <option value="2">ITM002</option>
@@ -88,20 +91,20 @@
                 </select>
             </div>
             <div class="col-10 col-md-6 mb-0 mt-3">
-                <label class="form-label text-success">Item Name:</label>
-                <label class="form-label text-success">&nbsp;&nbsp;Item 1</label>
+                <label class="form-label text-info-emphasis">Item Name:</label>
+                <label class="form-label text-info-emphasis">&nbsp;&nbsp;Item 1</label>
             </div>
             <div class="col-10 col-md-3 col-sm-5 mb-0 mt-0 mt-md-3 ">
-                <label class="form-label text-success">Unit Price:</label>
-                <label class="form-label text-success">&nbsp;&nbsp;100.00</label>
+                <label class="form-label text-info-emphasis">Unit Price:</label>
+                <label class="form-label text-info-emphasis">&nbsp;&nbsp;100.00</label>
             </div>
             <div class="col-10 col-md-9 col-sm-5 mb-0 mt-0">
-                <label class="form-label text-success">Qty left:</label>
-                <label class="form-label text-success">&nbsp;&nbsp;100</label>
+                <label class="form-label text-info-emphasis">Qty left:</label>
+                <label class="form-label text-info-emphasis">&nbsp;&nbsp;100</label>
             </div>
             <div class="col-10 col-md-9 mb-2 mt-3">
                 <label class="form-label" for="inputOrdQty">Ordered Qty:</label>
-                <input class="form-control" id="inputOrdQty" min="1" placeholder="" type="number" style="width: 35%">
+                <input class="form-control border-black" id="inputOrdQty" min="1" placeholder="" type="number" style="width: 35%">
             </div>
             <div class="col-10 col-md-9 mb-0 mt-3">
                 <button class="btn w-100 h-100 bg-danger text-white ">Add To Cart</button>
@@ -117,7 +120,7 @@
                         <th>Total</th>
                     </tr>
                     </thead>
-                    <tbody class="table-secondary">
+                    <tbody class="table-light">
                     <tr>
                         <td>Row 1, Cell 1</td>
                         <td>Row 1, Cell 2</td>
@@ -137,15 +140,15 @@
             </div>
             <div class="col-10 col-md-9 mb-0 mt-5">
                 <label class="form-label fs-1 text-danger">Total:</label>
-                <label class="form-label fs-1 text-danger">&nbsp;&nbsp;1000</label>
+                <label class="form-label fs-1 text-danger">&nbsp;&nbsp;1000/=</label>
             </div>
             <div class="col-10 col-md-9 mb-3 mt-0">
                 <label class="form-label fs-4 text-secondary">Sub Total:</label>
-                <label class="form-label fs-4 text-secondary">&nbsp;&nbsp;900</label>
+                <label class="form-label fs-4 text-secondary">&nbsp;&nbsp;900/=</label>
             </div>
             <div class="col-10 col-md-9 mb-0 mt-0">
                 <label class="form-label" for="inputDiscount">Discount (%):</label>
-                <input class="form-control w-25" id="inputDiscount" min="0" placeholder="" type="number">
+                <input class="form-control w-25 border-black" id="inputDiscount" min="0" placeholder="" type="number">
             </div>
         </div>
         <div class="row w-100 mb-5 mt-5 justify-content-center mx-auto">

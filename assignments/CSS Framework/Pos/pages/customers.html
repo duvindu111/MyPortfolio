@@ -33,13 +33,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link" href="../orders.html">Place Order</a>
+                        <a aria-current="page" class="nav-link" href="../placeOrder.html">Place Order</a>
                     </li>
                     <li class="nav-item">
                         <a aria-current="page" class="nav-link" href="items.html">Items</a>
                     </li>
                     <li class="nav-item">
                         <a aria-current="page" class="nav-link active" href="#">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="orderDetails.html">Order Details</a>
                     </li>
                 </ul>
 
@@ -50,32 +53,36 @@
 
 <main style="margin-top: 56px; z-index: 10">
     <div class="accordion" id="accordionExample">
-        <div class="accordion-item rounded-bottom-5 border-top-0" style="border-color: black;">
-            <h2 class="accordion-header rounded-bottom-5 ">
+        <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
+            <h2 class="accordion-header rounded-bottom-3 ">
                 <button aria-controls="collapseOne" aria-expanded="false"
-                        class="accordion-button rounded-bottom-5 px-5 bg-secondary-subtle "
+                        class="accordion-button rounded-bottom-3 px-5 bg-secondary text-white "
                         data-bs-target="#collapseOne"
                         data-bs-toggle="collapse" type="button">
                     Add / Update Customer
                 </button>
             </h2>
-            <div class="accordion-collapse collapse " data-bs-parent="#accordionExample" id="collapseOne">
+            <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
 
-                <div class="mb-3 mx-5 mt-3">
-                    <label class="form-label" for="inputCustId">Customer ID:</label>
-                    <input class="form-control" id="inputCustId" placeholder="" type="text">
-                </div>
-                <div class="mb-3 mx-5 mt-3">
-                    <label class="form-label" for="inputCustName">Customer Name:</label>
-                    <input class="form-control" id="inputCustName" placeholder="" type="text">
-                </div>
-                <div class="mb-3 mx-5 mt-3">
-                    <label class="form-label" for="inputCustAdd">Customer Address:</label>
-                    <input class="form-control" id="inputCustAdd" placeholder="" type="text">
-                </div>
-                <div class="mb-3 mx-5 mt-3">
-                    <label class="form-label" for="inputCustTel">Customer Contact:</label>
-                    <input class="form-control" id="inputCustTel" placeholder="" type="text">
+                <div class="container-fluid ">
+                    <div class="row w-100 justify-content-center mx-auto mt-4">
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputCustId">Customer ID:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustId" placeholder="" type="text">
+                        </div>
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputCustName">Customer Name:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustName" placeholder="" type="text">
+                        </div>
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputCustAddress">Customer Address:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustAddress" placeholder="" type="text">
+                        </div>
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputCustContact">Customer Contact:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustContact" placeholder="" type="text">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
@@ -99,9 +106,9 @@
         </div>
     </div>
 
-    <div class="container border mt-5 rounded-2 border-black">
-            <div class="row justify-content-center mb-4">
-                <div class="col-10 mt-3">
+    <div class="container border mt-5 rounded-5 border-success bg-secondary-subtle">
+            <div class="row justify-content-center mb-5">
+                <div class="col-10 mt-5">
                     <label class=" " style="">Find Customer:</label>
                 </div>
                 <form class="d-flex justify-content-center mt-3 gap-3" role="search">
@@ -125,6 +132,30 @@
         </tr>
         </thead>
         <tbody class="table-secondary">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
         <tr>
             <td>Row 1, Cell 1</td>
             <td>Row 1, Cell 2</td>
