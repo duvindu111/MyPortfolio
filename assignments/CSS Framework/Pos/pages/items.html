@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Framework POS</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="../assets/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+<header class="position-fixed top-0 w-100" style="z-index: 20">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <i class="fa-solid fa-location-crosshairs opacity-75"
+               style="margin-right: 10px; margin-left: 10px; font-size: 2rem"></i>
+            <h3 class="mb-0">Shop</h3>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="../orders.html">Place Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="customers.html">Customers</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main style="margin-top: 56px; z-index: 10">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item rounded-bottom-5 border-top-0" style="border-color: black;">
+            <h2 class="accordion-header rounded-bottom-5 ">
+                <button aria-controls="collapseOne" aria-expanded="false"
+                        class="accordion-button rounded-bottom-5 px-5 bg-secondary-subtle "
+                        data-bs-target="#collapseOne"
+                        data-bs-toggle="collapse" type="button">
+                    Add / Update Item
+                </button>
+            </h2>
+            <div class="accordion-collapse collapse " data-bs-parent="#accordionExample" id="collapseOne">
+
+                <div class="mb-3 mx-5 mt-3">
+                    <label class="form-label" for="inputItemCode">Item Code:</label>
+                    <input class="form-control" id="inputItemCode" placeholder="" type="text">
+                </div>
+                <div class="mb-3 mx-5 mt-3">
+                    <label class="form-label" for="inputitemName">Item Name:</label>
+                    <input class="form-control" id="inputitemName" placeholder="" type="text">
+                </div>
+                <div class="mb-3 mx-5 mt-3">
+                    <label class="form-label" for="inputUnitPrice">Unit Price:</label>
+                    <input class="form-control" id="inputUnitPrice" placeholder="" type="text">
+                </div>
+                <div class="mb-3 mx-5 mt-3">
+                    <label class="form-label" for="inputQtyOnHand">Qty On Hand:</label>
+                    <input class="form-control" id="inputQtyOnHand" placeholder="" type="text">
+                </div>
+
+                <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
+                    <div class="row w-100">
+                        <div class="col-6 col-md-4 text-center py-2">
+                            <button class="btn w-100 h-100 btn-dark">Save</button>
+                        </div>
+                        <div class="col-6 col-md-4 text-center py-2">
+                            <button class="btn w-100 h-100 btn-dark">Update</button>
+                        </div>
+                        <div class="col-6 col-md-4 text-center py-2">
+                            <button class="btn w-100 h-100 btn-dark">Delete</button>
+                        </div>
+                        <div class="col-6 col-md-12 text-center py-2">
+                            <button class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container border mt-5 rounded-2 border-black">
+            <div class="row justify-content-center mb-4">
+                <div class="col-10 mt-3">
+                    <label class=" " style="">Find Item:</label>
+                </div>
+                <form class="d-flex justify-content-center mt-3 gap-3" role="search">
+                    <div class="col-7 col-md-8">
+                        <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <button class="btn btn-outline-success w-100" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+    <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
+        <thead>
+        <tr class="table-dark">
+            <th>Item Code</th>
+            <th>Name</th>
+            <th>Unit Price</th>
+            <th>Qty On Hand</th>
+        </tr>
+        </thead>
+        <tbody class="table-secondary">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+
+
+<script src="../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
