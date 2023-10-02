@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Single Page POS</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="placeOrder">
+        <header class="position-fixed top-0 w-100" style="z-index: 20">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <i class="fa-solid fa-location-crosshairs opacity-75"
+                        style="margin-right: 10px; margin-left: 10px; font-size: 2rem"></i>
+                    <h3 class="mb-0">Shop</h3>
+                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+                        type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link active" href="#">Place Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Items</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Order Details</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="" style="margin-top: 100px; z-index: 10">
+            <div class="container border rounded-5 mb-5 py-4 border-secondary border-3 bg-secondary-subtle ">
+                <div class="row justify-content-center w-100 mx-auto">
+                    <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
+                        <label class="form-label" for="inputOrderId">Order ID:</label>
+                        <input class="form-control border-black" id="inputOrderId" placeholder="" type="text">
+                    </div>
+                    <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
+                        <label class="form-label" for="inputOrderDate">Order Date:</label>
+                        <input class="form-control border-black" id="inputOrderDate" placeholder="" type="date">
+                    </div>
+                    <div class="col-10 col-md-3 mb-0 mt-3">
+                        <label class="form-label" for="inputCustId">Customer ID:</label>
+                        <!--                <input class="form-control" id="inputCustId" placeholder="" type="text">-->
+                        <select class="form-select border-black" id="inputCustId">
+                            <option selected>Choose Customer ID</option>
+                            <option value="1">C001</option>
+                            <option value="2">C002</option>
+                            <option value="3">C003</option>
+                        </select>
+                    </div>
+                    <div class="col-10 col-md-9 mb-0 mt-3">
+                        <label class="form-label text-info-emphasis">Customer Name:</label>
+                        <label class="form-label text-info-emphasis">&nbsp;&nbsp;Name 1</label>
+                    </div>
+                    <div class="col-10 col-md-9 mb-0 mt-0">
+                        <label class="form-label text-info-emphasis">Customer Contact:</label>
+                        <label class="form-label text-info-emphasis">&nbsp;&nbsp;0123456789</label>
+                    </div>
+                    <div class="col-10 col-md-9 mb-0 mt-3">
+                        <label class="form-label" for="inputItmCode">Item Code:</label>
+                        <!--                <input class="form-control" id="inputItmCode" placeholder="" type="text">-->
+                        <select class="form-select border-black" id="inputItmCode">
+                            <option selected>Choose Item Code</option>
+                            <option value="1">ITM001</option>
+                            <option value="2">ITM002</option>
+                            <option value="3">ITM003</option>
+                        </select>
+                    </div>
+                    <div class="col-10 col-md-6 mb-0 mt-3">
+                        <label class="form-label text-info-emphasis">Item Name:</label>
+                        <label class="form-label text-info-emphasis">&nbsp;&nbsp;Item 1</label>
+                    </div>
+                    <div class="col-10 col-md-3 col-sm-5 mb-0 mt-0 mt-md-3 ">
+                        <label class="form-label text-info-emphasis">Unit Price:</label>
+                        <label class="form-label text-info-emphasis">&nbsp;&nbsp;100.00</label>
+                    </div>
+                    <div class="col-10 col-md-9 col-sm-5 mb-0 mt-0">
+                        <label class="form-label text-info-emphasis">Qty left:</label>
+                        <label class="form-label text-info-emphasis">&nbsp;&nbsp;100</label>
+                    </div>
+                    <div class="col-10 col-md-9 mb-2 mt-3">
+                        <label class="form-label" for="inputOrdQty">Ordered Qty:</label>
+                        <input class="form-control border-black" id="inputOrdQty" min="1" placeholder="" type="number"
+                            style="width: 35%">
+                    </div>
+                    <div class="col-10 col-md-9 mb-0 mt-3">
+                        <button class="btn w-100 h-100 bg-danger text-white ">Add To Cart</button>
+                    </div>
+                    <div class="col-10 col-md-9 mb-0 mt-3 overflow-x-scroll">
+                        <table class="table table-responsive table-hover mt-4 mb-4 table-bordered  w-100" style="">
+                            <thead>
+                                <tr class="table-dark">
+                                    <th>Item Code</th>
+                                    <th>Item Name</th>
+                                    <th>Unit Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-light">
+                                <tr>
+                                    <td>Row 1, Cell 1</td>
+                                    <td>Row 1, Cell 2</td>
+                                    <td>Row 1, Cell 3</td>
+                                    <td>Row 1, Cell 4</td>
+                                    <td>Row 1, Cell 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 2, Cell 1</td>
+                                    <td>Row 2, Cell 2</td>
+                                    <td>Row 2, Cell 3</td>
+                                    <td>Row 1, Cell 4</td>
+                                    <td>Row 1, Cell 5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-10 col-md-9 mb-0 mt-5">
+                        <label class="form-label fs-1 text-danger">Total:</label>
+                        <label class="form-label fs-1 text-danger">&nbsp;&nbsp;1000/=</label>
+                    </div>
+                    <div class="col-10 col-md-9 mb-3 mt-0">
+                        <label class="form-label fs-4 text-secondary">Sub Total:</label>
+                        <label class="form-label fs-4 text-secondary">&nbsp;&nbsp;900/=</label>
+                    </div>
+                    <div class="col-10 col-md-9 mb-0 mt-0">
+                        <label class="form-label" for="inputDiscount">Discount (%):</label>
+                        <input class="form-control w-25 border-black" id="inputDiscount" min="0" placeholder=""
+                            type="number">
+                    </div>
+                </div>
+                <div class="row w-100 mb-5 mt-5 justify-content-center mx-auto">
+                    <div class="col-10 col-md-9 text-center py-2">
+                        <button class="btn w-100 h-100 bg-success text-white">Purchase</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </section>
+
+    <section id="items" style="display: none;">
+        <header class="position-fixed top-0 w-100" style="z-index: 20">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <i class="fa-solid fa-location-crosshairs opacity-75"
+                        style="margin-right: 10px; margin-left: 10px; font-size: 2rem"></i>
+                    <h3 class="mb-0">Shop</h3>
+                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+                        type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Place Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link active" href="#">Items</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Order Details</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main style="margin-top: 56px; z-index: 10">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
+                    <h2 class="accordion-header rounded-bottom-3 ">
+                        <button aria-controls="collapseOne" aria-expanded="false"
+                            class="accordion-button rounded-bottom-3 px-5 bg-secondary text-white "
+                            data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+                            Add / Update Item
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
+
+                        <div class="container-fluid ">
+                            <div class="row w-100 justify-content-center mx-auto mt-4">
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputItemCode">Item Code:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputItemCode" placeholder="" type="text">
+                                </div>
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputitemName">Item Name:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputitemName" placeholder="" type="text">
+                                </div>
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputUnitPrice">Unit Price:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputUnitPrice" placeholder="" type="text">
+                                </div>
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputQtyOnHand">Qty On Hand:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputQtyOnHand" placeholder="" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
+                            <div class="row w-100">
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Save</button>
+                                </div>
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Update</button>
+                                </div>
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Delete</button>
+                                </div>
+                                <div class="col-6 col-md-12 text-center py-2">
+                                    <button class="btn w-100 h-100"
+                                        style="background-color: grey; color: white">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container border mt-5 rounded-5 border-success bg-secondary-subtle">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-10 mt-5">
+                        <label class=" " style="">Find Item:</label>
+                    </div>
+                    <form class="d-flex justify-content-center mt-3 gap-3" role="search">
+                        <div class="col-7 col-md-8">
+                            <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <button class="btn btn-outline-success w-100" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Item Code</th>
+                        <th>Name</th>
+                        <th>Unit Price</th>
+                        <th>Qty On Hand</th>
+                    </tr>
+                </thead>
+                <tbody class="table-secondary">
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </section>
+
+    <section id="customers" style="display: none;">
+        <header class="position-fixed top-0 w-100" style="z-index: 20">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <i class="fa-solid fa-location-crosshairs opacity-75"
+                        style="margin-right: 10px; margin-left: 10px; font-size: 2rem"></i>
+                    <h3 class="mb-0">Shop</h3>
+                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+                        type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Place Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Items</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link active" href="#">Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Order Details</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main style="margin-top: 56px; z-index: 10">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
+                    <h2 class="accordion-header rounded-bottom-3 ">
+                        <button aria-controls="collapseOne" aria-expanded="false"
+                            class="accordion-button rounded-bottom-3 px-5 bg-secondary text-white "
+                            data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+                            Add / Update Customer
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
+
+                        <div class="container-fluid ">
+                            <div class="row w-100 justify-content-center mx-auto mt-4">
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputCustId">Customer ID:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputCustId" placeholder="" type="text">
+                                </div>
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputCustName">Customer Name:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputCustName" placeholder="" type="text">
+                                </div>
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputCustAddress">Customer Address:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputCustAddress" placeholder="" type="text">
+                                </div>
+                                <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                                    <label class="form-label" for="inputCustContact">Customer Contact:</label>
+                                    <input class="form-control border-secondary-subtle border-3 rounded-5"
+                                        id="inputCustContact" placeholder="" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
+                            <div class="row w-100">
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Save</button>
+                                </div>
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Update</button>
+                                </div>
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Delete</button>
+                                </div>
+                                <div class="col-6 col-md-12 text-center py-2">
+                                    <button class="btn w-100 h-100"
+                                        style="background-color: grey; color: white">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container border mt-5 rounded-5 border-success bg-secondary-subtle">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-10 mt-5">
+                        <label class=" " style="">Find Customer:</label>
+                    </div>
+                    <form class="d-flex justify-content-center mt-3 gap-3" role="search">
+                        <div class="col-7 col-md-8">
+                            <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <button class="btn btn-outline-success w-100" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
+                <thead>
+                    <tr class="table-dark">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody class="table-secondary">
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                        <td>Row 1, Cell 4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </section>
+
+    <section id="orderDetails" style="display: none;">
+        <header class="position-fixed top-0 w-100 " style="z-index: 20">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <i class="fa-solid fa-location-crosshairs opacity-75"
+                        style="margin-right: 10px; margin-left: 10px; font-size: 2rem"></i>
+                    <h3 class="mb-0">Shop</h3>
+                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+                        type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Place Order</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Items</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link" href="#">Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link active" href="#">Order Details</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main style="margin-top: 56px; z-index: 10" class="">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item bg-secondary-subtle rounded-bottom-3" style="">
+                    <h2 class="accordion-header rounded-bottom-3 ">
+                        <button aria-controls="collapseOne" aria-expanded="false"
+                            class="accordion-button rounded-bottom-3 px-5 bg-secondary text-white "
+                            data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+                            Update / Delete Order
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
+                        <div class="row justify-content-center w-100 mt-4">
+                            <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
+                                <label class="form-label" for="inputOrderId">Order ID:</label>
+                                <input class="form-control text-danger" disabled id="inputOrderId" placeholder=""
+                                    type="text" value="ORD-001">
+                            </div>
+                            <div class="col-10 col-sm-5 col-md-3 mb-3 mt-3 mb-md-0">
+                                <label class="form-label" for="inputOrderDate">Order Date:</label>
+                                <input class="form-control" id="inputOrderDate" placeholder="" type="date">
+                            </div>
+                            <div class="col-10 col-md-3 mb-0 mt-3">
+                                <label class="form-label" for="inputCustId">Customer ID:</label>
+                                <select class="form-select" id="inputCustId">
+                                    <option selected>Choose Customer ID</option>
+                                    <option value="1">C001</option>
+                                    <option value="2">C002</option>
+                                    <option value="3">C003</option>
+                                </select>
+                            </div>
+                            <div class="col-10 col-md-9 mb-0 mt-3">
+                                <label class="form-label">Customer Name:</label>
+                                <label class="form-label">&nbsp;&nbsp;Name 1</label>
+                            </div>
+                            <div class="col-10 col-md-9 mb-0 mt-0">
+                                <label class="form-label">Customer Contact:</label>
+                                <label class="form-label">&nbsp;&nbsp;0123456789</label>
+                            </div>
+                            <div class="col-10 col-md-9 mb-0 mt-3">
+                                <label class="form-label" for="inputItmCode">Item Code:</label>
+                                <select class="form-select" id="inputItmCode">
+                                    <option selected>Choose Item Code</option>
+                                    <option value="1">ITM001</option>
+                                    <option value="2">ITM002</option>
+                                    <option value="3">ITM003</option>
+                                </select>
+                            </div>
+                            <div class="col-10 col-md-6 mb-0 mt-3">
+                                <label class="form-label">Item Name:</label>
+                                <label class="form-label">&nbsp;&nbsp;Item 1</label>
+                            </div>
+                            <div class="col-10 col-md-3 col-sm-5 mb-0 mt-0 mt-md-3 ">
+                                <label class="form-label">Unit Price:</label>
+                                <label class="form-label">&nbsp;&nbsp;100.00</label>
+                            </div>
+                            <div class="col-10 col-md-9 col-sm-5 mb-0 mt-0">
+                                <label class="form-label">Qty left:</label>
+                                <label class="form-label">&nbsp;&nbsp;100</label>
+                            </div>
+                            <div class="col-10 col-md-9 mb-0 mt-3">
+                                <label class="form-label" for="inputOrdQty">Ordered Qty:</label>
+                                <input class="form-control" id="inputOrdQty" placeholder="" type="number" min="1">
+                            </div>
+                            <div class="col-10 col-md-9 mb-0 mt-3">
+                                <label class="form-label">Total:</label>
+                                <label class="form-label">&nbsp;&nbsp;1000</label>
+                            </div>
+                            <div class="col-10 col-md-9 mb-2 mt-0">
+                                <label class="form-label">Sub Total:</label>
+                                <label class="form-label">&nbsp;&nbsp;900</label>
+                            </div>
+                            <div class="col-10 col-md-9 mb-0 mt-0">
+                                <label class="form-label" for="inputDiscount">Discount (%):</label>
+                                <input class="form-control w-25" id="inputDiscount" placeholder="" type="number"
+                                    min="0">
+                            </div>
+                        </div>
+
+
+
+                        <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
+                            <div class="row w-100 justify-content-center">
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Update</button>
+                                </div>
+                                <div class="col-6 col-md-4 text-center py-2">
+                                    <button class="btn w-100 h-100 btn-dark">Delete</button>
+                                </div>
+                                <div class="col-6 col-md-8 text-center py-2">
+                                    <button class="btn w-100 h-100"
+                                        style="background-color: grey; color: white">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container border mt-5 rounded-5 border-success bg-secondary-subtle">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-10 mt-5">
+                        <label class=" " style="">Find the Order:</label>
+                    </div>
+                    <form class="d-flex justify-content-center mt-3 gap-3" role="search">
+                        <div class="col-7 col-md-8">
+                            <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <button class="btn btn-outline-success w-100" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 mb-5 mt-3 overflow-x-scroll mx-auto">
+                <table class="table table-hover m-auto w-100 mt-5 table-responsive table-bordered">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Customer ID</th>
+                            <th>Item ID</th>
+                            <th>Qty</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-secondary">
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 1, Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 1, Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 1, Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 1, Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Row 1, Cell 1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>Row 1, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 1, Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2, Cell 1</td>
+                            <td>Row 2, Cell 2</td>
+                            <td>Row 2, Cell 3</td>
+                            <td>Row 1, Cell 4</td>
+                            <td>Row 1, Cell 5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </section>
+
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function (event) {
+            let selectedSection = sessionStorage.getItem("selectedSection");
+            if (selectedSection) {
+                document.querySelectorAll("body>section").forEach(section => {
+                    section.style.display="none";
+                });
+                document.getElementById(selectedSection).style.display="block";
+            } else {
+                navigate("placeOrder");
+            }
+        };
+
+        //placeOrder
+        document.querySelector("#placeOrder>header>nav>div>div>ul>li:nth-child(2)").addEventListener(
+            "click", function () {
+                document.querySelector("#items").style.display = "block";
+                document.querySelector("#placeOrder").style.display = "none";
+                sessionStorage.setItem("selectedSection", "items");
+            }
+        );
+        document.querySelector("#placeOrder>header>nav>div>div>ul>li:nth-child(3)").addEventListener(
+            "click", function () {
+                document.querySelector("#customers").style.display = "block";
+                document.querySelector("#placeOrder").style.display = "none";
+                sessionStorage.setItem("selectedSection", "customers");
+            }
+        );
+        document.querySelector("#placeOrder>header>nav>div>div>ul>li:nth-child(4)").addEventListener(
+            "click", function () {
+                document.querySelector("#orderDetails").style.display = "block";
+                document.querySelector("#placeOrder").style.display = "none";
+                sessionStorage.setItem("selectedSection", "orderDetails");
+            }
+        );
+
+        //items
+        document.querySelector("#items>header>nav>div>div>ul>li:nth-child(1)").addEventListener(
+            "click", function () {
+                document.querySelector("#placeOrder").style.display = "block";
+                document.querySelector("#items").style.display = "none";
+                sessionStorage.setItem("selectedSection", "placeOrder");
+            }
+        );
+        document.querySelector("#items>header>nav>div>div>ul>li:nth-child(3)").addEventListener(
+            "click", function () {
+                document.querySelector("#customers").style.display = "block";
+                document.querySelector("#items").style.display = "none";
+                sessionStorage.setItem("selectedSection", "customers");
+            }
+        );
+        document.querySelector("#items>header>nav>div>div>ul>li:nth-child(4)").addEventListener(
+            "click", function () {
+                document.querySelector("#orderDetails").style.display = "block";
+                document.querySelector("#items").style.display = "none";
+                sessionStorage.setItem("selectedSection", "orderDetails");
+            }
+        );
+
+        //customers
+        document.querySelector("#customers>header>nav>div>div>ul>li:nth-child(1)").addEventListener(
+            "click", function () {
+                document.querySelector("#placeOrder").style.display = "block";
+                document.querySelector("#customers").style.display = "none";
+                sessionStorage.setItem("selectedSection", "placeOrder");
+            }
+        );
+        document.querySelector("#customers>header>nav>div>div>ul>li:nth-child(2)").addEventListener(
+            "click", function () {
+                document.querySelector("#items").style.display = "block";
+                document.querySelector("#customers").style.display = "none";
+                sessionStorage.setItem("selectedSection", "items");
+            }
+        );
+        document.querySelector("#customers>header>nav>div>div>ul>li:nth-child(4)").addEventListener(
+            "click", function () {
+                document.querySelector("#orderDetails").style.display = "block";
+                document.querySelector("#customers").style.display = "none";
+                sessionStorage.setItem("selectedSection", "orderDetails");
+            }
+        );
+
+        //orderDetails
+        document.querySelector("#orderDetails>header>nav>div>div>ul>li:nth-child(1)").addEventListener(
+            "click", function () {
+                document.querySelector("#placeOrder").style.display = "block";
+                document.querySelector("#orderDetails").style.display = "none";
+                sessionStorage.setItem("selectedSection", "placeOrder");
+            }
+        );
+        document.querySelector("#orderDetails>header>nav>div>div>ul>li:nth-child(2)").addEventListener(
+            "click", function () {
+                document.querySelector("#items").style.display = "block";
+                document.querySelector("#orderDetails").style.display = "none";
+                sessionStorage.setItem("selectedSection", "items");
+            }
+        );
+        document.querySelector("#orderDetails>header>nav>div>div>ul>li:nth-child(3)").addEventListener(
+            "click", function () {
+                document.querySelector("#customers").style.display = "block";
+                document.querySelector("#orderDetails").style.display = "none";
+                sessionStorage.setItem("selectedSection", "customers");
+            }
+        );
+
+
+    </script>
+</body>
+
+</html>
