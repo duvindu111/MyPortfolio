@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QUE</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        div {
+            position: relative;
+            display: inline-block;
+            /* border: 1px solid black; */
+        }
+
+        div:first-child {
+            width: 200px;
+            height: 80px;
+        }
+
+        div:nth-child(2) {
+            width: 200px;
+            height: 80px;
+            top: 80px;
+        }
+
+        div:nth-child(3) {
+            width: 200px;
+            height: 80px;
+            top: 80px;
+        }
+
+        div:nth-child(4) {
+            width: 200px;
+            height: 80px;
+            top: 80px;
+        }
+
+        div:nth-child(5) {
+            width: 200px;
+            height: 80px;
+            top: 160px;
+        }
+
+        section {
+            width: max-content;
+            height: 240px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <script>
+        let colors = ["blue", "green", "aquamarine", "yellow", "red"];
+        let divs = document.querySelectorAll("div");
+
+        setInterval(
+            function () {
+                var lastColor = colors.pop();
+                colors.unshift(lastColor);
+                for (let i in colors) {
+                    divs[i].style.background = colors[i];
+                }
+            }, 300
+        );
+
+
+
+    </script>
+</body>
+
+</html>
