@@ -358,7 +358,7 @@
         </header>
 
         <main style="margin-top: 56px; z-index: 10">
-            <div class="accordion" id="accordionExample">
+            <div class="accordion" id="c_accordionExample">
                 <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
                     <h2 class="accordion-header rounded-bottom-3 ">
                         <button aria-controls="collapseOne" aria-expanded="false"
@@ -372,32 +372,32 @@
                         <div class="container-fluid ">
                             <div class="row w-100 justify-content-center mx-auto mt-4">
                                 <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                    <label class="form-label" for="inputCustId">Customer ID:</label>
+                                    <label class="form-label" for="c_inputCustId">Customer ID:</label>
                                     <input class="form-control border-secondary-subtle border-3 rounded-5"
-                                        id="inputCustId" placeholder="" type="text">
+                                        id="c_inputCustId" placeholder="" type="text">
                                 </div>
                                 <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                    <label class="form-label" for="inputCustName">Customer Name:</label>
+                                    <label class="form-label" for="c_inputCustName">Customer Name:</label>
                                     <input class="form-control border-secondary-subtle border-3 rounded-5"
-                                        id="inputCustName" placeholder="" type="text">
+                                        id="c_inputCustName" placeholder="" type="text">
                                 </div>
                                 <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                    <label class="form-label" for="inputCustAddress">Customer Address:</label>
+                                    <label class="form-label" for="c_inputCustAddress">Customer Address:</label>
                                     <input class="form-control border-secondary-subtle border-3 rounded-5"
-                                        id="inputCustAddress" placeholder="" type="text">
+                                        id="c_inputCustAddress" placeholder="" type="text">
                                 </div>
                                 <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                    <label class="form-label" for="inputCustContact">Customer Contact:</label>
+                                    <label class="form-label" for="c_inputCustContact">Customer Contact:</label>
                                     <input class="form-control border-secondary-subtle border-3 rounded-5"
-                                        id="inputCustContact" placeholder="" type="text">
+                                        id="c_inputCustContact" placeholder="" type="text">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
+                        <div class="container-fluid mt-4 w-100 mb-5 px-5" id="c_btnContainer" style="height: max-content">
                             <div class="row w-100">
                                 <div class="col-6 col-md-4 text-center py-2">
-                                    <button class="btn w-100 h-100 btn-dark">Save</button>
+                                    <button class="btn w-100 h-100 btn-dark" id="c_btnSave">Save</button>
                                 </div>
                                 <div class="col-6 col-md-4 text-center py-2">
                                     <button class="btn w-100 h-100 btn-dark">Update</button>
@@ -432,7 +432,7 @@
                 </div>
             </div>
 
-            <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
+            <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered" id="custTable">
                 <thead>
                     <tr class="table-dark">
                         <th>ID</th>
@@ -441,7 +441,7 @@
                         <th>Contact</th>
                     </tr>
                 </thead>
-                <tbody class="table-secondary">
+                <tbody class="table-secondary" id="custTableBody">
                     <tr>
                         <td>Row 1, Cell 1</td>
                         <td>Row 1, Cell 2</td>
@@ -693,6 +693,52 @@
 
     <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script>
+        var custBtnSave = document.querySelector("#c_btnSave");
+        let custIdField= document.querySelector("#c_inputCustId");
+        let custNameField= document.querySelector("#c_inputCustName");
+        let custAddressField= document.querySelector("#c_inputCustAddress");
+        let custContactField= document.querySelector("#c_inputCustContact")
+
+        var customers=[];
+        custBtnSave.addEventListener("click",function(){
+            var customer={
+                custId: custIdField.value,
+                custName: custNameField.value,
+                custAddress: custAddressField.value,
+                custContact: custContactField.value,
+            }
+
+            customers.push(customer);
+            console.log(customers);
+
+            /////////////////////
+            let table = document.getElementById("custTable");
+            let tbody = table.getElementsByTagName("tbody")[0];
+
+            tbody.innerHTML="";
+            for (let i=0; i<customers.length; i++){
+
+                let trow = document.createElement("tr");
+
+                let tcell1 = document.createElement("td");
+                tcell1.textContent=customers[i].custId;;
+
+                let tcell2 = document.createElement("td");
+                tcell2.textContent=customers[i].custName;;
+
+                let tcell3 = document.createElement("td");
+                tcell3.textContent= customers[i].custAddress;;
+
+                let tcell4 = document.createElement("td");
+                tcell4.textContent= customers[i].custContact;;
+
+                trow.append(tcell1,tcell2,tcell3,tcell4);
+
+                tbody.appendChild(trow);
+            }
+
+        })
+
         window.onload = function (event) {
             let selectedSection = sessionStorage.getItem("selectedSection");
             if (selectedSection) {
