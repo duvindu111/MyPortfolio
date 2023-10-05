@@ -781,9 +781,7 @@
             color: #EB4A4C;
         }
 
-        body>header>section:nth-child(2)>nav>menu>li>a:active {
-          
-}
+        body>header>section:nth-child(2)>nav>menu>li>a:active {}
 
         body>header>section:nth-child(2)>nav>menu>li:last-of-type {
             padding-right: 4px;
@@ -2111,25 +2109,25 @@
             background-color: #4b4b4b;
         }
 
-        #loading_section{
+        #loading_section {
             position: fixed;
             width: 100vw;
-            height:100vh;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
-            background-color: white;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #131313;
             z-index: 100;
         }
 
-        #loading_section>div{
+        #loading_section>div {
             position: absolute;
-            margin:auto;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             width: max-content;
             height: max-content;
         }
@@ -4488,10 +4486,9 @@
     </header>
 
     <main>
-
         <section id="loading_section">
             <div>
-                <img src="assets/resources/images/loading.gif" alt="">
+                <img src="assets/resources/images/loading2.gif" alt=""> 
             </div>
         </section>
         <section id="animated_section">
@@ -5005,9 +5002,9 @@
 
     <script src="assets/resources/js/jquery-3.7.1.min.js"></script>
     <script>
-        $(window).on('load',function(){
+        $(window).on('load', function () {
             // $("#loading_section").css("display","none");
-            $("#loading_section").fadeOut(1000);
+            $("#loading_section").fadeOut(2000);
         })
     </script>
 </body>
