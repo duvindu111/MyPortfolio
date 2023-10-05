@@ -441,43 +441,13 @@
                         <th>Contact</th>
                     </tr>
                 </thead>
-                <tbody class="table-secondary" id="custTableBody">
-                    <tr>
-                        <td>Row 1, Cell 1</td>
-                        <td>Row 1, Cell 2</td>
-                        <td>Row 1, Cell 3</td>
-                        <td>Row 1, Cell 4</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2, Cell 1</td>
-                        <td>Row 2, Cell 2</td>
-                        <td>Row 2, Cell 3</td>
-                        <td>Row 1, Cell 4</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1, Cell 1</td>
-                        <td>Row 1, Cell 2</td>
-                        <td>Row 1, Cell 3</td>
-                        <td>Row 1, Cell 4</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2, Cell 1</td>
-                        <td>Row 2, Cell 2</td>
-                        <td>Row 2, Cell 3</td>
-                        <td>Row 1, Cell 4</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1, Cell 1</td>
-                        <td>Row 1, Cell 2</td>
-                        <td>Row 1, Cell 3</td>
-                        <td>Row 1, Cell 4</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2, Cell 1</td>
-                        <td>Row 2, Cell 2</td>
-                        <td>Row 2, Cell 3</td>
-                        <td>Row 1, Cell 4</td>
-                    </tr>
+                <tbody id="c_tBody" class="table-secondary" id="custTableBody">
+                <tr>
+                    <td>demo</td>
+                    <td>demo</td>
+                    <td>demo</td>
+                    <td>demo</td>
+                </tr>
                 </tbody>
             </table>
         </main>
@@ -692,52 +662,67 @@
     </section>
 
     <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script>
-        var custBtnSave = document.querySelector("#c_btnSave");
-        let custIdField= document.querySelector("#c_inputCustId");
-        let custNameField= document.querySelector("#c_inputCustName");
-        let custAddressField= document.querySelector("#c_inputCustAddress");
-        let custContactField= document.querySelector("#c_inputCustContact")
+        // var custBtnSave = document.querySelector("#c_btnSave");
+        // let custIdField= document.querySelector("#c_inputCustId");
+        // let custNameField= document.querySelector("#c_inputCustName");
+        // let custAddressField= document.querySelector("#c_inputCustAddress");
+        // let custContactField= document.querySelector("#c_inputCustContact")
+
+        var custBtnSave = $("#c_btnSave");
+        let custIdField= $("#c_inputCustId");
+        let custNameField= $("#c_inputCustName");
+        let custAddressField= $("#c_inputCustAddress");
+        let custContactField= $("#c_inputCustContact");
 
         var customers=[];
-        custBtnSave.addEventListener("click",function(){
+
+        custBtnSave.click(function(){
             var customer={
-                custId: custIdField.value,
-                custName: custNameField.value,
-                custAddress: custAddressField.value,
-                custContact: custContactField.value,
+                custId: custIdField.val(),
+                custName: custNameField.val(),
+                custAddress: custAddressField.val(),
+                custContact: custContactField.val(),
             }
 
             customers.push(customer);
             console.log(customers);
 
-            /////////////////////
-            let table = document.getElementById("custTable");
-            let tbody = table.getElementsByTagName("tbody")[0];
+            let table = $("#custTable");
+            let tbody = $("#c_tBody");
 
-            tbody.innerHTML="";
+            tbody.empty();
             for (let i=0; i<customers.length; i++){
 
-                let trow = document.createElement("tr");
+                let trow = `<tr>
+                            <td>${customers[i].custId}</td>
+                            <td>${customers[i].custName}</td>
+                            <td>${customers[i].custAddress}</td>
+                            <td>${customers[i].custContact}</td>
+                        </tr>`
 
-                let tcell1 = document.createElement("td");
-                tcell1.textContent=customers[i].custId;;
-
-                let tcell2 = document.createElement("td");
-                tcell2.textContent=customers[i].custName;;
-
-                let tcell3 = document.createElement("td");
-                tcell3.textContent= customers[i].custAddress;;
-
-                let tcell4 = document.createElement("td");
-                tcell4.textContent= customers[i].custContact;;
-
-                trow.append(tcell1,tcell2,tcell3,tcell4);
-
-                tbody.appendChild(trow);
+                tbody.append(trow);
             }
+            setCustDataToTextFields();
+        });
 
-        })
+        setCustDataToTextFields();
+
+        function setCustDataToTextFields(){
+            $("#c_tBody>tr").click(function (){
+                custIdField.val($(this).children(":eq(0)").text());
+                custNameField.val($(this).children(":eq(1)").text());
+                custAddressField.val($(this).children(":eq(2)").text());
+                custContactField.val($(this).children(":eq(3)").text());
+            });
+
+            $("#c_tBody>tr").dblclick(function (){
+                $(this).remove();
+                customers.de
+            });
+        }
+
 
         window.onload = function (event) {
             let selectedSection = sessionStorage.getItem("selectedSection");
@@ -842,7 +827,6 @@
                 sessionStorage.setItem("selectedSection", "customers");
             }
         );
-
 
     </script>
 </body>

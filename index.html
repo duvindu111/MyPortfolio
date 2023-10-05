@@ -2111,6 +2111,29 @@
             background-color: #4b4b4b;
         }
 
+        #loading_section{
+            position: fixed;
+            width: 100vw;
+            height:100vh;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color: white;
+            z-index: 100;
+        }
+
+        #loading_section>div{
+            position: absolute;
+            margin:auto;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            width: max-content;
+            height: max-content;
+        }
+
         /* media queries */
         /* 320px */
         @media all and (max-width:320px) {
@@ -4465,6 +4488,12 @@
     </header>
 
     <main>
+
+        <section id="loading_section">
+            <div>
+                <img src="assets/resources/images/loading.gif" alt="">
+            </div>
+        </section>
         <section id="animated_section">
             <div class="code" id="code1">
                 <code>system out</code>
@@ -4973,6 +5002,14 @@
             <i class="fa-solid fa-circle-chevron-up"></i>
         </a>
     </div>
+
+    <script src="assets/resources/js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(window).on('load',function(){
+            $("#loading_section").css("display","none");
+            $("#loading_section").fadeOut(1000);
+        })
+    </script>
 </body>
 
 </html>
