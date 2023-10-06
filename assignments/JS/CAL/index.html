@@ -6,7 +6,6 @@
     <title>Calculator</title>
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -36,13 +35,43 @@
         #btnPlus,#btnMinus,#btnDivide,#btnMultiplication{
             opacity: 80%;
         }
+
+        @media all and (max-width: 1024px){
+            #container_section{
+                width: 50% !important;
+            }
+        }
+        @media all and (max-width: 768px){
+            #container_section{
+                width: 80% !important;
+            }
+        }
+        @media all and (max-width: 425px){
+            #container_section{
+                width: 90% !important;
+            }
+        }
+        @media all and (max-width: 425px){
+            #container_section{
+                width: 100% !important;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-top:15px;
+                padding-bottom:5px;
+            }
+            .row{
+                margin-right:0 !important;
+                margin-left:0 !important;
+            }
+        }
+
     </style>
 
 </head>
 
 <body class="d-flex justify-content-center align-items-center">
-    <section class="container text-center rounded-2 bg-dark bg-opacity-75" style="width: 40%;">
-        <section class="row m-auto border border-black mt-4 mb-4 mx-4 py-1 " style="height: 60px">
+    <section class="container text-center rounded-2 bg-dark bg-opacity-75" id="container_section" style="width: 40%;">
+        <section class="row m-auto mt-4 mb-4 mx-4 py-1 " style="height: 60px">
             <div class="col-3 h-100" >
                 <button id="btnC" class="btn w-100 h-100" style="background-color: #ffa7a7; border-bottom: 2px solid #ff6d6d">C</button>
             </div>
@@ -50,7 +79,7 @@
                 <input id="inpDis" type="text" class="form-control w-100 h-100 rounded-2 bg-white bg-opacity-10 border-black border-2 border-opacity-100 text-white" style="text-align: right" disabled >
             </div>
         </section>
-        <section class="row m-auto border border-black mt-4 mb-1 mx-4 py-1" style="height: 60px">
+        <section class="row m-auto  mt-4 mb-1 mx-4 py-1" style="height: 60px">
             <div class="col-3 h-100" >
                 <button id="btn7" class="btn w-100 h-100 bg-white bg-opacity-50" style="">7</button>
             </div>
@@ -64,7 +93,7 @@
                 <button id="btnPlus" class="btn w-100 h-100 bg-danger-subtle" style="">+</button>
             </div>
         </section>
-        <section class="row m-auto border border-black mt-1 mb-1 mx-4 py-1" style="height: 60px">
+        <section class="row m-auto  mt-1 mb-1 mx-4 py-1" style="height: 60px">
             <div class="col-3 h-100" >
                 <button id="btn4" class="btn w-100 h-100 bg-white bg-opacity-50" style="">4</button>
             </div>
@@ -78,7 +107,7 @@
                 <button id="btnMinus" class="btn w-100 h-100 bg-danger-subtle" style="">-</button>
             </div>
         </section>
-        <section class="row m-auto border border-black mt-1 mb-1 mx-4 py-1" style="height: 60px">
+        <section class="row m-auto mt-1 mb-1 mx-4 py-1" style="height: 60px">
             <div class="col-3 h-100" >
                 <button id="btn1" class="btn w-100 h-100 bg-white bg-opacity-50" style="">1</button>
             </div>
@@ -92,7 +121,7 @@
                 <button id="btnDivide" class="btn w-100 h-100 bg-danger-subtle" style="">/</button>
             </div>
         </section>
-        <section class="row m-auto border border-black mt-1 mb-4 mx-4 py-1" style="height: 60px">
+        <section class="row m-auto mt-1 mb-4 mx-4 py-1" style="height: 60px">
             <div class="col-3 h-100" >
                 <button id="btn0" class="btn w-100 h-100 bg-white bg-opacity-50" style="">0</button>
             </div>
@@ -133,29 +162,64 @@
 
     btnPlus.addEventListener("click",function(){
         operator="plus";
-        number=display.value;
+        if (typeof midNum == 'undefined') {
+            number = display.value;
+        }else{
+            number = midNum;
+        }
         display.value=""
         console.log(number);
     });
     btnMinus.addEventListener("click",function(){
         operator="minus";
-        number=display.value;
+        if (typeof midNum == 'undefined') {
+            number = display.value;
+        }else{
+            number = midNum;
+        }
         display.value=""
         console.log(number);
     });
     btnDivide.addEventListener("click",function(){
         operator="divide";
-        number=display.value;
+        if (typeof midNum == 'undefined') {
+            number = display.value;
+        }else{
+            number = midNum;
+        }
         display.value=""
         console.log(number);
     });
     btnMultiplication.addEventListener("click",function(){
         operator="multiply";
-        number=display.value;
+        if (typeof midNum == 'undefined') {
+            number = display.value;
+        }else{
+            number = midNum;
+        }
         display.value=""
         console.log(number);
     });
 
+    var midNum;
+    function midCalculations(midNumber){
+        switch(operator){
+            case "plus":
+                midNum = parseFloat(number) + parseFloat(midNumber);
+                break;
+            case "minus":
+                midNum = parseFloat(number) - parseFloat(midNumber);
+                break;
+            case "divide":
+                midNum = parseFloat(number) / parseFloat(midNumber);
+                break;
+            case "multiply":
+                midNum = parseFloat(number) * parseFloat(midNumber);
+                break;
+            default:
+                break;
+        }
+    }
     function selectOperator(num){
         switch(operator){
             case "plus":
@@ -184,43 +248,60 @@
     btnC.addEventListener("click",function(){
         display.value="";
         number=0;
+        midNum= undefined;
+        operator= undefined;
     });
     btnDot.addEventListener("click",function(){
-        if(display.value==""){
-            display.value = "0.";
+        let dotCount = display.value.match(/\./g);
+        if (dotCount && dotCount.length >= 1) {
+
         }else{
-            display.value = display.value+".";
+            if(display.value==""){
+                display.value = "0.";
+            }else{
+                display.value = display.value+".";
+            }
         }
     });
     btn0.addEventListener("click",function(){
         displayOnScreen(0);
+        midCalculations(display.value);
     });
     btn1.addEventListener("click",function(){
         displayOnScreen(1);
+        midCalculations(display.value);
     });
     btn2.addEventListener("click",function(){
         displayOnScreen(2);
+        midCalculations(display.value);
     });
     btn3.addEventListener("click",function(){
         displayOnScreen(3);
+        midCalculations(display.value);
     });
     btn4.addEventListener("click",function(){
         displayOnScreen(4);
+        midCalculations(display.value);
     });
     btn5.addEventListener("click",function(){
         displayOnScreen(5);
+        midCalculations(display.value);
     });
     btn6.addEventListener("click",function(){
         displayOnScreen(6);
+        midCalculations(display.value);
     });
     btn7.addEventListener("click",function(){
         displayOnScreen(7);
+        midCalculations(display.value);
     });
     btn8.addEventListener("click",function(){
         displayOnScreen(8);
+        midCalculations(display.value);
     });
     btn9.addEventListener("click",function(){
         displayOnScreen(9);
+        midCalculations(display.value);
     });
     btnEqual.addEventListener("click",function(){
         selectOperator(display.value);
@@ -228,8 +309,16 @@
             display.value="Invalid"
             number=0;
         }else{
-            display.value=number;
+            console.log("else");
+            if (typeof midNum == 'undefined') {
+                console.log("else if");
+            }else{
+                console.log("else else");
+                display.value = number;
+            }
         }
+        operator= undefined;
+        midNum= undefined;
     });
 
 
