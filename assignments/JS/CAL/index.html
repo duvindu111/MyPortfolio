@@ -304,7 +304,12 @@
         midCalculations(display.value);
     });
     btnEqual.addEventListener("click",function(){
-        selectOperator(display.value);
+        if(display.value==""){
+            selectOperator(0);
+        }else{
+            selectOperator(display.value);
+        }
+
         if(isNaN(number)){
             display.value="Invalid"
             number=0;
